@@ -1,3 +1,3 @@
 User-agent: *
-Sitemap: http://localhost/sitemap.xml
+Sitemap: http://bowwow.zapto.org/sitemap.xml
 Disallow: /ghost/
