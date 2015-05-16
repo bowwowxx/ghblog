@@ -1,0 +1,439 @@
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>在synology nas上架設簡約風格的ghost blog(node.js blog)</title>
+    <meta name="description" content="">
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="../favicon.ico">
+
+    <script type="text/javascript" src="../assets/js/vendor/fastclick.js?v=350ea902ce"></script>
+    <script type="text/javascript" src="../assets/js/vendor/modernizr.js?v=350ea902ce"></script>
+
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" type="text/css" href="/assets/css/outdatedBrowser/outdatedBrowser.min.css?v=350ea902ce">
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/ichi.css?v=350ea902ce">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:300,700,400%7CSource+Sans+Pro:300,400,600,700,900,300italic,400italic,600italic,700italic,900italic">
+
+    <link rel="canonical" href="http://localhost/zai-synology-nasshang-jia-she-jian-yue-feng-ge-de-ghost-blognode-js-blog/">
+    
+    <meta property="og:site_name" content="bowwow">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="在synology nas上架設簡約風格的ghost blog(node.js blog)">
+    <meta property="og:description" content="一般建立網站  大家常用的大約有wordpress、drupal、joomla、ghost 安迪兒看了一下今年列出來2015 best的統計  順便給大家參考  Best Content Management System of 2015  https://www.hoasted.com/blog/best-content-management-system-of-2015/ 之前對於ghost的簡約風格  安迪兒一直很有好感  加上ghost又是用node.js開發，和wordpress相比  有簡易、輕量，效能優越，服務的訪客數較高  markdown編輯器...等好處 安迪兒之前有試過在自家的nas上架wordpress  wordpress+php+mariadb+apache 但整個弄下來再加上wordpress一點點的基本外掛  整個太肥了，連線時頁面瀏覽的效能不是很好  (呃....">
+    <meta property="og:url" content="http://localhost/zai-synology-nasshang-jia-she-jian-yue-feng-ge-de-ghost-blognode-js-blog/">
+    <meta property="og:image" content="http://img.allenchou.cc/ghost-1.png">
+    <meta property="article:published_time" content="2015-05-13T06:26:46.082Z">
+    <meta property="article:modified_time" content="2015-05-13T06:33:24.434Z">
+    <meta property="article:tag" content="ghost blog">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="在synology nas上架設簡約風格的ghost blog(node.js blog)">
+    <meta name="twitter:description" content="一般建立網站  大家常用的大約有wordpress、drupal、joomla、ghost 安迪兒看了一下今年列出來2015 best的統計  順便給大家參考  Best Content Management System of 2015  https://www.hoasted.com/blog/best-content-management-system-of-2015/ 之前對於ghost的簡約風格  安迪兒一直很有好感  加上ghost又是用node.js開發，和wordpress相比  有簡易、輕量，效能優越，服務的訪客數較高  markdown編輯器...等好處 安迪兒之前有試過在自家的nas上架wordpress  wordpress+php+mariadb+apache 但整個弄下來再加上wordpress一點點的基本外掛  整個太肥了，連線時頁面瀏覽的效能不是很好  (呃....">
+    <meta name="twitter:url" content="http://localhost/zai-synology-nasshang-jia-she-jian-yue-feng-ge-de-ghost-blognode-js-blog/">
+    <meta name="twitter:image:src" content="http://img.allenchou.cc/ghost-1.png">
+    
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "publisher": "bowwow",
+    "author": {
+        "@type": "Person",
+        "name": "bowwow",
+        "image": "http://localhost/content/images/2015/05/1-1.png",
+        "url": "http://localhost/author/bowwow",
+        "sameAs": null,
+        "description": null
+    },
+    "headline": "在synology nas上架設簡約風格的ghost blog(node.js blog)",
+    "url": "http://localhost/zai-synology-nasshang-jia-she-jian-yue-feng-ge-de-ghost-blognode-js-blog/",
+    "datePublished": "2015-05-13T06:26:46.082Z",
+    "dateModified": "2015-05-13T06:33:24.434Z",
+    "image": "http://img.allenchou.cc/ghost-1.png",
+    "keywords": "ghost blog",
+    "description": "一般建立網站  大家常用的大約有wordpress、drupal、joomla、ghost 安迪兒看了一下今年列出來2015 best的統計  順便給大家參考  Best Content Management System of 2015  https://www.hoasted.com/blog/best-content-management-system-of-2015/ 之前對於ghost的簡約風格  安迪兒一直很有好感  加上ghost又是用node.js開發，和wordpress相比  有簡易、輕量，效能優越，服務的訪客數較高  markdown編輯器...等好處 安迪兒之前有試過在自家的nas上架wordpress  wordpress+php+mariadb+apache 但整個弄下來再加上wordpress一點點的基本外掛  整個太肥了，連線時頁面瀏覽的效能不是很好  (呃...."
+}
+    </script>
+
+    <meta name="generator" content="Ghost 0.6">
+    <link rel="alternate" type="application/rss+xml" title="bowwow" href="http://localhost/rss/">
+</head>
+<body class="post-template tag-ghost-blog">
+
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdate" href="http://outdatedbrowser.com/">Update my browser now</a></p>
+</div>
+
+<nav class="top-bar hide-for-large-up" data-topbar style="background: none">
+  <ul class="title-area">
+    <li class="name">
+      
+    </li>
+    <li class="home"><a class="fi-home" href="http://localhost"></a></li>
+    <li class="toggle-topbar"><a href="index.html#" id="trigger-overlay" class="fi-list"></a></li>
+  </ul>
+
+<div class="overlay overlay-scale">
+    <button type="button" class="overlay-close">Close</button>
+    <nav>
+        <ul>
+                <li><a href="http://localhost/">Home</a></li>
+
+        </ul>
+    </nav>
+</div>
+
+</nav>
+
+<div class="row">
+
+<div class="small-16 medium-16 large-4 columns head-area bgimage" style="background-image: url(../content/images/2015/05/do02.jpg)">
+
+<header class="site-head">
+    <div class="vertical">
+        <div class="site-head-content inner">
+            <ul class="side-nav blog-menu show-for-large-up">
+                    <li><a href="http://localhost/">Home</a></li>
+
+            </ul>
+            <a class="blog-logo" href="http://localhost"><img alt="bowwow" src="../content/images/2015/05/bow02-1.jpg"></a>
+            <h1 class="blog-title">bowwow</h1>
+            <hr>
+            <p class="blog-description">Thoughts, stories and ideas.</p>
+            <div class="blog-network">
+<!--                 <a href="#" class="fi-social-pinterest"></a>
+                <a href="#" class="fi-social-linkedin"></a>
+                <a href="#" class="fi-social-behance"></a>
+                <a href="#" class="fi-social-deviant-art"></a>
+                <a href="#" class="fi-social-dribbble"></a>
+                <a href="#" class="fi-social-flickr"></a>
+                <a href="#" class="fi-social-github"></a>
+                <a href="#" class="fi-social-skype"></a>
+                <a href="#" class="fi-social-snapchat"></a>
+                <a href="#" class="fi-social-steam"></a>
+                <a href="#" class="fi-social-xbox"></a>
+                <a href="#" class="fi-social-reddit"></a> -->
+                <a href="index.html#" class="fi-rss"></a>
+                <a href="index.html#" class="fi-social-google-plus"></a>
+                <a href="index.html#" class="fi-social-youtube"></a>
+                <a href="index.html#" class="fi-social-twitter"></a>
+                <a href="index.html#" class="fi-social-facebook"></a>
+            </div>
+        </div>
+    </div>
+</header>
+
+</div>
+
+
+<div class="small-16 medium-16 large-12 columns main-column">
+    
+
+<main class="content" role="main">
+
+    <article class="post tag-ghost-blog featured">
+
+
+            <h1 class="post-title">在synology nas上架設簡約風格的ghost blog(node.js blog)</h1>
+
+            <span class="post-meta label"><time datetime="2015-05-13">13 May 2015</time></span>
+
+            <section class="post-content">
+                <p>一般建立網站 <br>
+大家常用的大約有wordpress、drupal、joomla、ghost</p>
+
+<p>安迪兒看了一下今年列出來2015 best的統計 <br>
+順便給大家參考 <br>
+Best Content Management System of 2015 <br>
+<a href="https://www.hoasted.com/blog/best-content-management-system-of-2015/">https://www.hoasted.com/blog/best-content-management-system-of-2015/</a></p>
+
+<p>之前對於ghost的簡約風格 <br>
+安迪兒一直很有好感 <br>
+加上ghost又是用node.js開發，和wordpress相比 <br>
+有簡易、輕量，效能優越，服務的訪客數較高 <br>
+markdown編輯器...等好處</p>
+
+<p>安迪兒之前有試過在自家的nas上架wordpress <br>
+wordpress+php+mariadb+apache</p>
+
+<p>但整個弄下來再加上wordpress一點點的基本外掛 <br>
+整個太肥了，連線時頁面瀏覽的效能不是很好 <br>
+(呃..說實話安迪兒的nas沒買頂規的, 以下是安迪兒的nas)
+<img src="https://lh4.googleusercontent.com/-P0JSB4KDIIw/VVJMPu6gApI/AAAAAAAAHpA/EwEqX87r_cM/w644-h239-no/ghostblog002.jpg" alt=""></p>
+
+<p>所以安迪兒後來就沒用wordpress <br>
+剛好前陣子nas也支援node.js了 <br>
+所以就來試一下在synology的nas上 <br>
+架個ghost的blog來玩玩。</p>
+
+<p>和wordpress一樣，不一定要自已架設 <br>
+也可以直接使用外面的網站上的服務</p>
+
+<p>像是 <br>
+ghost本身的站可以註冊免費試用一個月 <br>
+digitalocean 每個月5美元 <br>
+heroku 免費但有5M的限制(db可以放別的地方)</p>
+
+<p>安迪兒這次用的是synology的ds213j 有2個HDD做raid1 <br>
+上面的版本是DSM5.1，己經有node.js可以安裝了 <br>
+不用像早期國外的user很坎坷的自己想盡辦法改核心移植上去</p>
+
+<p>以下安迪兒記錄一下整個安裝的過程</p>
+
+<p>1.捉ghost回來在筆電上試玩 <br>
+2.裝到nas裡，因為nas不關機，可以一直開著 <br>
+3.常駐服務，關掉ssh視窗也會背景執行</p>
+
+<p>第一個步驟，先捉最新的ghost版本 <br>
+安迪兒是0.6.2版
+<a href="https://ghost.org/download/">https://ghost.org/download/</a></p>
+
+<p>大至上照著installation的說明 <br>
+<a href="https://github.com/TryGhost/Ghost">https://github.com/TryGhost/Ghost</a> <br>
+<a href="http://support.ghost.org/installing-ghost-mac/">http://support.ghost.org/installing-ghost-mac/</a></p>
+
+<p>筆電上安裝好node.js、npm好所有的package <br>
+下個npm start --production 啟動 <br>
+打開<a href="http://localhost:2368">http://localhost:2368</a> 就能看到ghsot簡約的畫面了</p>
+
+<p>因為這部份文件說的很詳細了，
+安迪兒就直接從nas的安裝過程開始記錄</p>
+
+<p>第二個步驟</p>
+
+<ul>
+<li><p>nas上先安裝好node.js，開好ssh確定能登入ssh的登入畫面 <br>
+可以參考安迪兒之前的 <br>
+<a href="http://www.dotblogs.com.tw/bowwowxx/archive/2014/08/14/146249.aspx">用Synology NAS 架 Git Server做版本控管</a></p></li>
+<li><p>ssh登入nas
+測一下node.js有無裝好，版本多少?
+<img src="https://lh6.googleusercontent.com/-JB2_KrpV4BI/VVJMnpeiZRI/AAAAAAAAHpU/HsP1Qm1BoWQ/w765-h280-no/ghostblog005.jpg" alt=""></p></li>
+<li><p>把電腦上整包的ghost放到nas裡 <br>
+因為nas效能不好，所以安迪兒是在筆電上裝好ghost用到的modules <br>
+壓成zip整個搬到nas上，解開後再做修改
+<img src="https://lh6.googleusercontent.com/-TrElRstSWx0/VVJNSrYZjRI/AAAAAAAAHqs/U-SQ2YXtU9k/w813-h446-no/ghostblog006.jpg" alt="">
+裝modules其實就是說明文件裡提到 <br>
+在電腦上ghost的目錄那裡執行 <br>
+npm install --production  </p></li>
+</ul>
+
+<p>就會裝上所有用到的modules <br>
+(裝完可以在node_modules的資料匣裡看到)  </p>
+
+<p>裝完後本機測試完
+把ghost整包傳上nas裡
+(安迪兒是放到/volume1/web/blog)</p>
+
+<p>記得要放到/volume1裡面 <br>
+(volume1指的是nas的硬碟 <br>
+不然nas的DSM一升級，東西就沒了)  </p>
+
+<p>傳檔完成後，就來試試能不能執行</p>
+
+<p>首先ssh root@192.x.x.x 進到nas <br>
+再到/volume1/web/blog的目錄下 <br>
+執行 <br>
+npm start --production  </p>
+
+<p>嗯，有些錯誤 <br>
+沒關係，修正一下 <br>
+第一次出現了arm node<em>sqlite3.node的錯 <br>
+「node</em>sqlite3-v2.2.3-node-v11-linux-arm  bababa....」</p>
+
+<p>因為安迪兒沒另外再架db，是用sqllite(一個檔案搞定db) <br>
+這邊的錯誤是說沒有相關arm架構的lib</p>
+
+<p>安迪兒看了一下node_modules裡的資料匣 <br>
+sqlite3的lib裡還真的只有node-v11-darwin-x64的資料匣  </p>
+
+<p>路徑如下: <br>
+web/blog/node_modules/sqlite3/lib/binding/node-v11-linux-arm</p>
+
+<p>安迪兒google了一下arm版的sqlite3 <br>
+這邊有人有提到 <br>
+<a href="https://github.com/mapbox/node-sqlite3/issues/298">https://github.com/mapbox/node-sqlite3/issues/298</a></p>
+
+<p>依issues裡面提到的，可以直接download這邊的來用 <br>
+<a href="https://github.com/sweetpi/node-sqlite3-arm/releases/tag/node_sqlite3-v2.2.4-node-v11-linux-arm">https://github.com/sweetpi/node-sqlite3-arm/releases/tag/node_sqlite3-v2.2.4-node-v11-linux-arm</a></p>
+
+<p>安迪兒在nas上建一下資料匣把node_sqlite3.node放入 <br>
+再執行 <br>
+npm start --production <br>
+就成功了</p>
+
+<p>第二次因為server有在跑 <br>
+但瀏覽器一直連不到ghost的頁面 <br>
+安迪兒依序做了一些相關的測試和調整  </p>
+
+<p>先寫隻test.js的server 跑看看瀏覽器有無畫面 <br>
+<code>var http = require ('http'); <br>
+http.createServer (function (req, res) { <br>
+res.writeHead (200, {'Content-Type': 'text / plain'}); <br>
+res.end ('Hello World \ n ') ; <br>
+}).listen (1337);
+</code></p>
+
+<p>存檔執行
+node test.js</p>
+
+<p>curl一下看本機有沒反應(ip是同一台) <br>
+curl <a href="http://127.0.0.1:1337">http://127.0.0.1:1337</a> <br>
+curl <a href="http://192.168.x.x:1337">http://192.168.x.x:1337</a></p>
+
+<p>看一下netstat -tl起了什麼port192.168.x.x <br>
+netstat -tl <br>
+<img src="https://lh5.googleusercontent.com/-O-jcH3spLqc/VVJNU6-uRbI/AAAAAAAAHqE/PrVAeTm6A7s/w456-h327-no/ghostblog007.jpg" alt=""></p>
+
+<p>然後再開一下防火牆 <br>
+<img src="https://lh3.googleusercontent.com/-FvoM-qh0SAo/VVJNMigvooI/AAAAAAAAHps/H_dslN_fMBo/w646-h290-no/ghostblog008.jpg" alt="">
+最後調了一下ghost裡面的config的設定檔 <br>
+(加上url和修改host/port等等)
+<img src="https://lh6.googleusercontent.com/-j8a4uopmpwc/VVJNTRbOTYI/AAAAAAAAHqg/EHnUVmCGN34/w411-h507-no/ghostblog009.jpg" alt=""></p>
+
+<p>弄完後再執行 <br>
+npm start --production  </p>
+
+<p>這次就成功了，真是開心吶</p>
+
+<p>第三個步驟 <br>
+總不能一直用ssh連線去啟動server吧</p>
+
+<p>安迪兒找了一下，看到其它人用的方式  </p>
+
+<p>screen <br>
+嗯...沒辦法時的最下策 <br>
+<a href="http://blog.vantol.org/installing-ghost-on-synology/">http://blog.vantol.org/installing-ghost-on-synology/</a></p>
+
+<p>forever <br>
+沒試，看資料說nas上的forever有點問題 <br>
+<a href="http://nodejust.com/foever-npm-start-nodejs-ghost-background/">http://nodejust.com/foever-npm-start-nodejs-ghost-background/</a></p>
+
+<p>supervisor <br>
+還ok，但有點麻煩 <br>
+<a href="http://blog.vantol.org/running-node-js-on-synology-with-supervisor/">http://blog.vantol.org/running-node-js-on-synology-with-supervisor/</a></p>
+
+<p>nas上的排程 <br>
+呃，每小時執行一次怪怪的  </p>
+
+<p>最後安迪兒看到supervisor文章裡的init.d和supervisord.conf <br>
+就想說那直接放到etc/init裡弄個conf檔，開機執行一下services看看 <br>
+就寫了一隻blog.conf <br>
+(執行ghost時用http user來跑，小心別用root喔XD)</p>
+
+<p>可以參考這邊 UpStart 簡介</p>
+
+<p>blog.conf內容: <br>
+<code>start on started httpd-user
+ stop on runlevel [06]
+ setuid http
+ exec  npm start /volume1/web/blog --production</code></p>
+
+<p>寫完後用root的權限傳上nas <br>
+cat blog.conf | ssh root@192.168.x.x cat "&gt;" /etc/init/blog.conf</p>
+
+<p>然後ssh 用root登入測試一下 剛寫好的blog.conf能不能start or stop</p>
+
+<p>切換到/etc/init下 <br>
+cd /etc/init <br>
+start blog <br>
+stop blog <br>
+<img src="https://lh4.googleusercontent.com/-5IGl-IoClqM/VVJNWa7nMOI/AAAAAAAAHqk/Ycewu4JZOxc/w755-h551-no/ghostblog013.jpg" alt="" title=""> </p>
+
+<p>沒寫錯的話，應該可以正常啟動或關掉服務 <br>
+到這邊就差不多完成了</p>
+
+<p>再來就下reboot nas吧 <br>
+shutdown -r now</p>
+
+<p>等一陣子nas重開後，再試試ghost blog能不能連吧。
+<img src="https://lh6.googleusercontent.com/-yAxMNP2E9kk/VVJNW5zWXOI/AAAAAAAAHqY/_YfUc9i_FIE/w813-h402-no/ghostblog014.jpg" alt=""></p>
+
+<p>以下是安迪兒的成果(在自家nas上) <br>
+<a href="http://bowwow.zapto.org/">http://bowwow.zapto.org/</a></p>
+
+<p>收工嘍~收工嘍</p>
+
+<p><mark>5/13補充:</mark> <br>
+中午發現ghost blog突然沒了 <br>
+檢查了一下 <br>
+init裡的blog啟動檔整個不見 <br>
+原來是很好運的 <br>
+今天剛好碰到DSM由5.1升級成5.2 init裡邊的東西全被還原了  </p>
+
+<p>所以相關的檔案資料千萬要放在volume裡面 <br>
+不然會像安迪兒一樣，神不知鬼不覺的自動升級後就沒了..XD</p>
+                        <aside class="tags fi-pricetag-multiple">Posted on <a href="../tag/ghost-blog/">ghost blog</a></aside>
+            </section>
+            <hr>
+            <footer class="post-footer">
+
+                <section class="share">
+                    <h4>Liked this post ? Share it.</h4>
+                    <a class="fi-social-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://localhost/zai-synology-nasshang-jia-she-jian-yue-feng-ge-de-ghost-blognode-js-blog/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    </a>
+                    <a class="fi-social-twitter" href="https://twitter.com/share?text=%E5%9C%A8synology%20nas%E4%B8%8A%E6%9E%B6%E8%A8%AD%E7%B0%A1%E7%B4%84%E9%A2%A8%E6%A0%BC%E7%9A%84ghost%20blog(node.js%20blog)&amp;url=http://localhost/zai-synology-nasshang-jia-she-jian-yue-feng-ge-de-ghost-blognode-js-blog/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    </a>
+                    <a class="fi-social-google-plus" href="https://plus.google.com/share?url=http://localhost/zai-synology-nasshang-jia-she-jian-yue-feng-ge-de-ghost-blognode-js-blog/" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    </a>
+                </section>
+
+                <section class="author">
+                    <header>
+                        <span>About the author</span>
+                    </header>
+                    <section>
+                        <h4>bowwow</h4>
+                        <img src="http://127.0.0.1:2368/content/images/2015/05/1-1.png">
+                        <span>TW</span>
+                        
+                    </section>
+                    <footer>
+                         <p></p>
+                    </footer>
+                </section>
+
+        <div class="clearfix"></div>
+                    <hr>
+
+            </footer>
+
+        <h3 class="title-disqus"><span class="fi-comments"></span>Discussions</h3>
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'bowwow'; // required: replace example with your forum shortname
+    var disqus_identifier = '2'; // make sure to use the post.id as an identifier, otherwise disqus will use the pages url per default, which might be problematic...
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </article>
+
+</main>
+
+</div>
+
+</div>
+
+    <!--[if lte IE 8]>
+        <script type="text/javascript" src="/assets/js/outdatedBrowser.min.js?v=350ea902ce"></script>
+    <![endif]-->
+    <script type="text/javascript" src="../assets/js/dest/built.min.js?v=350ea902ce"></script>
+
+    <script>
+      $(document).foundation();
+    </script>
+</body>
