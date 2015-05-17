@@ -1,0 +1,533 @@
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>bowwow</title><description>Thoughts, stories and ideas.</description><link>http://bowwowxx.github.io/ghblog/</link><generator>Ghost 0.6</generator><lastBuildDate>Sun, 17 May 2015 15:46:02 GMT</lastBuildDate><atom:link href="http://bowwowxx.github.io/ghblog/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>使用GitHub當靜態化Blog(備份你的Ghost blog)</title><description>&lt;p&gt;寫程式或翻譯文章的人應該都知道 &lt;br&gt;
+github是多麼偉大的發明 &lt;br&gt;
+除了可以讓人自由自在的倒版本至任何時候 &lt;br&gt;
+也可以好好的劃分一下
+到底這個錯誤是誰幹的 &lt;br&gt;
+也就是所謂的 &lt;strong&gt;「自己的屁屁擦乾淨」~XD&lt;/strong&gt;  &lt;/p&gt;
+
+&lt;p&gt;這個功能拿來在網站或文章發佈維護上超讚的呀&lt;/p&gt;
+
+&lt;p&gt;所以安迪兒就試著把前些天在nas上架設的ghost blog &lt;br&gt;
+想辦法弄上去github&lt;/p&gt;
+
+&lt;p&gt;最後安迪兒完成了  &lt;/p&gt;
+
+&lt;p&gt;以下是安迪兒完工後的成果 &lt;br&gt;
+&lt;a href="https://bowwowxx.github.io/ghblog/"&gt;https://bowwowxx.github.io/ghblog/&lt;/a&gt;  &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;先說一下和原來的ghost blog有什麼差異和這樣做的優點&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;github的名聲響亮，網站夠穩定  &lt;/li&gt;
+&lt;li&gt;github新增/刪除/修改和倒檔到各種版本，操作很方便  &lt;/li&gt;
+&lt;li&gt;github放的是整個網站所產生的&lt;strong&gt;靜態網頁&lt;/strong&gt; &lt;br&gt;
+所以速度不止快又安全(都是靜態網頁了還能幹嘛)&lt;/li&gt;
+&lt;li&gt;方便性，所有東西本機搞定，寫文章或做設定時 &lt;br&gt;
+本機起一下server傳至github後就可以關機，收書包回家了~XD&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;以上是單純就一般展示類的網站或blog，其它的不一定適合這樣使用&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;再來是整個串接的流程&lt;/strong&gt;
+為什麼能這樣做呢? &lt;br&gt;
+其實是用wget的方式去對整個網站做鏡像  &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;流程大約是&lt;/strong&gt; &lt;br&gt;
+在本機啟好server後，把整個網站轉成static的檔，再commit到github上&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;以下就和大家分享一下執行的方式&lt;/strong&gt;    &lt;/p&gt;
+
+&lt;p&gt;這邊是使用Buest這個python的程式 &lt;br&gt;
+&lt;a href="https://github.com/axitkhurana/buster"&gt;https://github.&lt;/a&gt;&lt;/p&gt;</description><link>http://bowwowxx.github.io/ghblog/shi-yong-githubdang-jing-tai-hua-blogbei-fen-ni-de-ghost-blog/</link><guid isPermaLink="false">792ac709-6ddf-4312-aa0b-8dbdc3e6a3f2</guid><category>ghost blog</category><category>github</category><dc:creator>bowwow</dc:creator><pubDate>Sat, 16 May 2015 19:59:55 GMT</pubDate><media:content url="http://cdn.designrshub.com/wp-content/uploads/2013/11/free-ghost-themes-05.jpg" medium="image"/><content:encoded>&lt;img src="http://cdn.designrshub.com/wp-content/uploads/2013/11/free-ghost-themes-05.jpg" alt="使用GitHub當靜態化Blog(備份你的Ghost blog)"&gt;&lt;p&gt;寫程式或翻譯文章的人應該都知道 &lt;br&gt;
+github是多麼偉大的發明 &lt;br&gt;
+除了可以讓人自由自在的倒版本至任何時候 &lt;br&gt;
+也可以好好的劃分一下
+到底這個錯誤是誰幹的 &lt;br&gt;
+也就是所謂的 &lt;strong&gt;「自己的屁屁擦乾淨」~XD&lt;/strong&gt;  &lt;/p&gt;
+
+&lt;p&gt;這個功能拿來在網站或文章發佈維護上超讚的呀&lt;/p&gt;
+
+&lt;p&gt;所以安迪兒就試著把前些天在nas上架設的ghost blog &lt;br&gt;
+想辦法弄上去github&lt;/p&gt;
+
+&lt;p&gt;最後安迪兒完成了  &lt;/p&gt;
+
+&lt;p&gt;以下是安迪兒完工後的成果 &lt;br&gt;
+&lt;a href="https://bowwowxx.github.io/ghblog/"&gt;https://bowwowxx.github.io/ghblog/&lt;/a&gt;  &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;先說一下和原來的ghost blog有什麼差異和這樣做的優點&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;github的名聲響亮，網站夠穩定  &lt;/li&gt;
+&lt;li&gt;github新增/刪除/修改和倒檔到各種版本，操作很方便  &lt;/li&gt;
+&lt;li&gt;github放的是整個網站所產生的&lt;strong&gt;靜態網頁&lt;/strong&gt; &lt;br&gt;
+所以速度不止快又安全(都是靜態網頁了還能幹嘛)&lt;/li&gt;
+&lt;li&gt;方便性，所有東西本機搞定，寫文章或做設定時 &lt;br&gt;
+本機起一下server傳至github後就可以關機，收書包回家了~XD&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;以上是單純就一般展示類的網站或blog，其它的不一定適合這樣使用&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;再來是整個串接的流程&lt;/strong&gt;
+為什麼能這樣做呢? &lt;br&gt;
+其實是用wget的方式去對整個網站做鏡像  &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;流程大約是&lt;/strong&gt; &lt;br&gt;
+在本機啟好server後，把整個網站轉成static的檔，再commit到github上&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;以下就和大家分享一下執行的方式&lt;/strong&gt;    &lt;/p&gt;
+
+&lt;p&gt;這邊是使用Buest這個python的程式 &lt;br&gt;
+&lt;a href="https://github.com/axitkhurana/buster"&gt;https://github.com/axitkhurana/buster&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;大家可以看一下它上面的說明  &lt;/p&gt;
+
+&lt;h1 id="1mac"&gt;1.首先mac要裝上&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href="http://brew.sh/index_zh-tw.html"&gt;Homebrew&lt;/a&gt; &lt;br&gt;
+這...應該都有裝過了吧，沒裝的再執行  &lt;/p&gt;
+
+&lt;p&gt;安裝指令  &lt;code&gt;ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)&lt;/code&gt;  &lt;/p&gt;
+
+&lt;p&gt;裝完後執行 &lt;br&gt;
+&lt;code&gt;brew --version&lt;/code&gt;   &lt;/p&gt;
+
+&lt;p&gt;[pip] &lt;br&gt;
+(&lt;a href="https://raw.githubusercontent.com/pypa/pip/master/contrib/get-pip.py"&gt;https://raw.githubusercontent.com/pypa/pip/master/contrib/get-pip.py&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;捉下來後執行&lt;code&gt;python get-pip.py&lt;/code&gt; &lt;br&gt;
+裝完後執行&lt;code&gt;pip --version&lt;/code&gt;  &lt;/p&gt;
+
+&lt;p&gt;[Buster] &lt;br&gt;
+(&lt;a href="https://github.com/axitkhurana/buster"&gt;https://github.com/axitkhurana/buster&lt;/a&gt;) &lt;br&gt;
+執行&lt;code&gt;pip install buster&lt;/code&gt;  &lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://bowwowxx.github.io/ghblog/shi-yong-githubdang-jing-tai-hua-blogbei-fen-ni-de-ghost-blog/"&gt;wget&lt;/a&gt; &lt;br&gt;
+執行&lt;code&gt;brew install wget&lt;/code&gt;  &lt;/p&gt;
+
+&lt;p&gt;以上軟體都裝完後，就可以收書包....回家再繼續
+(開完笑的，大約完成了1/3)&lt;/p&gt;
+
+&lt;h1 id="2github"&gt;2.再來是設定github的部份&lt;/h1&gt;
+
+&lt;p&gt;github的操作，安迪兒就不多說了 &lt;br&gt;
+另外關於建立github page的部份 &lt;br&gt;
+可以參考github上的說明 &lt;br&gt;
+&lt;a href="https://pages.github.com/"&gt;https://pages.github.com&lt;/a&gt;  &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;安迪兒這邊使用project site &amp;amp; start from scratch&lt;/strong&gt;  &lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;首先先建一個repository，安迪兒取名叫ghblog &lt;br&gt;
+(ghost blog的意思)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src="https://lh3.googleusercontent.com/-jNxe_j7FCyg/VVd7Nk4MwVI/AAAAAAAAHs8/gke_b0Vv1Lc/w936-h283-no/githubghost001.jpg" alt="使用GitHub當靜態化Blog(備份你的Ghost blog)" title=""&gt;  &lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;開一個新的branch叫gh-pages &lt;br&gt;
+(這個是github定義，照這名子命名) &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src="https://lh3.googleusercontent.com/-kJoXtIpzewg/VVd7Nn7kbiI/AAAAAAAAHsc/l3NyIwAEtsw/w502-h455-no/githubghost002.jpg" alt="使用GitHub當靜態化Blog(備份你的Ghost blog)"&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;建一個index.html  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;!DOCTYPE html&amp;gt;  
+&amp;lt;html&amp;gt;  
+ &amp;lt;head&amp;gt;
+  &amp;lt;title&amp;gt;bowwow&amp;lt;/title&amp;gt;
+ &amp;lt;/head&amp;gt;
+ &amp;lt;body&amp;gt;
+  &amp;lt;h1&amp;gt;gogo&amp;lt;/h1&amp;gt;
+ &amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src="https://lh5.googleusercontent.com/-Yjzcl4c7o_4/VVd7NrBIFCI/AAAAAAAAHuQ/SXkxAk29ou4/w429-h307-no/githubghost003.jpg" alt="使用GitHub當靜態化Blog(備份你的Ghost blog)" title=""&gt; &lt;br&gt;
+&lt;img src="https://lh5.googleusercontent.com/-sFjAZtjKPXs/VVd7Obey_sI/AAAAAAAAHuE/FSW-vvB7l1M/w462-h373-no/githubghost004.jpg" alt="使用GitHub當靜態化Blog(備份你的Ghost blog)"&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;試試打開github上該專案的網頁 &lt;br&gt;
+&lt;a href="https://自己的名子.github.io/repository名子/"&gt;https://自己的名子.github.io/repository名子/&lt;/a&gt; &lt;br&gt;
+ex: &lt;br&gt;
+&lt;a href="https://bowwowxx.github.io/ghblog/"&gt;https://bowwowxx.github.io/ghblog/&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;順利的話應該頁面就開的出來嘍&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://lh6.googleusercontent.com/-ua0w_Uoaocs/VVd7OtzbVQI/AAAAAAAAHso/ik72HgVdjjc/w428-h318-no/githubghost005.jpg" alt="使用GitHub當靜態化Blog(備份你的Ghost blog)" title=""&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id="3github"&gt;3.網站做映像備份並推檔上github&lt;/h1&gt;
+
+&lt;p&gt;啟動ghost server &lt;br&gt;
+到ghost的目錄下 &lt;code&gt;npm start --production&lt;/code&gt; &lt;br&gt;
+打開網頁 127.0.0.1:2368 看有無啟動了&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://lh5.googleusercontent.com/-z6pkkp2w7C4/VVd7QTz_qUI/AAAAAAAAHtI/waUYNLv0jec/w398-h573-no/githubghost009.jpg" alt="使用GitHub當靜態化Blog(備份你的Ghost blog)" title=""&gt; &lt;br&gt;
+&lt;img src="https://lh6.googleusercontent.com/-ihW0tR9nhIg/VVd7RCmBS_I/AAAAAAAAHtQ/HBBaLmACzbo/w870-h573-no/githubghost010.jpg" alt="使用GitHub當靜態化Blog(備份你的Ghost blog)"&gt;&lt;/p&gt;
+
+&lt;p&gt;建立git gh-page branch的目錄 &lt;/p&gt;
+
+&lt;p&gt;在想要建的資料匣裡 &lt;br&gt;
+輸入
+&lt;code&gt;git clone https://github.com/自己的名子/repository名子.git static&lt;/code&gt;  &lt;/p&gt;
+
+&lt;p&gt;ex: &lt;br&gt;
+  git clone &lt;a href="https://github.com/bowwowxx/ghblog.git"&gt;https://github.com/bowwowxx/ghblog.git&lt;/a&gt; static  &lt;/p&gt;
+
+&lt;p&gt;此時目錄下會產生一個static的資料匣 &lt;br&gt;
+可以進去看一下git的東西是不是正確 &lt;br&gt;
+git status &lt;br&gt;
+git branch  &lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://lh3.googleusercontent.com/-EfUBO6wIajA/VVd7QF-SYPI/AAAAAAAAHtY/vzGliddytFw/s509-no/githubghost008.jpg" alt="使用GitHub當靜態化Blog(備份你的Ghost blog)"&gt;&lt;/p&gt;
+
+&lt;p&gt;然後回到static同一層(~/Desktop/github/) &lt;br&gt;
+執行 &lt;br&gt;
+&lt;code&gt;buster generate --domain=http://127.0.0.1:2368&lt;/code&gt;  &lt;/p&gt;
+
+&lt;p&gt;完成後，可以再進static裡看看有沒有所有備份好的靜態資料了  &lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://lh5.googleusercontent.com/-T6Q1U3X7JdA/VVd7RBpCeoI/AAAAAAAAHtw/LsSc20cKOC0/w574-h573-no/githubghost011.jpg" alt="使用GitHub當靜態化Blog(備份你的Ghost blog)"&gt;&lt;/p&gt;
+
+&lt;p&gt;一樣再回到static同一層(~/Desktop/github/) &lt;br&gt;
+執行
+&lt;code&gt;buster preview&lt;/code&gt;   &lt;/p&gt;
+
+&lt;p&gt;此時畫面會出現 Serving at port 9000  &lt;/p&gt;
+
+&lt;p&gt;打開瀏覽器輸入127.0.0.1:9000 &lt;br&gt;
+檢查一下所有靜態網頁資料正不正常&lt;/p&gt;
+
+&lt;p&gt;沒關題的話，就可以關掉ghost的server和Buster的server了&lt;/p&gt;
+
+&lt;p&gt;再來最後一步，就是把所有的資料推上github上 &lt;br&gt;
+執行&lt;code&gt;buster deploy&lt;/code&gt;  出現完工的訊息    &lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://lh3.googleusercontent.com/-cv_Tt65Mqe0/VVd7SgJxqYI/AAAAAAAAHuA/Ewb1H2Lb9C4/w631-h573-no/githubghost014.jpg" alt="使用GitHub當靜態化Blog(備份你的Ghost blog)" title=""&gt;  &lt;/p&gt;
+
+&lt;p&gt;就可以重新打開github的頁面看看有沒網站了 &lt;br&gt;
+&lt;a href="https://bowwowxx.github.io/ghblog/"&gt;https://bowwowxx.github.io/ghblog/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;終於呀....大工告成了 &lt;br&gt;
+日後要發文或修改，直接本機啟動server &lt;br&gt;
+push檔案上github，就可以關機了 &lt;br&gt;
+收工嘍~收工嘍~^^&lt;/p&gt;</content:encoded></item><item><title>在synology nas上架設簡約風格的ghost blog(node.js blog)</title><description>&lt;p&gt;一般建立網站 &lt;br&gt;
+大家常用的大約有wordpress、drupal、joomla、ghost&lt;/p&gt;
+
+&lt;p&gt;安迪兒看了一下今年列出來2015 best的統計 &lt;br&gt;
+順便給大家參考 &lt;br&gt;
+Best Content Management System of 2015 &lt;br&gt;
+&lt;a href="https://www.hoasted.com/blog/best-content-management-system-of-2015/"&gt;https://www.hoasted.com/blog/best-content-management-system-of-2015/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;之前對於ghost的簡約風格 &lt;br&gt;
+安迪兒一直很有好感 &lt;br&gt;
+加上ghost又是用node.js開發，和wordpress相比 &lt;br&gt;
+有簡易、輕量，效能優越，服務的訪客數較高 &lt;br&gt;
+markdown編輯器...等好處&lt;/p&gt;
+
+&lt;p&gt;安迪兒之前有試過在自家的nas上架wordpress &lt;br&gt;
+wordpress+php+mariadb+apache&lt;/p&gt;
+
+&lt;p&gt;但整個弄下來再加上wordpress一點點的基本外掛 &lt;br&gt;
+整個太肥了，連線時頁面瀏覽的效能不是很好 &lt;br&gt;
+(呃..說實話安迪兒的nas沒買頂規的, 以下是安迪兒的nas)
+&lt;img src="https://lh4.googleusercontent.com/-P0JSB4KDIIw/VVJMPu6gApI/AAAAAAAAHpA/EwEqX87r_cM/w644-h239-no/ghostblog002.jpg" alt=""&gt;&lt;/p&gt;
+
+&lt;p&gt;所以安迪兒後來就沒用wordpress &lt;br&gt;
+剛好前陣子nas也支援node.js了 &lt;br&gt;
+所以就來試一下在synology的nas上 &lt;br&gt;
+架個ghost的blog來玩玩。&lt;/p&gt;
+
+&lt;p&gt;和wordpress一樣，不一定要自已架設 &lt;br&gt;
+也可以直接使用外面的網站上的服務&lt;/p&gt;</description><link>http://bowwowxx.github.io/ghblog/zai-synology-nasshang-jia-she-jian-yue-feng-ge-de-ghost-blognode-js-blog/</link><guid isPermaLink="false">f5c899f6-d974-4c26-9d6e-cd3029faae51</guid><category>ghost blog</category><dc:creator>bowwow</dc:creator><pubDate>Wed, 13 May 2015 06:26:46 GMT</pubDate><media:content url="http://img.allenchou.cc/ghost-1.png" medium="image"/><content:encoded>&lt;img src="http://img.allenchou.cc/ghost-1.png" alt="在synology nas上架設簡約風格的ghost blog(node.js blog)"&gt;&lt;p&gt;一般建立網站 &lt;br&gt;
+大家常用的大約有wordpress、drupal、joomla、ghost&lt;/p&gt;
+
+&lt;p&gt;安迪兒看了一下今年列出來2015 best的統計 &lt;br&gt;
+順便給大家參考 &lt;br&gt;
+Best Content Management System of 2015 &lt;br&gt;
+&lt;a href="https://www.hoasted.com/blog/best-content-management-system-of-2015/"&gt;https://www.hoasted.com/blog/best-content-management-system-of-2015/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;之前對於ghost的簡約風格 &lt;br&gt;
+安迪兒一直很有好感 &lt;br&gt;
+加上ghost又是用node.js開發，和wordpress相比 &lt;br&gt;
+有簡易、輕量，效能優越，服務的訪客數較高 &lt;br&gt;
+markdown編輯器...等好處&lt;/p&gt;
+
+&lt;p&gt;安迪兒之前有試過在自家的nas上架wordpress &lt;br&gt;
+wordpress+php+mariadb+apache&lt;/p&gt;
+
+&lt;p&gt;但整個弄下來再加上wordpress一點點的基本外掛 &lt;br&gt;
+整個太肥了，連線時頁面瀏覽的效能不是很好 &lt;br&gt;
+(呃..說實話安迪兒的nas沒買頂規的, 以下是安迪兒的nas)
+&lt;img src="https://lh4.googleusercontent.com/-P0JSB4KDIIw/VVJMPu6gApI/AAAAAAAAHpA/EwEqX87r_cM/w644-h239-no/ghostblog002.jpg" alt="在synology nas上架設簡約風格的ghost blog(node.js blog)"&gt;&lt;/p&gt;
+
+&lt;p&gt;所以安迪兒後來就沒用wordpress &lt;br&gt;
+剛好前陣子nas也支援node.js了 &lt;br&gt;
+所以就來試一下在synology的nas上 &lt;br&gt;
+架個ghost的blog來玩玩。&lt;/p&gt;
+
+&lt;p&gt;和wordpress一樣，不一定要自已架設 &lt;br&gt;
+也可以直接使用外面的網站上的服務&lt;/p&gt;
+
+&lt;p&gt;像是 &lt;br&gt;
+ghost本身的站可以註冊免費試用一個月 &lt;br&gt;
+digitalocean 每個月5美元 &lt;br&gt;
+heroku 免費但有5M的限制(db可以放別的地方)&lt;/p&gt;
+
+&lt;p&gt;安迪兒這次用的是synology的ds213j 有2個HDD做raid1 &lt;br&gt;
+上面的版本是DSM5.1，己經有node.js可以安裝了 &lt;br&gt;
+不用像早期國外的user很坎坷的自己想盡辦法改核心移植上去&lt;/p&gt;
+
+&lt;p&gt;以下安迪兒記錄一下整個安裝的過程&lt;/p&gt;
+
+&lt;p&gt;1.捉ghost回來在筆電上試玩 &lt;br&gt;
+2.裝到nas裡，因為nas不關機，可以一直開著 &lt;br&gt;
+3.常駐服務，關掉ssh視窗也會背景執行&lt;/p&gt;
+
+&lt;p&gt;第一個步驟，先捉最新的ghost版本 &lt;br&gt;
+安迪兒是0.6.2版
+&lt;a href="https://ghost.org/download/"&gt;https://ghost.org/download/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;大至上照著installation的說明 &lt;br&gt;
+&lt;a href="https://github.com/TryGhost/Ghost"&gt;https://github.com/TryGhost/Ghost&lt;/a&gt; &lt;br&gt;
+&lt;a href="http://support.ghost.org/installing-ghost-mac/"&gt;http://support.ghost.org/installing-ghost-mac/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;筆電上安裝好node.js、npm好所有的package &lt;br&gt;
+下個npm start --production 啟動 &lt;br&gt;
+打開&lt;a href="http://localhost:2368"&gt;http://localhost:2368&lt;/a&gt; 就能看到ghsot簡約的畫面了&lt;/p&gt;
+
+&lt;p&gt;因為這部份文件說的很詳細了，
+安迪兒就直接從nas的安裝過程開始記錄&lt;/p&gt;
+
+&lt;p&gt;第二個步驟&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;nas上先安裝好node.js，開好ssh確定能登入ssh的登入畫面 &lt;br&gt;
+可以參考安迪兒之前的 &lt;br&gt;
+&lt;a href="http://www.dotblogs.com.tw/bowwowxx/archive/2014/08/14/146249.aspx"&gt;用Synology NAS 架 Git Server做版本控管&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;ssh登入nas
+測一下node.js有無裝好，版本多少?
+&lt;img src="https://lh6.googleusercontent.com/-JB2_KrpV4BI/VVJMnpeiZRI/AAAAAAAAHpU/HsP1Qm1BoWQ/w765-h280-no/ghostblog005.jpg" alt="在synology nas上架設簡約風格的ghost blog(node.js blog)"&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;把電腦上整包的ghost放到nas裡 &lt;br&gt;
+因為nas效能不好，所以安迪兒是在筆電上裝好ghost用到的modules &lt;br&gt;
+壓成zip整個搬到nas上，解開後再做修改
+&lt;img src="https://lh6.googleusercontent.com/-TrElRstSWx0/VVJNSrYZjRI/AAAAAAAAHqs/U-SQ2YXtU9k/w813-h446-no/ghostblog006.jpg" alt="在synology nas上架設簡約風格的ghost blog(node.js blog)"&gt;
+裝modules其實就是說明文件裡提到 &lt;br&gt;
+在電腦上ghost的目錄那裡執行 &lt;br&gt;
+npm install --production  &lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;就會裝上所有用到的modules &lt;br&gt;
+(裝完可以在node_modules的資料匣裡看到)  &lt;/p&gt;
+
+&lt;p&gt;裝完後本機測試完
+把ghost整包傳上nas裡
+(安迪兒是放到/volume1/web/blog)&lt;/p&gt;
+
+&lt;p&gt;記得要放到/volume1裡面 &lt;br&gt;
+(volume1指的是nas的硬碟 &lt;br&gt;
+不然nas的DSM一升級，東西就沒了)  &lt;/p&gt;
+
+&lt;p&gt;傳檔完成後，就來試試能不能執行&lt;/p&gt;
+
+&lt;p&gt;首先ssh root@192.x.x.x 進到nas &lt;br&gt;
+再到/volume1/web/blog的目錄下 &lt;br&gt;
+執行 &lt;br&gt;
+npm start --production  &lt;/p&gt;
+
+&lt;p&gt;嗯，有些錯誤 &lt;br&gt;
+沒關係，修正一下 &lt;br&gt;
+第一次出現了arm node&lt;em&gt;sqlite3.node的錯 &lt;br&gt;
+「node&lt;/em&gt;sqlite3-v2.2.3-node-v11-linux-arm  bababa....」&lt;/p&gt;
+
+&lt;p&gt;因為安迪兒沒另外再架db，是用sqllite(一個檔案搞定db) &lt;br&gt;
+這邊的錯誤是說沒有相關arm架構的lib&lt;/p&gt;
+
+&lt;p&gt;安迪兒看了一下node_modules裡的資料匣 &lt;br&gt;
+sqlite3的lib裡還真的只有node-v11-darwin-x64的資料匣  &lt;/p&gt;
+
+&lt;p&gt;路徑如下: &lt;br&gt;
+web/blog/node_modules/sqlite3/lib/binding/node-v11-linux-arm&lt;/p&gt;
+
+&lt;p&gt;安迪兒google了一下arm版的sqlite3 &lt;br&gt;
+這邊有人有提到 &lt;br&gt;
+&lt;a href="https://github.com/mapbox/node-sqlite3/issues/298"&gt;https://github.com/mapbox/node-sqlite3/issues/298&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;依issues裡面提到的，可以直接download這邊的來用 &lt;br&gt;
+&lt;a href="https://github.com/sweetpi/node-sqlite3-arm/releases/tag/node_sqlite3-v2.2.4-node-v11-linux-arm"&gt;https://github.com/sweetpi/node-sqlite3-arm/releases/tag/node_sqlite3-v2.2.4-node-v11-linux-arm&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;安迪兒在nas上建一下資料匣把node_sqlite3.node放入 &lt;br&gt;
+再執行 &lt;br&gt;
+npm start --production &lt;br&gt;
+就成功了&lt;/p&gt;
+
+&lt;p&gt;第二次因為server有在跑 &lt;br&gt;
+但瀏覽器一直連不到ghost的頁面 &lt;br&gt;
+安迪兒依序做了一些相關的測試和調整  &lt;/p&gt;
+
+&lt;p&gt;先寫隻test.js的server 跑看看瀏覽器有無畫面 &lt;br&gt;
+&lt;code&gt;var http = require ('http'); &lt;br&gt;
+http.createServer (function (req, res) { &lt;br&gt;
+res.writeHead (200, {'Content-Type': 'text / plain'}); &lt;br&gt;
+res.end ('Hello World \ n ') ; &lt;br&gt;
+}).listen (1337);
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;存檔執行
+node test.js&lt;/p&gt;
+
+&lt;p&gt;curl一下看本機有沒反應(ip是同一台) &lt;br&gt;
+curl &lt;a href="http://127.0.0.1:1337"&gt;http://127.0.0.1:1337&lt;/a&gt; &lt;br&gt;
+curl &lt;a href="http://192.168.x.x:1337"&gt;http://192.168.x.x:1337&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;看一下netstat -tl起了什麼port192.168.x.x &lt;br&gt;
+netstat -tl &lt;br&gt;
+&lt;img src="https://lh5.googleusercontent.com/-O-jcH3spLqc/VVJNU6-uRbI/AAAAAAAAHqE/PrVAeTm6A7s/w456-h327-no/ghostblog007.jpg" alt="在synology nas上架設簡約風格的ghost blog(node.js blog)"&gt;&lt;/p&gt;
+
+&lt;p&gt;然後再開一下防火牆 &lt;br&gt;
+&lt;img src="https://lh3.googleusercontent.com/-FvoM-qh0SAo/VVJNMigvooI/AAAAAAAAHps/H_dslN_fMBo/w646-h290-no/ghostblog008.jpg" alt="在synology nas上架設簡約風格的ghost blog(node.js blog)"&gt;
+最後調了一下ghost裡面的config的設定檔 &lt;br&gt;
+(加上url和修改host/port等等)
+&lt;img src="https://lh6.googleusercontent.com/-j8a4uopmpwc/VVJNTRbOTYI/AAAAAAAAHqg/EHnUVmCGN34/w411-h507-no/ghostblog009.jpg" alt="在synology nas上架設簡約風格的ghost blog(node.js blog)"&gt;&lt;/p&gt;
+
+&lt;p&gt;弄完後再執行 &lt;br&gt;
+npm start --production  &lt;/p&gt;
+
+&lt;p&gt;這次就成功了，真是開心吶&lt;/p&gt;
+
+&lt;p&gt;第三個步驟 &lt;br&gt;
+總不能一直用ssh連線去啟動server吧&lt;/p&gt;
+
+&lt;p&gt;安迪兒找了一下，看到其它人用的方式  &lt;/p&gt;
+
+&lt;p&gt;screen &lt;br&gt;
+嗯...沒辦法時的最下策 &lt;br&gt;
+&lt;a href="http://blog.vantol.org/installing-ghost-on-synology/"&gt;http://blog.vantol.org/installing-ghost-on-synology/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;forever &lt;br&gt;
+沒試，看資料說nas上的forever有點問題 &lt;br&gt;
+&lt;a href="http://nodejust.com/foever-npm-start-nodejs-ghost-background/"&gt;http://nodejust.com/foever-npm-start-nodejs-ghost-background/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;supervisor &lt;br&gt;
+還ok，但有點麻煩 &lt;br&gt;
+&lt;a href="http://blog.vantol.org/running-node-js-on-synology-with-supervisor/"&gt;http://blog.vantol.org/running-node-js-on-synology-with-supervisor/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;nas上的排程 &lt;br&gt;
+呃，每小時執行一次怪怪的  &lt;/p&gt;
+
+&lt;p&gt;最後安迪兒看到supervisor文章裡的init.d和supervisord.conf &lt;br&gt;
+就想說那直接放到etc/init裡弄個conf檔，開機執行一下services看看 &lt;br&gt;
+就寫了一隻blog.conf &lt;br&gt;
+(執行ghost時用http user來跑，小心別用root喔XD)&lt;/p&gt;
+
+&lt;p&gt;可以參考這邊 UpStart 簡介&lt;/p&gt;
+
+&lt;p&gt;blog.conf內容: &lt;br&gt;
+&lt;code&gt;start on started httpd-user
+ stop on runlevel [06]
+ setuid http
+ exec  npm start /volume1/web/blog --production&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;寫完後用root的權限傳上nas &lt;br&gt;
+cat blog.conf | ssh root@192.168.x.x cat "&gt;" /etc/init/blog.conf&lt;/p&gt;
+
+&lt;p&gt;然後ssh 用root登入測試一下 剛寫好的blog.conf能不能start or stop&lt;/p&gt;
+
+&lt;p&gt;切換到/etc/init下 &lt;br&gt;
+cd /etc/init &lt;br&gt;
+start blog &lt;br&gt;
+stop blog &lt;br&gt;
+&lt;img src="https://lh4.googleusercontent.com/-5IGl-IoClqM/VVJNWa7nMOI/AAAAAAAAHqk/Ycewu4JZOxc/w755-h551-no/ghostblog013.jpg" alt="在synology nas上架設簡約風格的ghost blog(node.js blog)" title=""&gt; &lt;/p&gt;
+
+&lt;p&gt;沒寫錯的話，應該可以正常啟動或關掉服務 &lt;br&gt;
+到這邊就差不多完成了&lt;/p&gt;
+
+&lt;p&gt;再來就下reboot nas吧 &lt;br&gt;
+shutdown -r now&lt;/p&gt;
+
+&lt;p&gt;等一陣子nas重開後，再試試ghost blog能不能連吧。
+&lt;img src="https://lh6.googleusercontent.com/-yAxMNP2E9kk/VVJNW5zWXOI/AAAAAAAAHqY/_YfUc9i_FIE/w813-h402-no/ghostblog014.jpg" alt="在synology nas上架設簡約風格的ghost blog(node.js blog)"&gt;&lt;/p&gt;
+
+&lt;p&gt;以下是安迪兒的成果(在自家nas上) &lt;br&gt;
+&lt;a href="http://bowwow.zapto.org/"&gt;http://bowwow.zapto.org/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;收工嘍~收工嘍&lt;/p&gt;
+
+&lt;p&gt;&lt;mark&gt;5/13補充:&lt;/mark&gt; &lt;br&gt;
+中午發現ghost blog突然沒了 &lt;br&gt;
+檢查了一下 &lt;br&gt;
+init裡的blog啟動檔整個不見 &lt;br&gt;
+原來是很好運的 &lt;br&gt;
+今天剛好碰到DSM由5.1升級成5.2 init裡邊的東西全被還原了  &lt;/p&gt;
+
+&lt;p&gt;所以相關的檔案資料千萬要放在volume裡面 &lt;br&gt;
+不然會像安迪兒一樣，神不知鬼不覺的自動升級後就沒了..XD&lt;/p&gt;</content:encoded></item><item><title>Welcome to Ghost</title><description>&lt;p&gt;You're live! Nice. We've put together a little post to introduce you to the Ghost editor and get you started. You can manage your content by signing in to the admin area at &lt;code&gt;&amp;lt;your blog URL&amp;gt;/ghost/&lt;/code&gt;. When you arrive, you can select this post from a list&lt;/p&gt;</description><link>http://bowwowxx.github.io/ghblog/welcome-to-ghost/</link><guid isPermaLink="false">b12474f8-fa68-4b33-b10b-1f6076983656</guid><category>Getting Started</category><dc:creator>bowwow</dc:creator><pubDate>Tue, 12 May 2015 17:05:58 GMT</pubDate><content:encoded>&lt;p&gt;You're live! Nice. We've put together a little post to introduce you to the Ghost editor and get you started. You can manage your content by signing in to the admin area at &lt;code&gt;&amp;lt;your blog URL&amp;gt;/ghost/&lt;/code&gt;. When you arrive, you can select this post from a list on the left and see a preview of it on the right. Click the little pencil icon at the top of the preview to edit this post and read the next section!&lt;/p&gt;
+
+&lt;h2 id="gettingstarted"&gt;Getting Started&lt;/h2&gt;
+
+&lt;p&gt;Ghost uses something called Markdown for writing. Essentially, it's a shorthand way to manage your post formatting as you write!&lt;/p&gt;
+
+&lt;p&gt;Writing in Markdown is really easy. In the left hand panel of Ghost, you simply write as you normally would. Where appropriate, you can use &lt;em&gt;shortcuts&lt;/em&gt; to &lt;strong&gt;style&lt;/strong&gt; your content. For example, a list:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Item number one&lt;/li&gt;
+&lt;li&gt;Item number two
+&lt;ul&gt;&lt;li&gt;A nested item&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;A final item&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;or with numbers!&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Remember to buy some milk  &lt;/li&gt;
+&lt;li&gt;Drink the milk  &lt;/li&gt;
+&lt;li&gt;Tweet that I remembered to buy the milk, and drank it&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id="links"&gt;Links&lt;/h3&gt;
+
+&lt;p&gt;Want to link to a source? No problem. If you paste in a URL, like &lt;a href="http://ghost.org"&gt;http://ghost.org&lt;/a&gt; - it'll automatically be linked up. But if you want to customise your anchor text, you can do that too! Here's a link to &lt;a href="http://ghost.org"&gt;the Ghost website&lt;/a&gt;. Neat.&lt;/p&gt;
+
+&lt;h3 id="whataboutimages"&gt;What about Images?&lt;/h3&gt;
+
+&lt;p&gt;Images work too! Already know the URL of the image you want to include in your article? Simply paste it in like this to make it show up:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://ghost.org/images/ghost.png" alt="The Ghost Logo"&gt;&lt;/p&gt;
+
+&lt;p&gt;Not sure which image you want to use yet? That's ok too. Leave yourself a descriptive placeholder and keep writing. Come back later and drag and drop the image in to upload:&lt;/p&gt;
+
+&lt;h3 id="quoting"&gt;Quoting&lt;/h3&gt;
+
+&lt;p&gt;Sometimes a link isn't enough, you want to quote someone on what they've said. It was probably very wisdomous. Is wisdomous a word? Find out in a future release when we introduce spellcheck! For now - it's definitely a word.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Wisdomous - it's definitely a word.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id="workingwithcode"&gt;Working with Code&lt;/h3&gt;
+
+&lt;p&gt;Got a streak of geek? We've got you covered there, too. You can write inline &lt;code&gt;&amp;lt;code&amp;gt;&lt;/code&gt; blocks really easily with back ticks. Want to show off something more comprehensive? 4 spaces of indentation gets you there.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;.awesome-thing {
+    display: block;
+    width: 100%;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id="readyforabreak"&gt;Ready for a Break?&lt;/h3&gt;
+
+&lt;p&gt;Throw 3 or more dashes down on any new line and you've got yourself a fancy new divider. Aw yeah.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h3 id="advancedusage"&gt;Advanced Usage&lt;/h3&gt;
+
+&lt;p&gt;There's one fantastic secret about Markdown. If you want, you can write plain old HTML and it'll still work! Very flexible.&lt;/p&gt;
+
+&lt;p&gt;&lt;input type="text" placeholder="I'm an input field!"&gt;&lt;/p&gt;
+
+&lt;p&gt;That should be enough to get you started. Have fun - and let us know what you think :)&lt;/p&gt;</content:encoded></item></channel></rss>
