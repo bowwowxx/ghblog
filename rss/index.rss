@@ -1,4 +1,4 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>bowwow</title><description>Thoughts, stories and ideas.</description><link>http://bowwowxx.github.io/ghblog/</link><generator>Ghost 0.6</generator><lastBuildDate>Sun, 17 May 2015 08:29:58 GMT</lastBuildDate><atom:link href="http://bowwowxx.github.io/ghblog/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>使用GitHub當靜態化Blog(備份你的Ghost blog)</title><description>&lt;p&gt;寫程式或翻譯文章的人應該都知道 &lt;br&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>bowwow</title><description>Thoughts, stories and ideas.</description><link>http://bowwowxx.github.io/ghblog/</link><generator>Ghost 0.6</generator><lastBuildDate>Sun, 17 May 2015 15:46:02 GMT</lastBuildDate><atom:link href="http://bowwowxx.github.io/ghblog/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>使用GitHub當靜態化Blog(備份你的Ghost blog)</title><description>&lt;p&gt;寫程式或翻譯文章的人應該都知道 &lt;br&gt;
 github是多麼偉大的發明 &lt;br&gt;
 除了可以讓人自由自在的倒版本至任何時候 &lt;br&gt;
 也可以好好的劃分一下
@@ -10,23 +10,23 @@ github是多麼偉大的發明 &lt;br&gt;
 &lt;p&gt;所以安迪兒就試著把前些天在nas上架設的ghost blog &lt;br&gt;
 想辦法弄上去github&lt;/p&gt;
 
-&lt;p&gt;然而...真的給安迪兒成功了&lt;/p&gt;
+&lt;p&gt;最後安迪兒完成了  &lt;/p&gt;
 
-&lt;p&gt;安迪兒的成果 &lt;br&gt;
+&lt;p&gt;以下是安迪兒完工後的成果 &lt;br&gt;
 &lt;a href="https://bowwowxx.github.io/ghblog/"&gt;https://bowwowxx.github.io/ghblog/&lt;/a&gt;  &lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;先說一下和原來的ghst blog有什麼差異和這樣做的優點&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;先說一下和原來的ghost blog有什麼差異和這樣做的優點&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;github的名聲響亮，網站夠穩定  &lt;/li&gt;
 &lt;li&gt;github新增/刪除/修改和倒檔到各種版本，操作很方便  &lt;/li&gt;
 &lt;li&gt;github放的是整個網站所產生的&lt;strong&gt;靜態網頁&lt;/strong&gt; &lt;br&gt;
 所以速度不止快又安全(都是靜態網頁了還能幹嘛)&lt;/li&gt;
-&lt;li&gt;超方便，所有東西本機搞定，寫文章或做設定時 &lt;br&gt;
+&lt;li&gt;方便性，所有東西本機搞定，寫文章或做設定時 &lt;br&gt;
 本機起一下server傳至github後就可以關機，收書包回家了~XD&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;以上是單純就一般展示類的網站或blog來說，其它的不太適合這樣用&lt;/p&gt;
+&lt;p&gt;以上是單純就一般展示類的網站或blog，其它的不一定適合這樣使用&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;再來是整個串接的流程&lt;/strong&gt;
 為什麼能這樣做呢? &lt;br&gt;
@@ -38,7 +38,7 @@ github是多麼偉大的發明 &lt;br&gt;
 &lt;p&gt;&lt;strong&gt;以下就和大家分享一下執行的方式&lt;/strong&gt;    &lt;/p&gt;
 
 &lt;p&gt;這邊是使用Buest這個python的程式 &lt;br&gt;
-&lt;a href="https://github.com/axitkhurana/buster"&gt;https:&lt;/a&gt;&lt;/p&gt;</description><link>http://bowwowxx.github.io/ghblog/shi-yong-githubdang-jing-tai-hua-blogbei-fen-ni-de-ghost-blog/</link><guid isPermaLink="false">792ac709-6ddf-4312-aa0b-8dbdc3e6a3f2</guid><category>ghost blog</category><category>ghithub</category><dc:creator>bowwow</dc:creator><pubDate>Sat, 16 May 2015 19:59:55 GMT</pubDate><media:content url="http://cdn.designrshub.com/wp-content/uploads/2013/11/free-ghost-themes-05.jpg" medium="image"/><content:encoded>&lt;img src="http://cdn.designrshub.com/wp-content/uploads/2013/11/free-ghost-themes-05.jpg" alt="使用GitHub當靜態化Blog(備份你的Ghost blog)"&gt;&lt;p&gt;寫程式或翻譯文章的人應該都知道 &lt;br&gt;
+&lt;a href="https://github.com/axitkhurana/buster"&gt;https://github.&lt;/a&gt;&lt;/p&gt;</description><link>http://bowwowxx.github.io/ghblog/shi-yong-githubdang-jing-tai-hua-blogbei-fen-ni-de-ghost-blog/</link><guid isPermaLink="false">792ac709-6ddf-4312-aa0b-8dbdc3e6a3f2</guid><category>ghost blog</category><category>github</category><dc:creator>bowwow</dc:creator><pubDate>Sat, 16 May 2015 19:59:55 GMT</pubDate><media:content url="http://cdn.designrshub.com/wp-content/uploads/2013/11/free-ghost-themes-05.jpg" medium="image"/><content:encoded>&lt;img src="http://cdn.designrshub.com/wp-content/uploads/2013/11/free-ghost-themes-05.jpg" alt="使用GitHub當靜態化Blog(備份你的Ghost blog)"&gt;&lt;p&gt;寫程式或翻譯文章的人應該都知道 &lt;br&gt;
 github是多麼偉大的發明 &lt;br&gt;
 除了可以讓人自由自在的倒版本至任何時候 &lt;br&gt;
 也可以好好的劃分一下
@@ -50,23 +50,23 @@ github是多麼偉大的發明 &lt;br&gt;
 &lt;p&gt;所以安迪兒就試著把前些天在nas上架設的ghost blog &lt;br&gt;
 想辦法弄上去github&lt;/p&gt;
 
-&lt;p&gt;然而...真的給安迪兒成功了&lt;/p&gt;
+&lt;p&gt;最後安迪兒完成了  &lt;/p&gt;
 
-&lt;p&gt;安迪兒的成果 &lt;br&gt;
+&lt;p&gt;以下是安迪兒完工後的成果 &lt;br&gt;
 &lt;a href="https://bowwowxx.github.io/ghblog/"&gt;https://bowwowxx.github.io/ghblog/&lt;/a&gt;  &lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;先說一下和原來的ghst blog有什麼差異和這樣做的優點&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;先說一下和原來的ghost blog有什麼差異和這樣做的優點&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;github的名聲響亮，網站夠穩定  &lt;/li&gt;
 &lt;li&gt;github新增/刪除/修改和倒檔到各種版本，操作很方便  &lt;/li&gt;
 &lt;li&gt;github放的是整個網站所產生的&lt;strong&gt;靜態網頁&lt;/strong&gt; &lt;br&gt;
 所以速度不止快又安全(都是靜態網頁了還能幹嘛)&lt;/li&gt;
-&lt;li&gt;超方便，所有東西本機搞定，寫文章或做設定時 &lt;br&gt;
+&lt;li&gt;方便性，所有東西本機搞定，寫文章或做設定時 &lt;br&gt;
 本機起一下server傳至github後就可以關機，收書包回家了~XD&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;以上是單純就一般展示類的網站或blog來說，其它的不太適合這樣用&lt;/p&gt;
+&lt;p&gt;以上是單純就一般展示類的網站或blog，其它的不一定適合這樣使用&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;再來是整個串接的流程&lt;/strong&gt;
 為什麼能這樣做呢? &lt;br&gt;
@@ -105,8 +105,8 @@ github是多麼偉大的發明 &lt;br&gt;
 &lt;p&gt;&lt;a href="http://bowwowxx.github.io/ghblog/shi-yong-githubdang-jing-tai-hua-blogbei-fen-ni-de-ghost-blog/"&gt;wget&lt;/a&gt; &lt;br&gt;
 執行&lt;code&gt;brew install wget&lt;/code&gt;  &lt;/p&gt;
 
-&lt;p&gt;以上軟體都裝完後，就可以收書包回家繼續~XD
-(開完笑的，大約完成1/3啦)&lt;/p&gt;
+&lt;p&gt;以上軟體都裝完後，就可以收書包....回家再繼續
+(開完笑的，大約完成了1/3)&lt;/p&gt;
 
 &lt;h1 id="2github"&gt;2.再來是設定github的部份&lt;/h1&gt;
 
@@ -126,7 +126,7 @@ github是多麼偉大的發明 &lt;br&gt;
 
 &lt;ul&gt;
 &lt;li&gt;開一個新的branch叫gh-pages &lt;br&gt;
-(這個github定義，照這名子取) &lt;/li&gt;
+(這個是github定義，照這名子命名) &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;img src="https://lh3.googleusercontent.com/-kJoXtIpzewg/VVd7Nn7kbiI/AAAAAAAAHsc/l3NyIwAEtsw/w502-h455-no/githubghost002.jpg" alt="使用GitHub當靜態化Blog(備份你的Ghost blog)"&gt;&lt;/p&gt;
@@ -164,7 +164,7 @@ ex: &lt;br&gt;
 
 &lt;p&gt;啟動ghost server &lt;br&gt;
 到ghost的目錄下 &lt;code&gt;npm start --production&lt;/code&gt; &lt;br&gt;
-打開網頁 127.0.0.1:2368 看有無開啟了&lt;/p&gt;
+打開網頁 127.0.0.1:2368 看有無啟動了&lt;/p&gt;
 
 &lt;p&gt;&lt;img src="https://lh5.googleusercontent.com/-z6pkkp2w7C4/VVd7QTz_qUI/AAAAAAAAHtI/waUYNLv0jec/w398-h573-no/githubghost009.jpg" alt="使用GitHub當靜態化Blog(備份你的Ghost blog)" title=""&gt; &lt;br&gt;
 &lt;img src="https://lh6.googleusercontent.com/-ihW0tR9nhIg/VVd7RCmBS_I/AAAAAAAAHtQ/HBBaLmACzbo/w870-h573-no/githubghost010.jpg" alt="使用GitHub當靜態化Blog(備份你的Ghost blog)"&gt;&lt;/p&gt;
@@ -185,7 +185,7 @@ git branch  &lt;/p&gt;
 
 &lt;p&gt;&lt;img src="https://lh3.googleusercontent.com/-EfUBO6wIajA/VVd7QF-SYPI/AAAAAAAAHtY/vzGliddytFw/s509-no/githubghost008.jpg" alt="使用GitHub當靜態化Blog(備份你的Ghost blog)"&gt;&lt;/p&gt;
 
-&lt;p&gt;然後回到static外 &lt;br&gt;
+&lt;p&gt;然後回到static同一層(~/Desktop/github/) &lt;br&gt;
 執行 &lt;br&gt;
 &lt;code&gt;buster generate --domain=http://127.0.0.1:2368&lt;/code&gt;  &lt;/p&gt;
 
@@ -193,7 +193,7 @@ git branch  &lt;/p&gt;
 
 &lt;p&gt;&lt;img src="https://lh5.googleusercontent.com/-T6Q1U3X7JdA/VVd7RBpCeoI/AAAAAAAAHtw/LsSc20cKOC0/w574-h573-no/githubghost011.jpg" alt="使用GitHub當靜態化Blog(備份你的Ghost blog)"&gt;&lt;/p&gt;
 
-&lt;p&gt;一樣再回到static外 &lt;br&gt;
+&lt;p&gt;一樣再回到static同一層(~/Desktop/github/) &lt;br&gt;
 執行
 &lt;code&gt;buster preview&lt;/code&gt;   &lt;/p&gt;
 
