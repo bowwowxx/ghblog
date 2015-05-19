@@ -1,4 +1,63 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>bowwow</title><description>Thoughts, stories and ideas.</description><link>http://bowwowxx.github.io/ghblog/</link><generator>Ghost 0.6</generator><lastBuildDate>Sun, 17 May 2015 15:46:02 GMT</lastBuildDate><atom:link href="http://bowwowxx.github.io/ghblog/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>使用GitHub當靜態化Blog(備份你的Ghost blog)</title><description>&lt;p&gt;寫程式或翻譯文章的人應該都知道 &lt;br&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>bowwow</title><description>Thoughts, stories and ideas.</description><link>http://bowwowxx.github.io/ghblog/</link><generator>Ghost 0.6</generator><lastBuildDate>Tue, 19 May 2015 18:18:59 GMT</lastBuildDate><atom:link href="http://bowwowxx.github.io/ghblog/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>怕忘記重要的待辦事項?用免費的google簡訊來通知你</title><description>google calendar</description><link>http://bowwowxx.github.io/ghblog/zhong-yao-dai-ban-shi-xiang-pa-wang-ji-shi-yong-mian-fei-de-googlejian-xun-lai-tong-zhi-ni/</link><guid isPermaLink="false">6b938abd-73c4-4e21-9396-d7afdcc6df4a</guid><category>tips</category><dc:creator>bowwow</dc:creator><pubDate>Tue, 19 May 2015 17:39:27 GMT</pubDate><media:content url="https://lh3.googleusercontent.com/Zx3bdSStF5OeFbUJmuS513woLDPCSZEXoBupxEh9CFo=w348-h207-p-no" medium="image"/><content:encoded>&lt;img src="https://lh3.googleusercontent.com/Zx3bdSStF5OeFbUJmuS513woLDPCSZEXoBupxEh9CFo=w348-h207-p-no" alt="怕忘記重要的待辦事項?用免費的google簡訊來通知你"&gt;&lt;p&gt;最近剛好安迪兒和朋友聊到關於&lt;strong&gt;安排行程&lt;/strong&gt;這件事 &lt;br&gt;
+因為現代人&lt;strong&gt;e-mail&lt;/strong&gt;或是&lt;strong&gt;桌面通知&lt;/strong&gt;收太多 &lt;br&gt;
+對於這些他竟然有點麻木，大腦會不自覺的去自動忽略這些 &lt;br&gt;
+(大公司的mail量太可怕了~XD)  &lt;/p&gt;
+
+&lt;p&gt;加上他本身雜事超多，又都在外面跑 &lt;br&gt;
+很希望能單純的，像是明天要辦的重要事項 &lt;br&gt;
+前一天晚上簡訊提醒他一下就好 &lt;br&gt;
+其它他再固定找時間上網安排一下行事曆裡的活動  &lt;/p&gt;
+
+&lt;p&gt;和他聊了一下，安迪兒突然想起 &lt;br&gt;
+很久以前有玩過google calendar的簡訊 &lt;br&gt;
+其實還蠻符合這功用的&lt;/p&gt;
+
+&lt;p&gt;所以安迪兒就再試了一下 &lt;br&gt;
+&lt;strong&gt;嗯...真的還蠻實用的&lt;/strong&gt; &lt;br&gt;
+一些重要日子，要辦啥文件或是買什麼東西、繳什麼費用 &lt;br&gt;
+都可以照設定的時間收到簡訊通知(免費的)
+就算網路沒開，手機還是可以收的到簡訊&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;感覺還不錯!&lt;/strong&gt; &lt;br&gt;
+這很適合用在全家共同的行事曆 &lt;br&gt;
+設定後，只要其中一人新增事項，其它人也會收到通知 &lt;br&gt;
+像是訂票交費之類的，大家一忙很怕都忘了&lt;/p&gt;
+
+&lt;p&gt;以下安迪兒大約貼一下設定的畫面，供大家參考玩玩 &lt;br&gt;
+整個設定蠻容易的
+大約就是登入&lt;a href="https://www.google.com.tw/url?sa=t&amp;amp;rct=j&amp;amp;q=&amp;amp;esrc=s&amp;amp;source=web&amp;amp;cd=1&amp;amp;cad=rja&amp;amp;uact=8&amp;amp;ved=0CBwQFjAA&amp;amp;url=https%3A%2F%2Fwww.google.com%2Fcalendar%2Frender%3Fhl%3Dzh_tw&amp;amp;ei=3G1bVeiOLoWQ8QWHloGIAw&amp;amp;usg=AFQjCNF7NE3lkg4WozNAbHmH4PRbcaDoQg&amp;amp;sig2=UpkFIIIiZuzqe4Xx37NO1g&amp;amp;bvm=bv.93564037,d.dGc"&gt;google行事曆&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;建一個新的行事曆&lt;/strong&gt; &lt;br&gt;
+&lt;img src="https://lh4.googleusercontent.com/-jMICbbnVp9I/VVtsdtCSyyI/AAAAAAAAHvE/O_L3NIsxPVU/w1222-h469-no/googlesms1_002.jpg" alt="怕忘記重要的待辦事項?用免費的google簡訊來通知你"&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;設定一下行事曆的mobile功能&lt;/strong&gt; &lt;br&gt;
+輸入手機的號碼，然後google馬上會寄一封簡訊到那隻手機 &lt;br&gt;
+再把簡訊裡面的驗證碼貼回來按下完成設定就可以了  &lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://lh5.googleusercontent.com/-hqU2Zp40zUs/VVtsdmIeugI/AAAAAAAAHu8/0FkXlqez8-w/w799-h505-no/googlesms1_003.jpg" alt="怕忘記重要的待辦事項?用免費的google簡訊來通知你" title=""&gt;  &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;再點開日曆設定&lt;/strong&gt; &lt;br&gt;
+設定一下該日曆的 [編輯通知]
+&lt;img src="https://lh4.googleusercontent.com/-iV6WURyWimw/VVtseaphWJI/AAAAAAAAHvI/wuvWawRJmRU/w1178-h340-no/googlesms1_004.jpg" alt="怕忘記重要的待辦事項?用免費的google簡訊來通知你" title=""&gt;  &lt;/p&gt;
+
+&lt;p&gt;這邊可以設定行事曆的活動開始前多久會簡訊通知你 &lt;br&gt;
+安迪兒設定了全天和時段的2種活動都通知 &lt;br&gt;
+(EX:全天是指明天整日停水，時段是指開會2小時這種)
+&lt;img src="https://lh4.googleusercontent.com/-o2gn0m8X6ro/VVtseQKf8SI/AAAAAAAAHvM/dF9kYpbVEuI/w1113-h475-no/googlesms1_005.jpg" alt="怕忘記重要的待辦事項?用免費的google簡訊來通知你" title=""&gt;  &lt;/p&gt;
+
+&lt;p&gt;以上設定好，就算完成嘍  &lt;/p&gt;
+
+&lt;p&gt;如果想要全家能一起共用編輯和接收訊息 &lt;br&gt;
+就在[共用此日曆]那邊加入別的人進來
+加進來的人，要再自行去設定他的google行事曆通知功能
+是不是很方便呢^^  &lt;/p&gt;
+
+&lt;p&gt;安迪兒下次會再分享一篇 &lt;br&gt;
+再進階一些的功能，關於gmail轉簡訊的方式    &lt;/p&gt;
+
+&lt;p&gt;~收工嘍~收工嘍&lt;/p&gt;
+
+&lt;p&gt;&lt;mark&gt;&lt;a href="https://bowwowxx.github.io/ghblog/"&gt;以上文章同步發表至安迪兒另一個github備份站&lt;/a&gt;&lt;/mark&gt;&lt;/p&gt;</content:encoded></item><item><title>使用GitHub當靜態化Blog(備份你的Ghost blog)</title><description>&lt;p&gt;寫程式或翻譯文章的人應該都知道 &lt;br&gt;
 github是多麼偉大的發明 &lt;br&gt;
 除了可以讓人自由自在的倒版本至任何時候 &lt;br&gt;
 也可以好好的劃分一下
@@ -465,7 +524,7 @@ init裡的blog啟動檔整個不見 &lt;br&gt;
 今天剛好碰到DSM由5.1升級成5.2 init裡邊的東西全被還原了  &lt;/p&gt;
 
 &lt;p&gt;所以相關的檔案資料千萬要放在volume裡面 &lt;br&gt;
-不然會像安迪兒一樣，神不知鬼不覺的自動升級後就沒了..XD&lt;/p&gt;</content:encoded></item><item><title>Welcome to Ghost</title><description>&lt;p&gt;You're live! Nice. We've put together a little post to introduce you to the Ghost editor and get you started. You can manage your content by signing in to the admin area at &lt;code&gt;&amp;lt;your blog URL&amp;gt;/ghost/&lt;/code&gt;. When you arrive, you can select this post from a list&lt;/p&gt;</description><link>http://bowwowxx.github.io/ghblog/welcome-to-ghost/</link><guid isPermaLink="false">b12474f8-fa68-4b33-b10b-1f6076983656</guid><category>Getting Started</category><dc:creator>bowwow</dc:creator><pubDate>Tue, 12 May 2015 17:05:58 GMT</pubDate><content:encoded>&lt;p&gt;You're live! Nice. We've put together a little post to introduce you to the Ghost editor and get you started. You can manage your content by signing in to the admin area at &lt;code&gt;&amp;lt;your blog URL&amp;gt;/ghost/&lt;/code&gt;. When you arrive, you can select this post from a list on the left and see a preview of it on the right. Click the little pencil icon at the top of the preview to edit this post and read the next section!&lt;/p&gt;
+不然會像安迪兒一樣，神不知鬼不覺的自動升級後就沒了..XD&lt;/p&gt;</content:encoded></item><item><title>Welcome to Ghost</title><description>&lt;p&gt;You're live! Nice. We've put together a little post to introduce you to the Ghost editor and get you started. You can manage your content by signing in to the admin area at &lt;code&gt;&amp;lt;your blog URL&amp;gt;/ghost/&lt;/code&gt;. When you arrive, you can select this post from a list&lt;/p&gt;</description><link>http://bowwowxx.github.io/ghblog/welcome-to-ghost/</link><guid isPermaLink="false">b12474f8-fa68-4b33-b10b-1f6076983656</guid><category>ghost blog</category><dc:creator>bowwow</dc:creator><pubDate>Tue, 12 May 2015 17:05:58 GMT</pubDate><content:encoded>&lt;p&gt;You're live! Nice. We've put together a little post to introduce you to the Ghost editor and get you started. You can manage your content by signing in to the admin area at &lt;code&gt;&amp;lt;your blog URL&amp;gt;/ghost/&lt;/code&gt;. When you arrive, you can select this post from a list on the left and see a preview of it on the right. Click the little pencil icon at the top of the preview to edit this post and read the next section!&lt;/p&gt;
 
 &lt;h2 id="gettingstarted"&gt;Getting Started&lt;/h2&gt;
 
