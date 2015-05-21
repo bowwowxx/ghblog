@@ -1,4 +1,125 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>bowwow</title><description>Thoughts, stories and ideas.</description><link>http://bowwowxx.github.io/ghblog/</link><generator>Ghost 0.6</generator><lastBuildDate>Tue, 19 May 2015 18:18:59 GMT</lastBuildDate><atom:link href="http://bowwowxx.github.io/ghblog/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>怕忘記重要的待辦事項?用免費的google簡訊來通知你</title><description>google calendar</description><link>http://bowwowxx.github.io/ghblog/zhong-yao-dai-ban-shi-xiang-pa-wang-ji-shi-yong-mian-fei-de-googlejian-xun-lai-tong-zhi-ni/</link><guid isPermaLink="false">6b938abd-73c4-4e21-9396-d7afdcc6df4a</guid><category>tips</category><dc:creator>bowwow</dc:creator><pubDate>Tue, 19 May 2015 17:39:27 GMT</pubDate><media:content url="https://lh3.googleusercontent.com/Zx3bdSStF5OeFbUJmuS513woLDPCSZEXoBupxEh9CFo=w348-h207-p-no" medium="image"/><content:encoded>&lt;img src="https://lh3.googleusercontent.com/Zx3bdSStF5OeFbUJmuS513woLDPCSZEXoBupxEh9CFo=w348-h207-p-no" alt="怕忘記重要的待辦事項?用免費的google簡訊來通知你"&gt;&lt;p&gt;最近剛好安迪兒和朋友聊到關於&lt;strong&gt;安排行程&lt;/strong&gt;這件事 &lt;br&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>bowwow</title><description>Thoughts, stories and ideas.</description><link>http://bowwowxx.github.io/ghblog/</link><generator>Ghost 0.6</generator><lastBuildDate>Thu, 21 May 2015 16:50:16 GMT</lastBuildDate><atom:link href="http://bowwowxx.github.io/ghblog/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Server掛點無人知?重要Mail用免費Google簡訊通知你</title><description>use google doc to get free sms and mail alerts.</description><link>http://bowwowxx.github.io/ghblog/servergua-dian-wu-ren-zhi-zhong-yao-mailyong-mian-fei-googlejian-xun-tong-zhi-nin/</link><guid isPermaLink="false">2b9ec8b1-cd91-41da-8e76-d2873db899f1</guid><category>tips</category><dc:creator>bowwow</dc:creator><pubDate>Thu, 21 May 2015 16:28:37 GMT</pubDate><media:content url="https://lh6.googleusercontent.com/-smQ3OXNJPTE/VVzAVN53oWI/AAAAAAAAHxs/IYgIygl7qwM/w477-h231-no/googlesms2_12.png" medium="image"/><content:encoded>&lt;img src="https://lh6.googleusercontent.com/-smQ3OXNJPTE/VVzAVN53oWI/AAAAAAAAHxs/IYgIygl7qwM/w477-h231-no/googlesms2_12.png" alt="Server掛點無人知?重要Mail用免費Google簡訊通知你"&gt;&lt;p&gt;之前安迪兒設定
+&lt;strong&gt;「重要待辦事項用google行事曆發簡訊 」&lt;/strong&gt; &lt;br&gt;
+剛好看到一篇文章，是間接使用Gmail對手機發簡訊   &lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://techawakening.org/website-downtime-free-sms-alerts-google-docs/988/"&gt;Use Google Docs to Get Free SMS and Email Alerts When your Website is Down&lt;/a&gt;  &lt;/p&gt;
+
+&lt;p&gt;安迪兒覺的很有趣，就查一下Google Docs的函式 &lt;br&gt;
+也寫了一個來玩一下  &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;關於mail發簡訊的例子用在那呢?&lt;/strong&gt; &lt;br&gt;
+最直覺就是server掛點了or有重要的mail想用簡訊來提醒  &lt;/p&gt;
+
+&lt;p&gt;以安迪兒來說，前公司的server有時會掛點 &lt;br&gt;
+雖然有同事寫監控程式，會發mail通知 &lt;br&gt;
+(幫他聲明一下，該同事很帥氣，住天母是金城武鄰居 &lt;br&gt;
+&lt;strong&gt;單身&lt;/strong&gt;要的話留言報名~XD)&lt;/p&gt;
+
+&lt;p&gt;但經理曾半開玩笑的說「mail太多了，之後要加上手機簡訊通知!!  」 &lt;br&gt;
+以這個例子來說，其實可以利用上述的方式來達到發簡訊的功能&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Gmail發簡訊的原理是?&lt;/strong&gt; &lt;br&gt;
+因為gmail沒有這個功能 &lt;br&gt;
+但google行事曆有 &lt;br&gt;
+所以用一個中間的google doc文件裡的程式定時去執行這件事 &lt;/p&gt;
+
+&lt;p&gt;程式撰寫的邏輯大約是先用程式去搜要的gmail &lt;br&gt;
+再建立&amp;amp;搬移至google calendar上 &lt;br&gt;
+再利用calendar的功能發簡訊 &lt;br&gt;
+最後再做一些不重覆寄等等收尾的處理  &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;關於試算表&lt;/strong&gt; &lt;br&gt;
+一直以來安迪兒都覺的微軟excel超威的 &lt;br&gt;
+以前助理們用到的企業內和專案的excel真是出神入化 &lt;br&gt;
+裡面滿滿的巨集程式樞紐分析 &lt;br&gt;
+程式寫不出來時，還可以去找他們商量 &lt;br&gt;
+也許他們輕易的弄一下馬上就生的出結果 &lt;br&gt;
+還可以用程式產生程式，整個讓安迪兒好生佩服  &lt;/p&gt;
+
+&lt;p&gt;但看了一下google doc裡面的excel(試算表) &lt;br&gt;
+&lt;strong&gt;它...更強大&lt;/strong&gt; &lt;br&gt;
+除了基本的巨集之外，還可以使用一些google的服務 &lt;br&gt;
+像是這次用的google mail和google calendar &lt;br&gt;
+都可以在上面寫程式做控制=O=&lt;/p&gt;
+
+&lt;p&gt;這麼強大的google試算表 當然要好好的玩一下^^&lt;/p&gt;
+
+&lt;p&gt;以下就記錄安迪兒整個執行的過程   &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;1.先確定或打開google行事曆的簡訊設定&lt;/strong&gt; &lt;br&gt;
+&lt;img src="https://lh6.googleusercontent.com/-RU4df6cQ7f0/VVy8OhtNlKI/AAAAAAAAHxA/UmgHM88XoQA/w459-h385-no/googlesms2_010.jpg" alt="Server掛點無人知?重要Mail用免費Google簡訊通知你" title=""&gt;  &lt;/p&gt;
+
+&lt;p&gt;可以參考安迪兒上一篇 &lt;br&gt;
+&lt;a href="http://www.dotblogs.com.tw/bowwowxx/archive/2015/05/20/151347.aspx"&gt;怕忘記重要的待辦事項?用免費的google簡訊來通知你...詳&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2.至gmail裡面&lt;/strong&gt; &lt;br&gt;
+&lt;a href="https://mail.google.com/"&gt;Gmail - Google&lt;/a&gt; &lt;br&gt;
+勾一些想要傳簡訊的mail，點[選篩選這類的郵件] &lt;br&gt;
+套用標籤那新增一個叫Alert的標籤 &lt;br&gt;
+(安迪兒的程式預設是Alert，可以自行修改)
+&lt;img src="https://lh3.googleusercontent.com/-O5H5JdCVv3k/VV3nVWp58lI/AAAAAAAAHzs/vx-SI8d6fcY/w828-h180-no/googlesms2_0020.jpg" alt="Server掛點無人知?重要Mail用免費Google簡訊通知你"&gt;
+&lt;img src="https://lh3.googleusercontent.com/-HvFMfaniNYg/VV3nUpN_scI/AAAAAAAAHzo/kjAy_6kqHHM/w438-h435-no/googlesms2_0019.jpg" alt="Server掛點無人知?重要Mail用免費Google簡訊通知你"&gt;
+&lt;img src="https://lh5.googleusercontent.com/-arZHhro6Y4E/VV3nUkBRX4I/AAAAAAAAHzk/bSmH-tE2z_4/w597-h279-no/googlesms2_0017.jpg" alt="Server掛點無人知?重要Mail用免費Google簡訊通知你"&gt;
+&lt;img src="https://lh3.googleusercontent.com/dp14x0B6KZBmfBi0w_P_e-ZKFJxDXv8stFwChCBWA6Y=w632-h180-p-no" alt="Server掛點無人知?重要Mail用免費Google簡訊通知你"&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;3.再來登入google文件&lt;/strong&gt; &lt;br&gt;
+&lt;a href="https://www.google.com/docs/about/"&gt;Google Docs - create and edit documents online, for free.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;建立一個新的試算表 &lt;br&gt;
+&lt;strong&gt;點選[工具]-[指令碼編輯器]&lt;/strong&gt;   &lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://lh5.googleusercontent.com/-o_dKI955y58/VVy8MvsxyEI/AAAAAAAAHwY/pRl5UAIl04I/w532-h410-no/googlesms2_001.jpg" alt="Server掛點無人知?重要Mail用免費Google簡訊通知你" title=""&gt;  &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;新增一個google apps script的[網路應用程式]&lt;/strong&gt;   &lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://lh6.googleusercontent.com/-0m7I2gG9bx0/VVy8MYN7PkI/AAAAAAAAHwE/B6npgkJ9NaY/w833-h565-no/googlesms2_002.jpg" alt="Server掛點無人知?重要Mail用免費Google簡訊通知你" title=""&gt; &lt;/p&gt;
+
+&lt;p&gt;再來這邊就開始寫想要程式碼 &lt;br&gt;
+這邊附上安迪兒寫好的alertMail給大家參考 &lt;br&gt;
+可以直接貼上使用 &lt;br&gt;
+&lt;strong&gt;&lt;a href="https://github.com/bowwowxx/GoogleAppsScript/blob/master/AlertMail"&gt;AlertMail&lt;/a&gt;&lt;/strong&gt;  &lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://lh3.googleusercontent.com/-BJsQNUcoE1s/VVy8NEPfbKI/AAAAAAAAHw8/lOXvOdvSGog/w471-h564-no/googlesms2_004.jpg" alt="Server掛點無人知?重要Mail用免費Google簡訊通知你" title=""&gt;   &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;寫完程式後存檔，此時要再設定這隻程式那時要執行&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;點選資源-您所有的觸發程序 &lt;br&gt;
+google會要你認證這隻程式權限，自已寫的不用怕就按下吧 &lt;br&gt;
+&lt;img src="https://lh6.googleusercontent.com/-eXbjA3Sedng/VVy8OVKRggI/AAAAAAAAHw4/oW13O48rsLI/w605-h380-no/googlesms2_009.jpg" alt="Server掛點無人知?重要Mail用免費Google簡訊通知你" title=""&gt; &lt;br&gt;
+&lt;img src="https://lh3.googleusercontent.com/-EpZoc1Ryj_k/VVy8N8R1HkI/AAAAAAAAHww/8-aFbTu8cYU/w669-h556-no/googlesms2_007.jpg" alt="Server掛點無人知?重要Mail用免費Google簡訊通知你"&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;設定觸發程序，安迪兒這邊設定2個 &lt;br&gt;
+第一個是文件打開時的動作 &lt;br&gt;
+第二個是每5分鐘去檢查mail&amp;amp;寄簡訊一次  &lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src="https://lh6.googleusercontent.com/-gkqgnqgHprA/VVy8OHiv6vI/AAAAAAAAHw0/OImomF_WM6U/w873-h480-no/googlesms2_008.jpg" alt="Server掛點無人知?重要Mail用免費Google簡訊通知你" title=""&gt;  &lt;/p&gt;
+
+&lt;p&gt;完成後就可以存檔關掉這個試算表嘍
+&lt;img src="https://lh4.googleusercontent.com/-3g0cesgaSyg/VVy8On7G4nI/AAAAAAAAHxM/vQ4ICv9Ln78/w656-h184-no/googlesms2_011.jpg" alt="Server掛點無人知?重要Mail用免費Google簡訊通知你" title=""&gt;  &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;再來就是測試了&lt;/strong&gt; &lt;br&gt;
+最快的方式就是直接勾1封mail加上標簽 &lt;br&gt;
+看5分鐘後會不會收到簡訊 &lt;br&gt;
+&lt;img src="https://lh5.googleusercontent.com/-Iu6rfucaUwE/VVy8MTsEIsI/AAAAAAAAHwU/I6it06FcU78/w836-h200-no/googlesms2_003.jpg" alt="Server掛點無人知?重要Mail用免費Google簡訊通知你" title=""&gt;  &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;以下是安迪兒手機收到的結果&lt;/strong&gt; &lt;br&gt;
+&lt;img src="https://lh3.googleusercontent.com/-Giiy7lTS5rk/VV2z5B7zQJI/AAAAAAAAHzA/vwZ9_SZaj48/w537-h556-no/googlesms2_015.JPG" alt="Server掛點無人知?重要Mail用免費Google簡訊通知你"&gt;
+&lt;img src="https://lh6.googleusercontent.com/-1YhNap7yYDo/VV2z5KKRXRI/AAAAAAAAHy8/swnf9N2SseI/w417-h556-no/googlesms2_016.JPG" alt="Server掛點無人知?重要Mail用免費Google簡訊通知你"&gt;&lt;/p&gt;
+
+&lt;p&gt;要玩的話記得一次別設定太多mail &lt;br&gt;
+安迪兒一開始設定每分鐘送簡訊，符合規則有3~40多封mail &lt;br&gt;
+突然間安迪兒的手機狂叫簡訊一直送  &lt;/p&gt;
+
+&lt;p&gt;然後...當天google就不再寄簡訊過來了 &lt;br&gt;
+(應該是同時間寄太多，被google阻擋了) &lt;/p&gt;
+
+&lt;p&gt;到了第二天又可以正常收簡訊 &lt;br&gt;
+以上案例純供大家參考~XD&lt;/p&gt;
+
+&lt;p&gt;就這樣嘍，收工了收工了^^&lt;/p&gt;
+
+&lt;p&gt;&lt;mark&gt;&lt;a href="https://bowwowxx.github.io/ghblog/"&gt;以上文章同步發表至安迪兒另一個github備份站&lt;/a&gt;&lt;/mark&gt;&lt;/p&gt;</content:encoded></item><item><title>怕忘記重要的待辦事項?用免費的google簡訊來通知你</title><description>google calendar</description><link>http://bowwowxx.github.io/ghblog/zhong-yao-dai-ban-shi-xiang-pa-wang-ji-shi-yong-mian-fei-de-googlejian-xun-lai-tong-zhi-ni/</link><guid isPermaLink="false">6b938abd-73c4-4e21-9396-d7afdcc6df4a</guid><category>tips</category><dc:creator>bowwow</dc:creator><pubDate>Tue, 19 May 2015 17:39:27 GMT</pubDate><media:content url="https://lh3.googleusercontent.com/Zx3bdSStF5OeFbUJmuS513woLDPCSZEXoBupxEh9CFo=w348-h207-p-no" medium="image"/><content:encoded>&lt;img src="https://lh3.googleusercontent.com/Zx3bdSStF5OeFbUJmuS513woLDPCSZEXoBupxEh9CFo=w348-h207-p-no" alt="怕忘記重要的待辦事項?用免費的google簡訊來通知你"&gt;&lt;p&gt;最近剛好安迪兒和朋友聊到關於&lt;strong&gt;安排行程&lt;/strong&gt;這件事 &lt;br&gt;
 因為現代人&lt;strong&gt;e-mail&lt;/strong&gt;或是&lt;strong&gt;桌面通知&lt;/strong&gt;收太多 &lt;br&gt;
 對於這些他竟然有點麻木，大腦會不自覺的去自動忽略這些 &lt;br&gt;
 (大公司的mail量太可怕了~XD)  &lt;/p&gt;
