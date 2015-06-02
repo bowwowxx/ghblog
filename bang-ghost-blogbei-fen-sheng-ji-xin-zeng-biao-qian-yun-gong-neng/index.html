@@ -1,0 +1,368 @@
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>ghost blog backup upgrade cloud tag</title>
+    <meta name="description" content="">
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="../favicon.ico">
+
+    <script type="text/javascript" src="../assets/js/vendor/fastclick.js?v=15b507d43a"></script>
+    <script type="text/javascript" src="../assets/js/vendor/modernizr.js?v=15b507d43a"></script>
+
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" type="text/css" href="/assets/css/outdatedBrowser/outdatedBrowser.min.css?v=15b507d43a">
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/ichi.css?v=15b507d43a">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:300,700,400%7CSource+Sans+Pro:300,400,600,700,900,300italic,400italic,600italic,700italic,900italic">
+
+    <link rel="canonical" href="index.html">
+    
+    <meta property="og:site_name" content="bowwow">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="ghost blog backup upgrade cloud tag">
+    <meta property="og:description" content="替Ghost Blog升級&amp;amp;備份&amp;amp;加上標籤雲功能   安迪兒之前想要cloud tag，有小改了一下ghost  剛好碰上這次有新版順便做了一次Ghost blog備份升級和移植  順便記錄一下這次的步驟，供下次使用   先來參考官方的說明文件:  Ghost how-to-upgrade   Ghost 會備份的目錄大約有以下這些 配置檔    /config.js  資料庫  /content/data/ 主题    /content/themes/  插件    /content/apps  圖片    /content/images  導覽    /core/server/helpers/tpl/navigation.hbs...">
+    <meta property="og:url" content="http://127.0.0.1:2368/bang-ghost-blogbei-fen-sheng-ji-xin-zeng-biao-qian-yun-gong-neng/">
+    <meta property="og:image" content="http://michaelhyatt.com/wp-content/uploads/2009/12/iStock_000003118625Small.jpg">
+    <meta property="article:published_time" content="2015-06-02T18:29:42.029Z">
+    <meta property="article:modified_time" content="2015-06-02T18:30:56.055Z">
+    <meta property="article:tag" content="ghost blog">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ghost blog backup upgrade cloud tag">
+    <meta name="twitter:description" content="替Ghost Blog升級&amp;amp;備份&amp;amp;加上標籤雲功能   安迪兒之前想要cloud tag，有小改了一下ghost  剛好碰上這次有新版順便做了一次Ghost blog備份升級和移植  順便記錄一下這次的步驟，供下次使用   先來參考官方的說明文件:  Ghost how-to-upgrade   Ghost 會備份的目錄大約有以下這些 配置檔    /config.js  資料庫  /content/data/ 主题    /content/themes/  插件    /content/apps  圖片    /content/images  導覽    /core/server/helpers/tpl/navigation.hbs...">
+    <meta name="twitter:url" content="http://127.0.0.1:2368/bang-ghost-blogbei-fen-sheng-ji-xin-zeng-biao-qian-yun-gong-neng/">
+    <meta name="twitter:image:src" content="http://michaelhyatt.com/wp-content/uploads/2009/12/iStock_000003118625Small.jpg">
+    
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "publisher": "bowwow",
+    "author": {
+        "@type": "Person",
+        "name": "bowwow",
+        "image": "http://127.0.0.1:2368/content/images/2015/05/bow02-2.jpg",
+        "url": "http://127.0.0.1:2368/author/bowwow",
+        "sameAs": null,
+        "description": null
+    },
+    "headline": "ghost blog backup upgrade cloud tag",
+    "url": "http://127.0.0.1:2368/bang-ghost-blogbei-fen-sheng-ji-xin-zeng-biao-qian-yun-gong-neng/",
+    "datePublished": "2015-06-02T18:29:42.029Z",
+    "dateModified": "2015-06-02T18:30:56.055Z",
+    "image": "http://michaelhyatt.com/wp-content/uploads/2009/12/iStock_000003118625Small.jpg",
+    "keywords": "ghost blog",
+    "description": "替Ghost Blog升級&amp;amp;備份&amp;amp;加上標籤雲功能   安迪兒之前想要cloud tag，有小改了一下ghost  剛好碰上這次有新版順便做了一次Ghost blog備份升級和移植  順便記錄一下這次的步驟，供下次使用   先來參考官方的說明文件:  Ghost how-to-upgrade   Ghost 會備份的目錄大約有以下這些 配置檔    /config.js  資料庫  /content/data/ 主题    /content/themes/  插件    /content/apps  圖片    /content/images  導覽    /core/server/helpers/tpl/navigation.hbs..."
+}
+    </script>
+
+    <meta name="generator" content="Ghost 0.6">
+    <link rel="alternate" type="application/rss+xml" title="bowwow" href="../rss/index.html">
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-63062501-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+<body class="post-template tag-ghost-blog">
+
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdate" href="http://outdatedbrowser.com/">Update my browser now</a></p>
+</div>
+
+<nav class="top-bar hide-for-large-up" data-topbar style="background: none">
+  <ul class="title-area">
+    <li class="name">
+
+    </li>
+    <li class="home"><a class="fi-home" href="../"></a></li>
+    <li class="toggle-topbar"><a href="index.html#" id="trigger-overlay" class="fi-list"></a></li>
+  </ul>
+
+<div class="overlay overlay-scale">
+    <button type="button" class="overlay-close">Close</button>
+    <nav>
+        <ul>
+                <li><a href="https://bowwowxx.github.io/ghblog/">Home</a></li>
+
+        </ul>
+    </nav>
+</div>
+
+</nav>
+
+<div class="row">
+
+<div class="small-16 medium-16 large-4 columns head-area bgimage" style="background-image: url(../content/images/2015/05/do02.jpg)">
+
+<header class="site-head">
+    <div class="vertical">
+        <div class="site-head-content inner">
+            <ul class="side-nav blog-menu show-for-large-up">
+                    <li><a href="https://bowwowxx.github.io/ghblog/">Home</a></li>
+
+            </ul>
+            <a class="blog-logo" href="../"><img alt="bowwow" src="../content/images/2015/05/bow02-1.jpg"></a>
+            <h1 class="blog-title">bowwow</h1>
+            <hr>
+            <p class="blog-description">Thoughts, stories and ideas.</p>
+            <ul><ul class="side-nav blog-menu show-for-large-uplass">
+    <li>
+    <a href="../tag/ghost-blog/">ghost blog:4</a>
+    </li>
+    <li>
+    <a href="../tag/tips/">tips:2</a>
+    </li>
+    <li>
+    <a href="../tag/github/">github:1</a>
+    </li>
+    <li>
+    <a href="../tag/getting-started/">Getting Started:0</a>
+    </li>
+</ul>
+</ul>
+
+            <div class="blog-network">
+<!--                 <a href="#" class="fi-social-pinterest"></a>
+                <a href="#" class="fi-social-linkedin"></a>
+                <a href="#" class="fi-social-behance"></a>
+                <a href="#" class="fi-social-deviant-art"></a>
+                <a href="#" class="fi-social-dribbble"></a>
+                <a href="#" class="fi-social-flickr"></a>
+                <a href="#" class="fi-social-github"></a>
+                <a href="#" class="fi-social-skype"></a>
+                <a href="#" class="fi-social-snapchat"></a>
+                <a href="#" class="fi-social-steam"></a>
+                <a href="#" class="fi-social-xbox"></a>
+                <a href="#" class="fi-social-reddit"></a> -->
+                <a href="index.html#" class="fi-rss"></a>
+                <a href="index.html#" class="fi-social-google-plus"></a>
+                <a href="index.html#" class="fi-social-youtube"></a>
+                <a href="index.html#" class="fi-social-twitter"></a>
+                <a href="index.html#" class="fi-social-facebook"></a>
+            </div>
+        </div>
+    </div>
+</header>
+
+</div>
+
+<div class="small-16 medium-16 large-12 columns main-column">
+    
+
+<main class="content" role="main">
+
+    <article class="post tag-ghost-blog">
+
+
+            <h1 class="post-title">幫Ghost Blog備份/升級/新增標籤雲功能</h1>
+
+            <span class="post-meta label"><time datetime="2015-06-03">03 Jun 2015</time></span>
+
+            <section class="post-content">
+                <p>替Ghost Blog升級&amp;備份&amp;加上標籤雲功能  </p>
+
+<p>安迪兒之前想要cloud tag，有小改了一下ghost <br>
+剛好碰上這次有新版順便做了一次Ghost blog備份升級和移植 <br>
+順便記錄一下這次的步驟，供下次使用  </p>
+
+<p>先來參考官方的說明文件: <br>
+<a href="http://support.ghost.org/how-to-upgrade">Ghost how-to-upgrade</a>  </p>
+
+<p>Ghost 會備份的目錄大約有以下這些</p>
+
+<p>配置檔    /config.js <br>
+資料庫  /content/data/
+主题    /content/themes/ <br>
+插件    /content/apps <br>
+圖片    /content/images <br>
+導覽    /core/server/helpers/tpl/navigation.hbs <br>
+分頁    /core/server/helpers/tpl/pagination.hbs </p>
+
+<p>嗯!基本上content的留起來就對了，有改到核心的 <br>
+再看core裡面要留什麼，像標籤雲有在core裡面動東西，就另外留下來</p>
+
+<p>動工前先備份一下 <br>
+首先停掉ghost服務 <br>
+copy另外一份ghost的資料匣備份  </p>
+
+<p>再來是升級 
+依文件上提到的連結下載最新的版本 <br>
+<a href="https://ghost.org/download/">DOWNLOAD THE LATEST GHOST VERSION</a></p>
+
+<p>捉下來檔案解開後，安迪兒直接把舊的content、config <br>
+還有core/server/helpers裡的一點點東西，覆蓋到新的資料匣裡</p>
+
+<p>然後在新的目錄下
+安裝一下新的node.js package <br>
+放給它跑一下就裝完新版了 <br>
+<code>sudo npm install --production</code></p>
+
+<p><img src="https://lh6.googleusercontent.com/-c1jHshR7--g/VW3zV668UXI/AAAAAAAAH1E/zd19Wi-5vaE/w728-h511-no/ghosbackup01.jpg" alt=""></p>
+
+<p>測試一下執行看看 <br>
+看來是正常了~XD <br>
+<code>npm start --production</code></p>
+
+<p><img src="https://lh6.googleusercontent.com/-FO4E8MVNAzk/VW3zWIMVJwI/AAAAAAAAH1A/6ZfntS8jfv0/w883-h469-no/ghosbackup03.jpg" alt=""></p>
+
+<p>以上就是整個升級的過程嘍</p>
+
+<p><strong>再來說一下如何加上標籤雲</strong> <br>
+新增2個新檔案 <br>
+helper: <br>
+<strong>/core/server/helpers/tags_cloudtag.js</strong></p>
+
+<pre><code>    var _               = require('lodash'),
+        template        = require('./template'),
+        config          = require('../config'),
+        api             = require('../api'),
+        tags_cloudtag;
+
+    tag_cloud = function (options) {
+        var tagCloudOptions = (options || {}).hash || {};
+        var limit = (_.has(tagCloudOptions, 'limit') &amp;&amp; !/all/i.test(tagCloudOptions.limit))? parseInt(tagCloudOptions.limit, 10) : 'all';
+
+        tagCloudOptions = _.pick(tagCloudOptions, ['limit']);
+        tagCloudOptions = {
+            limit: 'all',
+            include: ['post_count'].join(','),
+            context: 'internal'
+        };
+
+        return api.tags.browse(tagCloudOptions).then(function(tags){
+            var sortedTags = _.sortBy(tags.tags, 'post_count').reverse();
+
+            if(limit !== 'all') {
+                sortedTags = sortedTags.slice(0, limit);
+            }
+
+            sortedTags.forEach(function(){
+                this.url = config.urlFor('tag', {tag: this}, false);
+            });
+
+            return template.execute('tags_cloudtag',  {tags:sortedTags});
+        });
+    };
+
+    module.exports = tags_cloudtag;
+</code></pre>
+
+<p>模版: <br>
+<strong>/core/server/helpers/tpl/tags_cloudtag.hbs</strong>  </p>
+
+<pre><code>    &lt;ul class="side-nav blog-menu show-for-large-uplass"&gt;
+        {{#foreach tags}}
+        &lt;li&gt;
+        &lt;a href="{{url}}"&gt;{{name}}&lt;/a&gt;
+        &lt;/li&gt;
+        {{/foreach}}
+    &lt;/ul&gt;
+</code></pre>
+
+<p>修改helper裡index加上剛新增的helper <br>
+<strong>/core/server/helpers/index.js</strong> <br>
+<strong>require</strong>那加上  </p>
+
+<pre><code>coreHelpers.tag_cloud = require('./tags_cloudtag');
+</code></pre>
+
+<p><img src="https://lh6.googleusercontent.com/-2xETiUrnGC4/VW3zWw2EOxI/AAAAAAAAH08/b5pNDHz0wiQ/w637-h266-no/ghosbackup04.jpg" alt=""></p>
+
+<p><strong>async</strong>那加上</p>
+
+<pre><code>registerAsyncThemeHelper('tags_cloudtag',coreHelpers.tags_cloudtag);
+</code></pre>
+
+<p><img src="https://lh5.googleusercontent.com/-umKmYea-ztY/VW3zXJyYWoI/AAAAAAAAH1M/-gVhVqTgA8I/w794-h511-no/ghosbackup05.jpg" alt="" title=""></p>
+
+<p>改完嘍，重啟一下ghost <br>
+ <code>npm start --production</code>  </p>
+
+<p>打開網頁看看正不正常 <br>
+ 都ok了，就把整包檔案搬上nas或是雲端主機上吧</p>
+
+<p><img src="https://lh5.googleusercontent.com/-aLqYdkoSyfs/VW3zXNViSXI/AAAAAAAAH1I/vkPFSuvBANs/w883-h486-no/ghosbackup06.jpg" alt="" title=""></p>
+
+<p>收工嘍收工嘍~</p>
+
+<p><mark><a href="https://bowwowxx.github.io/ghblog/">以上文章同步發表至安迪兒另一個github備份站</a></mark></p>
+                        <aside class="tags fi-pricetag-multiple">Posted on <a href="../tag/ghost-blog/">ghost blog</a></aside>
+            </section>
+            <hr>
+            <footer class="post-footer">
+
+                <section class="share">
+                    <h4>Liked this post ? Share it.</h4>
+                    <a class="fi-social-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://127.0.0.1:2368/bang-ghost-blogbei-fen-sheng-ji-xin-zeng-biao-qian-yun-gong-neng/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    </a>
+                    <a class="fi-social-twitter" href="https://twitter.com/share?text=%E5%B9%ABGhost%20Blog%E5%82%99%E4%BB%BD%2F%E5%8D%87%E7%B4%9A%2F%E6%96%B0%E5%A2%9E%E6%A8%99%E7%B1%A4%E9%9B%B2%E5%8A%9F%E8%83%BD&amp;url=http://127.0.0.1:2368/bang-ghost-blogbei-fen-sheng-ji-xin-zeng-biao-qian-yun-gong-neng/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    </a>
+                    <a class="fi-social-google-plus" href="https://plus.google.com/share?url=http://127.0.0.1:2368/bang-ghost-blogbei-fen-sheng-ji-xin-zeng-biao-qian-yun-gong-neng/" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    </a>
+                </section>
+
+                <section class="author">
+                    <header>
+                        <span>About the author</span>
+                    </header>
+                    <section>
+                        <h4>bowwow</h4>
+                        <img src="../content/images/2015/05/bow02-2.jpg">
+                        <span>TW</span>
+                        
+                    </section>
+                    <footer>
+                         <p></p>
+                    </footer>
+                </section>
+
+        <div class="clearfix"></div>
+                    <hr>
+
+            </footer>
+
+        <h3 class="title-disqus"><span class="fi-comments"></span>Discussions</h3>
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'bowwow'; // required: replace example with your forum shortname
+    var disqus_identifier = '8'; // make sure to use the post.id as an identifier, otherwise disqus will use the pages url per default, which might be problematic...
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </article>
+
+</main>
+
+</div>
+
+</div>
+
+    <!--[if lte IE 8]>
+        <script type="text/javascript" src="/assets/js/outdatedBrowser.min.js?v=15b507d43a"></script>
+    <![endif]-->
+    <script type="text/javascript" src="../assets/js/dest/built.min.js?v=15b507d43a"></script>
+
+    <script>
+      $(document).foundation();
+    </script>
+</body>

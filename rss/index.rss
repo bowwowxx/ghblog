@@ -1,4 +1,149 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>bowwow</title><description>Thoughts, stories and ideas.</description><link>http://bowwowxx.github.io/ghblog/</link><generator>Ghost 0.6</generator><lastBuildDate>Thu, 21 May 2015 17:17:17 GMT</lastBuildDate><atom:link href="http://bowwowxx.github.io/ghblog/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Server掛點無人知?重要E-Mail用免費的Google簡訊通知你</title><description>use google doc to get free sms and mail alerts.</description><link>http://bowwowxx.github.io/ghblog/servergua-dian-wu-ren-zhi-zhong-yao-mailyong-mian-fei-googlejian-xun-tong-zhi-nin/</link><guid isPermaLink="false">2b9ec8b1-cd91-41da-8e76-d2873db899f1</guid><category>tips</category><dc:creator>bowwow</dc:creator><pubDate>Thu, 21 May 2015 16:28:37 GMT</pubDate><media:content url="https://lh6.googleusercontent.com/-smQ3OXNJPTE/VVzAVN53oWI/AAAAAAAAHxs/IYgIygl7qwM/w477-h231-no/googlesms2_12.png" medium="image"/><content:encoded>&lt;img src="https://lh6.googleusercontent.com/-smQ3OXNJPTE/VVzAVN53oWI/AAAAAAAAHxs/IYgIygl7qwM/w477-h231-no/googlesms2_12.png" alt="Server掛點無人知?重要E-Mail用免費的Google簡訊通知你"&gt;&lt;p&gt;之前安迪兒設定
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>bowwow</title><description>Thoughts, stories and ideas.</description><link>http://127.0.0.1:2368/</link><generator>Ghost 0.6</generator><lastBuildDate>Tue, 02 Jun 2015 18:32:57 GMT</lastBuildDate><atom:link href="http://127.0.0.1:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>幫Ghost Blog備份/升級/新增標籤雲功能</title><description>&lt;p&gt;替Ghost Blog升級&amp;amp;備份&amp;amp;加上標籤雲功能  &lt;/p&gt;
+
+&lt;p&gt;安迪兒之前想要cloud tag，有小改了一下ghost &lt;br&gt;
+剛好碰上這次有新版順便做了一次Ghost blog備份升級和移植 &lt;br&gt;
+順便記錄一下這次的步驟，供下次使用  &lt;/p&gt;
+
+&lt;p&gt;先來參考官方的說明文件: &lt;br&gt;
+&lt;a href="http://support.ghost.org/how-to-upgrade"&gt;Ghost how-to-upgrade&lt;/a&gt;  &lt;/p&gt;
+
+&lt;p&gt;Ghost 會備份的目錄大約有以下這些&lt;/p&gt;
+
+&lt;p&gt;配置檔    /config.js &lt;br&gt;
+資料庫  /content/data/
+主题    /content/themes/ &lt;br&gt;
+插件    /content/apps &lt;br&gt;
+圖片    /content/images &lt;br&gt;
+導覽    /core/server/helpers/tpl/navigation.hbs &lt;br&gt;
+分頁    /core/server/helpers/tpl/pagination.hbs &lt;/p&gt;
+
+&lt;p&gt;嗯!基本上content的留起來就對了，有改到核心的&lt;/p&gt;</description><link>http://127.0.0.1:2368/bang-ghost-blogbei-fen-sheng-ji-xin-zeng-biao-qian-yun-gong-neng/</link><guid isPermaLink="false">9a6ed1b5-cd75-4de5-b9df-4eaa14fb9c69</guid><category>ghost blog</category><dc:creator>bowwow</dc:creator><pubDate>Tue, 02 Jun 2015 18:29:42 GMT</pubDate><media:content url="http://michaelhyatt.com/wp-content/uploads/2009/12/iStock_000003118625Small.jpg" medium="image"/><content:encoded>&lt;img src="http://michaelhyatt.com/wp-content/uploads/2009/12/iStock_000003118625Small.jpg" alt="幫Ghost Blog備份/升級/新增標籤雲功能"&gt;&lt;p&gt;替Ghost Blog升級&amp;amp;備份&amp;amp;加上標籤雲功能  &lt;/p&gt;
+
+&lt;p&gt;安迪兒之前想要cloud tag，有小改了一下ghost &lt;br&gt;
+剛好碰上這次有新版順便做了一次Ghost blog備份升級和移植 &lt;br&gt;
+順便記錄一下這次的步驟，供下次使用  &lt;/p&gt;
+
+&lt;p&gt;先來參考官方的說明文件: &lt;br&gt;
+&lt;a href="http://support.ghost.org/how-to-upgrade"&gt;Ghost how-to-upgrade&lt;/a&gt;  &lt;/p&gt;
+
+&lt;p&gt;Ghost 會備份的目錄大約有以下這些&lt;/p&gt;
+
+&lt;p&gt;配置檔    /config.js &lt;br&gt;
+資料庫  /content/data/
+主题    /content/themes/ &lt;br&gt;
+插件    /content/apps &lt;br&gt;
+圖片    /content/images &lt;br&gt;
+導覽    /core/server/helpers/tpl/navigation.hbs &lt;br&gt;
+分頁    /core/server/helpers/tpl/pagination.hbs &lt;/p&gt;
+
+&lt;p&gt;嗯!基本上content的留起來就對了，有改到核心的 &lt;br&gt;
+再看core裡面要留什麼，像標籤雲有在core裡面動東西，就另外留下來&lt;/p&gt;
+
+&lt;p&gt;動工前先備份一下 &lt;br&gt;
+首先停掉ghost服務 &lt;br&gt;
+copy另外一份ghost的資料匣備份  &lt;/p&gt;
+
+&lt;p&gt;再來是升級 
+依文件上提到的連結下載最新的版本 &lt;br&gt;
+&lt;a href="https://ghost.org/download/"&gt;DOWNLOAD THE LATEST GHOST VERSION&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;捉下來檔案解開後，安迪兒直接把舊的content、config &lt;br&gt;
+還有core/server/helpers裡的一點點東西，覆蓋到新的資料匣裡&lt;/p&gt;
+
+&lt;p&gt;然後在新的目錄下
+安裝一下新的node.js package &lt;br&gt;
+放給它跑一下就裝完新版了 &lt;br&gt;
+&lt;code&gt;sudo npm install --production&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://lh6.googleusercontent.com/-c1jHshR7--g/VW3zV668UXI/AAAAAAAAH1E/zd19Wi-5vaE/w728-h511-no/ghosbackup01.jpg" alt="幫Ghost Blog備份/升級/新增標籤雲功能"&gt;&lt;/p&gt;
+
+&lt;p&gt;測試一下執行看看 &lt;br&gt;
+看來是正常了~XD &lt;br&gt;
+&lt;code&gt;npm start --production&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://lh6.googleusercontent.com/-FO4E8MVNAzk/VW3zWIMVJwI/AAAAAAAAH1A/6ZfntS8jfv0/w883-h469-no/ghosbackup03.jpg" alt="幫Ghost Blog備份/升級/新增標籤雲功能"&gt;&lt;/p&gt;
+
+&lt;p&gt;以上就是整個升級的過程嘍&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;再來說一下如何加上標籤雲&lt;/strong&gt; &lt;br&gt;
+新增2個新檔案 &lt;br&gt;
+helper: &lt;br&gt;
+&lt;strong&gt;/core/server/helpers/tags_cloudtag.js&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    var _               = require('lodash'),
+        template        = require('./template'),
+        config          = require('../config'),
+        api             = require('../api'),
+        tags_cloudtag;
+
+    tag_cloud = function (options) {
+        var tagCloudOptions = (options || {}).hash || {};
+        var limit = (_.has(tagCloudOptions, 'limit') &amp;amp;&amp;amp; !/all/i.test(tagCloudOptions.limit))? parseInt(tagCloudOptions.limit, 10) : 'all';
+
+        tagCloudOptions = _.pick(tagCloudOptions, ['limit']);
+        tagCloudOptions = {
+            limit: 'all',
+            include: ['post_count'].join(','),
+            context: 'internal'
+        };
+
+        return api.tags.browse(tagCloudOptions).then(function(tags){
+            var sortedTags = _.sortBy(tags.tags, 'post_count').reverse();
+
+            if(limit !== 'all') {
+                sortedTags = sortedTags.slice(0, limit);
+            }
+
+            sortedTags.forEach(function(){
+                this.url = config.urlFor('tag', {tag: this}, false);
+            });
+
+            return template.execute('tags_cloudtag',  {tags:sortedTags});
+        });
+    };
+
+    module.exports = tags_cloudtag;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;模版: &lt;br&gt;
+&lt;strong&gt;/core/server/helpers/tpl/tags_cloudtag.hbs&lt;/strong&gt;  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    &amp;lt;ul class="side-nav blog-menu show-for-large-uplass"&amp;gt;
+        {{#foreach tags}}
+        &amp;lt;li&amp;gt;
+        &amp;lt;a href="{{url}}"&amp;gt;{{name}}&amp;lt;/a&amp;gt;
+        &amp;lt;/li&amp;gt;
+        {{/foreach}}
+    &amp;lt;/ul&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;修改helper裡index加上剛新增的helper &lt;br&gt;
+&lt;strong&gt;/core/server/helpers/index.js&lt;/strong&gt; &lt;br&gt;
+&lt;strong&gt;require&lt;/strong&gt;那加上  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;coreHelpers.tag_cloud = require('./tags_cloudtag');
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src="https://lh6.googleusercontent.com/-2xETiUrnGC4/VW3zWw2EOxI/AAAAAAAAH08/b5pNDHz0wiQ/w637-h266-no/ghosbackup04.jpg" alt="幫Ghost Blog備份/升級/新增標籤雲功能"&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;async&lt;/strong&gt;那加上&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;registerAsyncThemeHelper('tags_cloudtag',coreHelpers.tags_cloudtag);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src="https://lh5.googleusercontent.com/-umKmYea-ztY/VW3zXJyYWoI/AAAAAAAAH1M/-gVhVqTgA8I/w794-h511-no/ghosbackup05.jpg" alt="幫Ghost Blog備份/升級/新增標籤雲功能" title=""&gt;&lt;/p&gt;
+
+&lt;p&gt;改完嘍，重啟一下ghost &lt;br&gt;
+ &lt;code&gt;npm start --production&lt;/code&gt;  &lt;/p&gt;
+
+&lt;p&gt;打開網頁看看正不正常 &lt;br&gt;
+ 都ok了，就把整包檔案搬上nas或是雲端主機上吧&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://lh5.googleusercontent.com/-aLqYdkoSyfs/VW3zXNViSXI/AAAAAAAAH1I/vkPFSuvBANs/w883-h486-no/ghosbackup06.jpg" alt="幫Ghost Blog備份/升級/新增標籤雲功能" title=""&gt;&lt;/p&gt;
+
+&lt;p&gt;收工嘍收工嘍~&lt;/p&gt;
+
+&lt;p&gt;&lt;mark&gt;&lt;a href="https://bowwowxx.github.io/ghblog/"&gt;以上文章同步發表至安迪兒另一個github備份站&lt;/a&gt;&lt;/mark&gt;&lt;/p&gt;</content:encoded></item><item><title>Server掛點無人知?重要E-Mail用免費的Google簡訊通知你</title><description>use google doc to get free sms and mail alerts.</description><link>http://127.0.0.1:2368/servergua-dian-wu-ren-zhi-zhong-yao-mailyong-mian-fei-googlejian-xun-tong-zhi-nin/</link><guid isPermaLink="false">2b9ec8b1-cd91-41da-8e76-d2873db899f1</guid><category>tips</category><dc:creator>bowwow</dc:creator><pubDate>Thu, 21 May 2015 16:28:37 GMT</pubDate><media:content url="https://lh6.googleusercontent.com/-smQ3OXNJPTE/VVzAVN53oWI/AAAAAAAAHxs/IYgIygl7qwM/w477-h231-no/googlesms2_12.png" medium="image"/><content:encoded>&lt;img src="https://lh6.googleusercontent.com/-smQ3OXNJPTE/VVzAVN53oWI/AAAAAAAAHxs/IYgIygl7qwM/w477-h231-no/googlesms2_12.png" alt="Server掛點無人知?重要E-Mail用免費的Google簡訊通知你"&gt;&lt;p&gt;之前安迪兒設定
 &lt;strong&gt;「重要待辦事項用google行事曆發簡訊 」&lt;/strong&gt; &lt;br&gt;
 剛好看到一篇文章，是間接使用Gmail對手機發簡訊   &lt;/p&gt;
 
@@ -119,7 +264,7 @@ google會要你認證這隻程式權限，自已寫的不用怕就按下吧 &lt;
 
 &lt;p&gt;就這樣嘍，收工了收工了^^&lt;/p&gt;
 
-&lt;p&gt;&lt;mark&gt;&lt;a href="https://bowwowxx.github.io/ghblog/"&gt;以上文章同步發表至安迪兒另一個github備份站&lt;/a&gt;&lt;/mark&gt;&lt;/p&gt;</content:encoded></item><item><title>怕忘記重要的待辦事項?用免費的google簡訊來通知你</title><description>google calendar</description><link>http://bowwowxx.github.io/ghblog/zhong-yao-dai-ban-shi-xiang-pa-wang-ji-shi-yong-mian-fei-de-googlejian-xun-lai-tong-zhi-ni/</link><guid isPermaLink="false">6b938abd-73c4-4e21-9396-d7afdcc6df4a</guid><category>tips</category><dc:creator>bowwow</dc:creator><pubDate>Tue, 19 May 2015 17:39:27 GMT</pubDate><media:content url="https://lh3.googleusercontent.com/Zx3bdSStF5OeFbUJmuS513woLDPCSZEXoBupxEh9CFo=w348-h207-p-no" medium="image"/><content:encoded>&lt;img src="https://lh3.googleusercontent.com/Zx3bdSStF5OeFbUJmuS513woLDPCSZEXoBupxEh9CFo=w348-h207-p-no" alt="怕忘記重要的待辦事項?用免費的google簡訊來通知你"&gt;&lt;p&gt;最近剛好安迪兒和朋友聊到關於&lt;strong&gt;安排行程&lt;/strong&gt;這件事 &lt;br&gt;
+&lt;p&gt;&lt;mark&gt;&lt;a href="https://bowwowxx.github.io/ghblog/"&gt;以上文章同步發表至安迪兒另一個github備份站&lt;/a&gt;&lt;/mark&gt;&lt;/p&gt;</content:encoded></item><item><title>怕忘記重要的待辦事項?用免費的google簡訊來通知你</title><description>google calendar</description><link>http://127.0.0.1:2368/zhong-yao-dai-ban-shi-xiang-pa-wang-ji-shi-yong-mian-fei-de-googlejian-xun-lai-tong-zhi-ni/</link><guid isPermaLink="false">6b938abd-73c4-4e21-9396-d7afdcc6df4a</guid><category>tips</category><dc:creator>bowwow</dc:creator><pubDate>Tue, 19 May 2015 17:39:27 GMT</pubDate><media:content url="https://lh3.googleusercontent.com/Zx3bdSStF5OeFbUJmuS513woLDPCSZEXoBupxEh9CFo=w348-h207-p-no" medium="image"/><content:encoded>&lt;img src="https://lh3.googleusercontent.com/Zx3bdSStF5OeFbUJmuS513woLDPCSZEXoBupxEh9CFo=w348-h207-p-no" alt="怕忘記重要的待辦事項?用免費的google簡訊來通知你"&gt;&lt;p&gt;最近剛好安迪兒和朋友聊到關於&lt;strong&gt;安排行程&lt;/strong&gt;這件事 &lt;br&gt;
 因為現代人&lt;strong&gt;e-mail&lt;/strong&gt;或是&lt;strong&gt;桌面通知&lt;/strong&gt;收太多 &lt;br&gt;
 對於這些他竟然有點麻木，大腦會不自覺的去自動忽略這些 &lt;br&gt;
 (大公司的mail量太可怕了~XD)  &lt;/p&gt;
@@ -218,7 +363,7 @@ github是多麼偉大的發明 &lt;br&gt;
 &lt;p&gt;&lt;strong&gt;以下就和大家分享一下執行的方式&lt;/strong&gt;    &lt;/p&gt;
 
 &lt;p&gt;這邊是使用Buest這個python的程式 &lt;br&gt;
-&lt;a href="https://github.com/axitkhurana/buster"&gt;https://github.&lt;/a&gt;&lt;/p&gt;</description><link>http://bowwowxx.github.io/ghblog/shi-yong-githubdang-jing-tai-hua-blogbei-fen-ni-de-ghost-blog/</link><guid isPermaLink="false">792ac709-6ddf-4312-aa0b-8dbdc3e6a3f2</guid><category>ghost blog</category><category>github</category><dc:creator>bowwow</dc:creator><pubDate>Sat, 16 May 2015 19:59:55 GMT</pubDate><media:content url="http://cdn.designrshub.com/wp-content/uploads/2013/11/free-ghost-themes-05.jpg" medium="image"/><content:encoded>&lt;img src="http://cdn.designrshub.com/wp-content/uploads/2013/11/free-ghost-themes-05.jpg" alt="使用GitHub當靜態化Blog(備份你的Ghost blog)"&gt;&lt;p&gt;寫程式或翻譯文章的人應該都知道 &lt;br&gt;
+&lt;a href="https://github.com/axitkhurana/buster"&gt;https://github.&lt;/a&gt;&lt;/p&gt;</description><link>http://127.0.0.1:2368/shi-yong-githubdang-jing-tai-hua-blogbei-fen-ni-de-ghost-blog/</link><guid isPermaLink="false">792ac709-6ddf-4312-aa0b-8dbdc3e6a3f2</guid><category>ghost blog</category><category>github</category><dc:creator>bowwow</dc:creator><pubDate>Sat, 16 May 2015 19:59:55 GMT</pubDate><media:content url="http://cdn.designrshub.com/wp-content/uploads/2013/11/free-ghost-themes-05.jpg" medium="image"/><content:encoded>&lt;img src="http://cdn.designrshub.com/wp-content/uploads/2013/11/free-ghost-themes-05.jpg" alt="使用GitHub當靜態化Blog(備份你的Ghost blog)"&gt;&lt;p&gt;寫程式或翻譯文章的人應該都知道 &lt;br&gt;
 github是多麼偉大的發明 &lt;br&gt;
 除了可以讓人自由自在的倒版本至任何時候 &lt;br&gt;
 也可以好好的劃分一下
@@ -282,7 +427,7 @@ github是多麼偉大的發明 &lt;br&gt;
 (&lt;a href="https://github.com/axitkhurana/buster"&gt;https://github.com/axitkhurana/buster&lt;/a&gt;) &lt;br&gt;
 執行&lt;code&gt;pip install buster&lt;/code&gt;  &lt;/p&gt;
 
-&lt;p&gt;&lt;a href="http://bowwowxx.github.io/ghblog/shi-yong-githubdang-jing-tai-hua-blogbei-fen-ni-de-ghost-blog/"&gt;wget&lt;/a&gt; &lt;br&gt;
+&lt;p&gt;&lt;a href="http://127.0.0.1:2368/shi-yong-githubdang-jing-tai-hua-blogbei-fen-ni-de-ghost-blog/"&gt;wget&lt;/a&gt; &lt;br&gt;
 執行&lt;code&gt;brew install wget&lt;/code&gt;  &lt;/p&gt;
 
 &lt;p&gt;以上軟體都裝完後，就可以收書包....回家再繼續
@@ -423,7 +568,7 @@ wordpress+php+mariadb+apache&lt;/p&gt;
 架個ghost的blog來玩玩。&lt;/p&gt;
 
 &lt;p&gt;和wordpress一樣，不一定要自已架設 &lt;br&gt;
-也可以直接使用外面的網站上的服務&lt;/p&gt;</description><link>http://bowwowxx.github.io/ghblog/zai-synology-nasshang-jia-she-jian-yue-feng-ge-de-ghost-blognode-js-blog/</link><guid isPermaLink="false">f5c899f6-d974-4c26-9d6e-cd3029faae51</guid><category>ghost blog</category><dc:creator>bowwow</dc:creator><pubDate>Wed, 13 May 2015 06:26:46 GMT</pubDate><media:content url="http://img.allenchou.cc/ghost-1.png" medium="image"/><content:encoded>&lt;img src="http://img.allenchou.cc/ghost-1.png" alt="在synology nas上架設簡約風格的ghost blog(node.js blog)"&gt;&lt;p&gt;一般建立網站 &lt;br&gt;
+也可以直接使用外面的網站上的服務&lt;/p&gt;</description><link>http://127.0.0.1:2368/zai-synology-nasshang-jia-she-jian-yue-feng-ge-de-ghost-blognode-js-blog/</link><guid isPermaLink="false">f5c899f6-d974-4c26-9d6e-cd3029faae51</guid><category>ghost blog</category><dc:creator>bowwow</dc:creator><pubDate>Wed, 13 May 2015 06:26:46 GMT</pubDate><media:content url="http://img.allenchou.cc/ghost-1.png" medium="image"/><content:encoded>&lt;img src="http://img.allenchou.cc/ghost-1.png" alt="在synology nas上架設簡約風格的ghost blog(node.js blog)"&gt;&lt;p&gt;一般建立網站 &lt;br&gt;
 大家常用的大約有wordpress、drupal、joomla、ghost&lt;/p&gt;
 
 &lt;p&gt;安迪兒看了一下今年列出來2015 best的統計 &lt;br&gt;
@@ -645,7 +790,7 @@ init裡的blog啟動檔整個不見 &lt;br&gt;
 今天剛好碰到DSM由5.1升級成5.2 init裡邊的東西全被還原了  &lt;/p&gt;
 
 &lt;p&gt;所以相關的檔案資料千萬要放在volume裡面 &lt;br&gt;
-不然會像安迪兒一樣，神不知鬼不覺的自動升級後就沒了..XD&lt;/p&gt;</content:encoded></item><item><title>Welcome to Ghost</title><description>&lt;p&gt;You're live! Nice. We've put together a little post to introduce you to the Ghost editor and get you started. You can manage your content by signing in to the admin area at &lt;code&gt;&amp;lt;your blog URL&amp;gt;/ghost/&lt;/code&gt;. When you arrive, you can select this post from a list&lt;/p&gt;</description><link>http://bowwowxx.github.io/ghblog/welcome-to-ghost/</link><guid isPermaLink="false">b12474f8-fa68-4b33-b10b-1f6076983656</guid><category>ghost blog</category><dc:creator>bowwow</dc:creator><pubDate>Tue, 12 May 2015 17:05:58 GMT</pubDate><content:encoded>&lt;p&gt;You're live! Nice. We've put together a little post to introduce you to the Ghost editor and get you started. You can manage your content by signing in to the admin area at &lt;code&gt;&amp;lt;your blog URL&amp;gt;/ghost/&lt;/code&gt;. When you arrive, you can select this post from a list on the left and see a preview of it on the right. Click the little pencil icon at the top of the preview to edit this post and read the next section!&lt;/p&gt;
+不然會像安迪兒一樣，神不知鬼不覺的自動升級後就沒了..XD&lt;/p&gt;</content:encoded></item><item><title>Welcome to Ghost</title><description>&lt;p&gt;You're live! Nice. We've put together a little post to introduce you to the Ghost editor and get you started. You can manage your content by signing in to the admin area at &lt;code&gt;&amp;lt;your blog URL&amp;gt;/ghost/&lt;/code&gt;. When you arrive, you can select this post from a list&lt;/p&gt;</description><link>http://127.0.0.1:2368/welcome-to-ghost/</link><guid isPermaLink="false">b12474f8-fa68-4b33-b10b-1f6076983656</guid><category>ghost blog</category><dc:creator>bowwow</dc:creator><pubDate>Tue, 12 May 2015 17:05:58 GMT</pubDate><content:encoded>&lt;p&gt;You're live! Nice. We've put together a little post to introduce you to the Ghost editor and get you started. You can manage your content by signing in to the admin area at &lt;code&gt;&amp;lt;your blog URL&amp;gt;/ghost/&lt;/code&gt;. When you arrive, you can select this post from a list on the left and see a preview of it on the right. Click the little pencil icon at the top of the preview to edit this post and read the next section!&lt;/p&gt;
 
 &lt;h2 id="gettingstarted"&gt;Getting Started&lt;/h2&gt;
 
