@@ -1,13 +1,13 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>bowwow</title><description>Thoughts, stories and ideas.</description><link>http://127.0.0.1:2368/</link><generator>Ghost 0.6</generator><lastBuildDate>Tue, 02 Jun 2015 18:32:57 GMT</lastBuildDate><atom:link href="http://127.0.0.1:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>幫Ghost Blog備份/升級/新增標籤雲功能</title><description>&lt;p&gt;替Ghost Blog升級&amp;amp;備份&amp;amp;加上標籤雲功能  &lt;/p&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>bowwow</title><description>Thoughts, stories and ideas.</description><link>http://127.0.0.1:2368/</link><generator>Ghost 0.6</generator><lastBuildDate>Wed, 03 Jun 2015 06:16:06 GMT</lastBuildDate><atom:link href="http://127.0.0.1:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>幫Ghost Blog備份/升級/新增標籤雲功能</title><description>&lt;p&gt;替Ghost Blog升級&amp;amp;備份&amp;amp;加上標籤雲功能  &lt;/p&gt;
 
 &lt;p&gt;安迪兒之前想要cloud tag，有小改了一下ghost &lt;br&gt;
-剛好碰上這次有新版順便做了一次Ghost blog備份升級和移植 &lt;br&gt;
+碰上這次有新版就做了一次Ghost blog備份、升級、移植 &lt;br&gt;
 順便記錄一下這次的步驟，供下次使用  &lt;/p&gt;
 
 &lt;p&gt;先來參考官方的說明文件: &lt;br&gt;
 &lt;a href="http://support.ghost.org/how-to-upgrade"&gt;Ghost how-to-upgrade&lt;/a&gt;  &lt;/p&gt;
 
-&lt;p&gt;Ghost 會備份的目錄大約有以下這些&lt;/p&gt;
+&lt;p&gt;Ghost 需要備份的目錄大約有以下這些&lt;/p&gt;
 
 &lt;p&gt;配置檔    /config.js &lt;br&gt;
 資料庫  /content/data/
@@ -17,16 +17,16 @@
 導覽    /core/server/helpers/tpl/navigation.hbs &lt;br&gt;
 分頁    /core/server/helpers/tpl/pagination.hbs &lt;/p&gt;
 
-&lt;p&gt;嗯!基本上content的留起來就對了，有改到核心的&lt;/p&gt;</description><link>http://127.0.0.1:2368/bang-ghost-blogbei-fen-sheng-ji-xin-zeng-biao-qian-yun-gong-neng/</link><guid isPermaLink="false">9a6ed1b5-cd75-4de5-b9df-4eaa14fb9c69</guid><category>ghost blog</category><dc:creator>bowwow</dc:creator><pubDate>Tue, 02 Jun 2015 18:29:42 GMT</pubDate><media:content url="http://michaelhyatt.com/wp-content/uploads/2009/12/iStock_000003118625Small.jpg" medium="image"/><content:encoded>&lt;img src="http://michaelhyatt.com/wp-content/uploads/2009/12/iStock_000003118625Small.jpg" alt="幫Ghost Blog備份/升級/新增標籤雲功能"&gt;&lt;p&gt;替Ghost Blog升級&amp;amp;備份&amp;amp;加上標籤雲功能  &lt;/p&gt;
+&lt;p&gt;嗯!&lt;/p&gt;</description><link>http://127.0.0.1:2368/bang-ghost-blogbei-fen-sheng-ji-xin-zeng-biao-qian-yun-gong-neng/</link><guid isPermaLink="false">9a6ed1b5-cd75-4de5-b9df-4eaa14fb9c69</guid><category>ghost blog</category><dc:creator>bowwow</dc:creator><pubDate>Tue, 02 Jun 2015 18:29:42 GMT</pubDate><media:content url="http://michaelhyatt.com/wp-content/uploads/2009/12/iStock_000003118625Small.jpg" medium="image"/><content:encoded>&lt;img src="http://michaelhyatt.com/wp-content/uploads/2009/12/iStock_000003118625Small.jpg" alt="幫Ghost Blog備份/升級/新增標籤雲功能"&gt;&lt;p&gt;替Ghost Blog升級&amp;amp;備份&amp;amp;加上標籤雲功能  &lt;/p&gt;
 
 &lt;p&gt;安迪兒之前想要cloud tag，有小改了一下ghost &lt;br&gt;
-剛好碰上這次有新版順便做了一次Ghost blog備份升級和移植 &lt;br&gt;
+碰上這次有新版就做了一次Ghost blog備份、升級、移植 &lt;br&gt;
 順便記錄一下這次的步驟，供下次使用  &lt;/p&gt;
 
 &lt;p&gt;先來參考官方的說明文件: &lt;br&gt;
 &lt;a href="http://support.ghost.org/how-to-upgrade"&gt;Ghost how-to-upgrade&lt;/a&gt;  &lt;/p&gt;
 
-&lt;p&gt;Ghost 會備份的目錄大約有以下這些&lt;/p&gt;
+&lt;p&gt;Ghost 需要備份的目錄大約有以下這些&lt;/p&gt;
 
 &lt;p&gt;配置檔    /config.js &lt;br&gt;
 資料庫  /content/data/
@@ -132,6 +132,15 @@ helper: &lt;br&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&lt;img src="https://lh5.googleusercontent.com/-umKmYea-ztY/VW3zXJyYWoI/AAAAAAAAH1M/-gVhVqTgA8I/w794-h511-no/ghosbackup05.jpg" alt="幫Ghost Blog備份/升級/新增標籤雲功能" title=""&gt;&lt;/p&gt;
+
+&lt;p&gt;再來看看要把這個tag加到那邊  &lt;/p&gt;
+
+&lt;p&gt;像安迪兒是改使用的themes裡面 &lt;br&gt;
+某一包theme的default.hbs檔 &lt;br&gt;
+再想要的地方加上{{tags_cloudtag limit="all"}} &lt;br&gt;
+limit指的是限定的標籤數量&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;&amp;lt;ul&amp;gt;{{tags_cloudtag limit="all"}}&amp;lt;/ul&amp;gt;&lt;/code&gt;    &lt;/p&gt;
 
 &lt;p&gt;改完嘍，重啟一下ghost &lt;br&gt;
  &lt;code&gt;npm start --production&lt;/code&gt;  &lt;/p&gt;
