@@ -1,4 +1,180 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>bowwow</title><description>Thoughts, stories and ideas.</description><link>http://127.0.0.1:2368/</link><generator>Ghost 0.6</generator><lastBuildDate>Wed, 03 Jun 2015 07:52:21 GMT</lastBuildDate><atom:link href="http://127.0.0.1:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>幫Ghost Blog備份/升級/新增標籤雲功能</title><description>&lt;p&gt;替Ghost Blog升級&amp;amp;備份&amp;amp;加上標籤雲功能  &lt;/p&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>bowwow</title><description>Thoughts, stories and ideas.</description><link>http://127.0.0.1:2368/</link><generator>Ghost 0.6</generator><lastBuildDate>Wed, 03 Jun 2015 17:13:08 GMT</lastBuildDate><atom:link href="http://127.0.0.1:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>打造Raspberry Pi萬能家用遊戲機(RetroPie)</title><description>&lt;p&gt;安迪兒之前一直想拿pi來當遊戲機玩 &lt;br&gt;
+但pi的用途太多了，一直移去別的用途 &lt;br&gt;
+這次忍痛拿了一塊Raspberry Pi 2來用 &lt;br&gt;
+因為他有1G的RAM和4核心 &lt;br&gt;
+效能超好，玩game不用擔心lag~XD&lt;/p&gt;
+
+&lt;p&gt;所以，安迪兒立馬去裝了有名的 
+&lt;a href="http://blog.petrockblock.com/retropie/retropie-downloads/"&gt;RetroPie&lt;/a&gt;  &lt;/p&gt;
+
+&lt;p&gt;它是個open source的萬用模擬器 &lt;br&gt;
+支援了數不清的各種模擬器&lt;/p&gt;
+
+&lt;p&gt;可以來這邊看看，保證大家滿意~XD
+&lt;a href="https://github.com/petrockblog/RetroPie-Setup/wiki"&gt;https://github.com/petrockblog/RetroPie-Setup/wiki&lt;/a&gt;  &lt;/p&gt;
+
+&lt;p&gt;而且mame竟然不只mame4all耶 &lt;br&gt;
+因為安迪兒之前捉的是pc上mame的ROM &lt;br&gt;
+mame4all上大多不能玩 &lt;br&gt;
+而RetroPie有支援AdvanceMAME &lt;br&gt;
+真是太開心了~XD&lt;/p&gt;
+
+&lt;p&gt;另外RetroPie對把手或是搖桿的支援度也蠻高的 &lt;br&gt;
+以上總結，不快裝一台來當家用遊樂器怎行呢~XD&lt;/p&gt;
+
+&lt;p&gt;以下安迪兒記錄一下安裝的過程&lt;/p&gt;
+
+&lt;p&gt;整個過程其實還好，大約和XBMC一樣
+直接捉下它的img下來，燒進sd卡
+然後再做一些設定&lt;/p&gt;
+
+&lt;p&gt;可以參考這份，git clone下來安裝 &lt;br&gt;
+&lt;a href="https://github.com/petrockblog/RetroPie-Setup/wiki/First-Installation"&gt;First Installation&lt;/a&gt;  &lt;/p&gt;
+
+&lt;p&gt;也可以直接去他官方網站上，捉images下來 &lt;br&gt;
+&lt;a href="http://blog.petrockblock.com/retropie/retropie-downloads/"&gt;retropie-downloads&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;安迪兒是直接去捉images下來解開，&lt;/p&gt;</description><link>http://127.0.0.1:2368/da-zao-raspberry-piwan-neng-jia-yong-you-xi-ji-retropie/</link><guid isPermaLink="false">e7686c7d-7463-487a-8145-70d2436495ee</guid><category>Raspberry Pi</category><dc:creator>bowwow</dc:creator><pubDate>Wed, 03 Jun 2015 17:00:50 GMT</pubDate><media:content url="http://www.techory.com/blog/wp-content/uploads/IMG_20150202_201753.jpg" medium="image"/><content:encoded>&lt;img src="http://www.techory.com/blog/wp-content/uploads/IMG_20150202_201753.jpg" alt="打造Raspberry Pi萬能家用遊戲機(RetroPie)"&gt;&lt;p&gt;安迪兒之前一直想拿pi來當遊戲機玩 &lt;br&gt;
+但pi的用途太多了，一直移去別的用途 &lt;br&gt;
+這次忍痛拿了一塊Raspberry Pi 2來用 &lt;br&gt;
+因為他有1G的RAM和4核心 &lt;br&gt;
+效能超好，玩game不用擔心lag~XD&lt;/p&gt;
+
+&lt;p&gt;所以，安迪兒立馬去裝了有名的 
+&lt;a href="http://blog.petrockblock.com/retropie/retropie-downloads/"&gt;RetroPie&lt;/a&gt;  &lt;/p&gt;
+
+&lt;p&gt;它是個open source的萬用模擬器 &lt;br&gt;
+支援了數不清的各種模擬器&lt;/p&gt;
+
+&lt;p&gt;可以來這邊看看，保證大家滿意~XD
+&lt;a href="https://github.com/petrockblog/RetroPie-Setup/wiki"&gt;https://github.com/petrockblog/RetroPie-Setup/wiki&lt;/a&gt;  &lt;/p&gt;
+
+&lt;p&gt;而且mame竟然不只mame4all耶 &lt;br&gt;
+因為安迪兒之前捉的是pc上mame的ROM &lt;br&gt;
+mame4all上大多不能玩 &lt;br&gt;
+而RetroPie有支援AdvanceMAME &lt;br&gt;
+真是太開心了~XD&lt;/p&gt;
+
+&lt;p&gt;另外RetroPie對把手或是搖桿的支援度也蠻高的 &lt;br&gt;
+以上總結，不快裝一台來當家用遊樂器怎行呢~XD&lt;/p&gt;
+
+&lt;p&gt;以下安迪兒記錄一下安裝的過程&lt;/p&gt;
+
+&lt;p&gt;整個過程其實還好，大約和XBMC一樣
+直接捉下它的img下來，燒進sd卡
+然後再做一些設定&lt;/p&gt;
+
+&lt;p&gt;可以參考這份，git clone下來安裝 &lt;br&gt;
+&lt;a href="https://github.com/petrockblog/RetroPie-Setup/wiki/First-Installation"&gt;First Installation&lt;/a&gt;  &lt;/p&gt;
+
+&lt;p&gt;也可以直接去他官方網站上，捉images下來 &lt;br&gt;
+&lt;a href="http://blog.petrockblock.com/retropie/retropie-downloads/"&gt;retropie-downloads&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;安迪兒是直接去捉images下來解開，燒至sd卡裡 &lt;br&gt;
+細節可以參考安迪兒之前記錄的文章 &lt;br&gt;
+&lt;code&gt;sudo dd bs=4m if=xxxxxxx.img of=/dev/disk2&lt;/code&gt;  &lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.dotblogs.com.tw/bowwowxx/archive/2014/04/15/144738.aspx"&gt;Raspberry pi 記錄1-安裝Raspberry pi&lt;/a&gt;  &lt;/p&gt;
+
+&lt;p&gt;再來接上鍵盤開機後，出現welcome的畫面 &lt;br&gt;
+有接搖桿或按鈕的，這時按一下第一顆鈕，看畫面有沒反應 &lt;br&gt;
+ok的話，按下鍵盤的F4離開  &lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://lh6.googleusercontent.com/-SkcUndVVi7E/VW8bRBnLGlI/AAAAAAAAH3g/kXWn53DCz08/w615-h820-no/retropio1_07.JPG" alt="打造Raspberry Pi萬能家用遊戲機(RetroPie)"&gt;&lt;/p&gt;
+
+&lt;p&gt;再來會要你設定其它界面選單上用到的鈕 &lt;br&gt;
+(這邊和遊戲用到的鈕不太同喔)  &lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://lh6.googleusercontent.com/-MFdQvS-M8H0/VW8bRDmX4hI/AAAAAAAAH3Y/eMJYwmUibSU/w615-h820-no/retropio1_08.JPG" alt="打造Raspberry Pi萬能家用遊戲機(RetroPie)"&gt;&lt;/p&gt;
+
+&lt;p&gt;設定完後，各種模擬器的選項就出來了  &lt;/p&gt;
+
+&lt;p&gt;再來我們先來調整一下raspberry pi上的一些基本設定 &lt;br&gt;
+按下鍵盤的F4鍵，再按一下別的按鍵就會跳出RetroPie到指令列 &lt;br&gt;
+首先我們看一下ip多少 &lt;br&gt;
+&lt;code&gt;ifconfig&lt;/code&gt;  &lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://lh6.googleusercontent.com/-eh-R0RmgPx8/VW8bTzjnOBI/AAAAAAAAH30/M6GA_hD1Dz0/w615-h820-no/retropio1_11.JPG" alt="打造Raspberry Pi萬能家用遊戲機(RetroPie)"&gt;&lt;/p&gt;
+
+&lt;p&gt;然後對raspberry pi做一些設定 &lt;br&gt;
+&lt;code&gt;sudo raspi-config&lt;/code&gt;  &lt;/p&gt;
+
+&lt;p&gt;照慣例，先擴展一下sd磁區 &lt;br&gt;
+&lt;strong&gt;選1.Expand Filesystem&lt;/strong&gt;  &lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://lh6.googleusercontent.com/-96j--lzOGkg/VW8bZmkTodI/AAAAAAAAH4U/1qL_rpyn7mk/w615-h820-no/retropio1_15.JPG" alt="打造Raspberry Pi萬能家用遊戲機(RetroPie)"&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;看一下ssh有沒有打開(應該是有啦)&lt;/strong&gt;  &lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://lh6.googleusercontent.com/-H9ajK1R_FCU/VW8bWg4WtGI/AAAAAAAAH4A/tq-DOCsGzQg/w615-h820-no/retropio1_12.JPG" alt="打造Raspberry Pi萬能家用遊戲機(RetroPie)" title=""&gt;  &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;超一點點頻(看個人~XD)&lt;/strong&gt;  &lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://lh6.googleusercontent.com/-amUTbllr828/VW8bXaDnHLI/AAAAAAAAH4I/ryGdPFWDDuA/w615-h820-no/retropio1_13.JPG" alt="打造Raspberry Pi萬能家用遊戲機(RetroPie)" title=""&gt;  &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;設定完成，重開機&lt;/strong&gt; &lt;br&gt;
+畫面出現了  &lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://lh6.googleusercontent.com/-tLpvD1CuNIs/VW8bRwB8e2I/AAAAAAAAH3k/Ot4YvE5W-hk/w615-h820-no/retropio1_09.JPG" alt="打造Raspberry Pi萬能家用遊戲機(RetroPie)"&gt;&lt;/p&gt;
+
+&lt;p&gt;此時把ROM COPY進去 &lt;br&gt;
+剛確定ip和ssh的設定就是要連線用的 &lt;br&gt;
+打開filezilla，輸入ip &lt;br&gt;
+帳號:pi &lt;br&gt;
+密碼:raspberry &lt;br&gt;
+就可以連線進去看嘍 &lt;br&gt;
+可以看到很多不同模擬器的資料匣 &lt;br&gt;
+把ROM拉到相關的模擬器資料匣吧^^&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://lh6.googleusercontent.com/-OQwYI92HSVc/VW8bNUOTboI/AAAAAAAAH24/zq04hhcr0QU/w802-h541-no/retropio1_01.jpg" alt="打造Raspberry Pi萬能家用遊戲機(RetroPie)"&gt;&lt;/p&gt;
+
+&lt;p&gt;再來我們更新一下RetroPie內，各模擬器的版本 &lt;br&gt;
+在電腦上打開終端機連線到pi裡面 &lt;br&gt;
+輸入:&lt;code&gt;ssh pi@raspberry pi的ip位址&lt;/code&gt; &lt;br&gt;
+密碼:&lt;code&gt;raspberry&lt;/code&gt;   &lt;/p&gt;
+
+&lt;p&gt;進RetroPie的設定資料匣 &lt;br&gt;
+&lt;code&gt;cd RetroPie-Setup&lt;/code&gt; &lt;br&gt;
+&lt;code&gt;chmod +x retropie_setup.sh&lt;/code&gt; &lt;br&gt;
+&lt;code&gt;sudo ./retropie_setup.sh&lt;/code&gt;  &lt;/p&gt;
+
+&lt;p&gt;就會進入設定畫面嘍&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://lh4.googleusercontent.com/-j9V-wr41D1c/VW8bOJ718vI/AAAAAAAAH28/xk_8QjS2jGM/w686-h457-no/retropio1_04.jpg" alt="打造Raspberry Pi萬能家用遊戲機(RetroPie)"&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;選1 Binary-baseinstallation(recommended)&lt;/strong&gt; &lt;br&gt;
+給它跑一下，全部裝完會到主畫面 &lt;br&gt;
+跑完後，安迪兒有碰到要裝什麼Atari 800的BIOS檔 &lt;br&gt;
+但因為沒用到，所以安迪兒直接按ok &lt;br&gt;
+(這不知是啥的模擬器沒玩過~XD) &lt;br&gt;
+最後在主畫面那&lt;strong&gt;選R Perform reboot&lt;/strong&gt;，它會重開機
+(先接一下鍵盤)  &lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://lh3.googleusercontent.com/-A-re0dw3fUE/VW8bOdjYbkI/AAAAAAAAH3A/bN6oXdhImQY/w498-h367-no/retropio1_05.jpg" alt="打造Raspberry Pi萬能家用遊戲機(RetroPie)"&gt;&lt;/p&gt;
+
+&lt;p&gt;重開機後，一樣出現剛才各種模擬器的選項 &lt;br&gt;
+但這時可以選mame了，裡面應該就有遊戲可以玩了 &lt;br&gt;
+安迪兒一開始搖桿都不能投幣 &lt;br&gt;
+百思不得其解，後來試了一下，原來它和pc上的mame plus模擬器一樣 &lt;br&gt;
+初始設定的按鈕 鍵盤的5是投幣 1是開始 p是暫停 &lt;br&gt;
+其它要更改按鍵的話，按一下tab，把要的key全換成按鈕或搖桿上的按鍵 &lt;br&gt;
+以上到這邊就完成了 &lt;br&gt;
+來張當年的&lt;strong&gt;絕響&lt;/strong&gt;紀念一下~~XD  &lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://lh6.googleusercontent.com/-Y19gSaOdPuI/VW8bap-BmII/AAAAAAAAH4k/QtYBxACx91I/w615-h820-no/retropio1_16.JPG" alt="打造Raspberry Pi萬能家用遊戲機(RetroPie)" title=""&gt;  &lt;/p&gt;
+
+&lt;p&gt;最後，怕&lt;strong&gt;Raspberry Pi 2&lt;/strong&gt;長時間玩溫度過高 &lt;br&gt;
+幫他裝了靜音風扇和打上LED燈(XD)  &lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://lh6.googleusercontent.com/-rWVOJVUF66E/VW8bajV0QHI/AAAAAAAAH4o/wc2WrVOoSqQ/w615-h820-no/retropio1_17.JPG" alt="打造Raspberry Pi萬能家用遊戲機(RetroPie)" title=""&gt;  &lt;/p&gt;
+
+&lt;p&gt;收工嘍~收工嘍&lt;/p&gt;
+
+&lt;p&gt;喔~對!，你問我&lt;a href="http://blog.xuite.net/conanluo/twblog1?st=c&amp;amp;p=1&amp;amp;w=4372320"&gt;ROM&lt;/a&gt;去那申請試用? &lt;br&gt;
+嗯....應該就樣吧.. &lt;br&gt;
+好孩子試用幾分鐘後要刪除喔~XD  &lt;/p&gt;
+
+&lt;p&gt;&lt;mark&gt;&lt;a href="https://bowwowxx.github.io/ghblog/"&gt;以上文章同步發表至安迪兒另一個github備份站&lt;/a&gt;&lt;/mark&gt;  &lt;/p&gt;</content:encoded></item><item><title>幫Ghost Blog備份/升級/新增標籤雲功能</title><description>&lt;p&gt;替Ghost Blog升級&amp;amp;備份&amp;amp;加上標籤雲功能  &lt;/p&gt;
 
 &lt;p&gt;安迪兒之前想要cloud tag，有小改了一下ghost &lt;br&gt;
 碰上這次有新版就做了一次Ghost blog備份、升級、移植 &lt;br&gt;

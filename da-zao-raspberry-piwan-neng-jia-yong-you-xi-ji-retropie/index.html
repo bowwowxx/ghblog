@@ -1,0 +1,385 @@
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>打造Raspberry Pi萬能家用遊戲機(RetroPie)</title>
+    <meta name="description" content="">
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="../favicon.ico">
+
+    <script type="text/javascript" src="../assets/js/vendor/fastclick.js?v=b4c1f10b06"></script>
+    <script type="text/javascript" src="../assets/js/vendor/modernizr.js?v=b4c1f10b06"></script>
+
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" type="text/css" href="/assets/css/outdatedBrowser/outdatedBrowser.min.css?v=b4c1f10b06">
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/ichi.css?v=b4c1f10b06">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:300,700,400%7CSource+Sans+Pro:300,400,600,700,900,300italic,400italic,600italic,700italic,900italic">
+
+    <link rel="canonical" href="index.html">
+    
+    <meta property="og:site_name" content="bowwow">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="打造Raspberry Pi萬能家用遊戲機(RetroPie)">
+    <meta property="og:description" content="安迪兒之前一直想拿pi來當遊戲機玩  但pi的用途太多了，一直移去別的用途  這次忍痛拿了一塊Raspberry Pi 2來用  因為他有1G的RAM和4核心  效能超好，玩game不用擔心lag~XD 所以，安迪兒立馬去裝了有名的  RetroPie   它是個open source的萬用模擬器  支援了數不清的各種模擬器 可以來這邊看看，保證大家滿意~XD https://github.com/petrockblog/RetroPie-Setup/wiki   而且mame竟然不只mame4all耶  因為安迪兒之前捉的是pc上mame的ROM  mame4all上大多不能玩  而RetroPie有支援AdvanceMAME  真是太開心了~XD 另外RetroPie對把手或是搖桿的支援度也蠻高的  以上總結，不快裝一台來當家用遊樂器怎行呢~XD 以下安迪兒記錄一下安裝的過程 整個過程其實還好，大約和XBMC一樣 直接捉下它的img下來，燒進sd卡...">
+    <meta property="og:url" content="http://127.0.0.1:2368/da-zao-raspberry-piwan-neng-jia-yong-you-xi-ji-retropie/">
+    <meta property="og:image" content="http://www.techory.com/blog/wp-content/uploads/IMG_20150202_201753.jpg">
+    <meta property="article:published_time" content="2015-06-03T17:00:50.481Z">
+    <meta property="article:modified_time" content="2015-06-03T17:12:14.004Z">
+    <meta property="article:tag" content="Raspberry Pi">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="打造Raspberry Pi萬能家用遊戲機(RetroPie)">
+    <meta name="twitter:description" content="安迪兒之前一直想拿pi來當遊戲機玩  但pi的用途太多了，一直移去別的用途  這次忍痛拿了一塊Raspberry Pi 2來用  因為他有1G的RAM和4核心  效能超好，玩game不用擔心lag~XD 所以，安迪兒立馬去裝了有名的  RetroPie   它是個open source的萬用模擬器  支援了數不清的各種模擬器 可以來這邊看看，保證大家滿意~XD https://github.com/petrockblog/RetroPie-Setup/wiki   而且mame竟然不只mame4all耶  因為安迪兒之前捉的是pc上mame的ROM  mame4all上大多不能玩  而RetroPie有支援AdvanceMAME  真是太開心了~XD 另外RetroPie對把手或是搖桿的支援度也蠻高的  以上總結，不快裝一台來當家用遊樂器怎行呢~XD 以下安迪兒記錄一下安裝的過程 整個過程其實還好，大約和XBMC一樣 直接捉下它的img下來，燒進sd卡...">
+    <meta name="twitter:url" content="http://127.0.0.1:2368/da-zao-raspberry-piwan-neng-jia-yong-you-xi-ji-retropie/">
+    <meta name="twitter:image:src" content="http://www.techory.com/blog/wp-content/uploads/IMG_20150202_201753.jpg">
+    
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "publisher": "bowwow",
+    "author": {
+        "@type": "Person",
+        "name": "bowwow",
+        "image": "http://127.0.0.1:2368/content/images/2015/05/bow02-2.jpg",
+        "url": "http://127.0.0.1:2368/author/bowwow",
+        "sameAs": null,
+        "description": null
+    },
+    "headline": "打造Raspberry Pi萬能家用遊戲機(RetroPie)",
+    "url": "http://127.0.0.1:2368/da-zao-raspberry-piwan-neng-jia-yong-you-xi-ji-retropie/",
+    "datePublished": "2015-06-03T17:00:50.481Z",
+    "dateModified": "2015-06-03T17:12:14.004Z",
+    "image": "http://www.techory.com/blog/wp-content/uploads/IMG_20150202_201753.jpg",
+    "keywords": "Raspberry Pi",
+    "description": "安迪兒之前一直想拿pi來當遊戲機玩  但pi的用途太多了，一直移去別的用途  這次忍痛拿了一塊Raspberry Pi 2來用  因為他有1G的RAM和4核心  效能超好，玩game不用擔心lag~XD 所以，安迪兒立馬去裝了有名的  RetroPie   它是個open source的萬用模擬器  支援了數不清的各種模擬器 可以來這邊看看，保證大家滿意~XD https://github.com/petrockblog/RetroPie-Setup/wiki   而且mame竟然不只mame4all耶  因為安迪兒之前捉的是pc上mame的ROM  mame4all上大多不能玩  而RetroPie有支援AdvanceMAME  真是太開心了~XD 另外RetroPie對把手或是搖桿的支援度也蠻高的  以上總結，不快裝一台來當家用遊樂器怎行呢~XD 以下安迪兒記錄一下安裝的過程 整個過程其實還好，大約和XBMC一樣 直接捉下它的img下來，燒進sd卡..."
+}
+    </script>
+
+    <meta name="generator" content="Ghost 0.6">
+    <link rel="alternate" type="application/rss+xml" title="bowwow" href="../rss/index.html">
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-63062501-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+<body class="post-template tag-raspberry-pi">
+
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdate" href="http://outdatedbrowser.com/">Update my browser now</a></p>
+</div>
+
+<nav class="top-bar hide-for-large-up" data-topbar style="background: none">
+  <ul class="title-area">
+    <li class="name">
+
+    </li>
+    <li class="home"><a class="fi-home" href="../"></a></li>
+    <li class="toggle-topbar"><a href="index.html#" id="trigger-overlay" class="fi-list"></a></li>
+  </ul>
+
+<div class="overlay overlay-scale">
+    <button type="button" class="overlay-close">Close</button>
+    <nav>
+        <ul>
+                <li><a href="https://bowwowxx.github.io/ghblog/">Home</a></li>
+
+        </ul>
+    </nav>
+</div>
+
+</nav>
+
+<div class="row">
+
+<div class="small-16 medium-16 large-4 columns head-area bgimage" style="background-image: url(../content/images/2015/05/do02.jpg)">
+
+<header class="site-head">
+    <div class="vertical">
+        <div class="site-head-content inner">
+            <ul class="side-nav blog-menu show-for-large-up">
+                    <li><a href="https://bowwowxx.github.io/ghblog/">Home</a></li>
+
+            </ul>
+            <a class="blog-logo" href="../"><img alt="bowwow" src="../content/images/2015/05/bow02-1.jpg"></a>
+            <h1 class="blog-title">bowwow</h1>
+            <hr>
+            <p class="blog-description">Thoughts, stories and ideas.</p>
+            <ul><ul class="side-nav blog-menu show-for-large-uplass">
+    <li>
+    <a href="../tag/ghost-blog/">ghost blog:4</a>
+    </li>
+    <li>
+    <a href="../tag/tips/">tips:2</a>
+    </li>
+    <li>
+    <a href="../tag/raspberry-pi/">Raspberry Pi:1</a>
+    </li>
+    <li>
+    <a href="../tag/github/">github:1</a>
+    </li>
+    <li>
+    <a href="../tag/getting-started/">Getting Started:0</a>
+    </li>
+</ul>
+</ul>
+
+            <div class="blog-network">
+<!--                 <a href="#" class="fi-social-pinterest"></a>
+                <a href="#" class="fi-social-linkedin"></a>
+                <a href="#" class="fi-social-behance"></a>
+                <a href="#" class="fi-social-deviant-art"></a>
+                <a href="#" class="fi-social-dribbble"></a>
+                <a href="#" class="fi-social-flickr"></a>
+                <a href="#" class="fi-social-github"></a>
+                <a href="#" class="fi-social-skype"></a>
+                <a href="#" class="fi-social-snapchat"></a>
+                <a href="#" class="fi-social-steam"></a>
+                <a href="#" class="fi-social-xbox"></a>
+                <a href="#" class="fi-social-reddit"></a> -->
+                <a href="index.html#" class="fi-rss"></a>
+                <a href="index.html#" class="fi-social-google-plus"></a>
+                <a href="index.html#" class="fi-social-youtube"></a>
+                <a href="index.html#" class="fi-social-twitter"></a>
+                <a href="index.html#" class="fi-social-facebook"></a>
+            </div>
+        </div>
+    </div>
+</header>
+
+</div>
+
+<div class="small-16 medium-16 large-12 columns main-column">
+    
+
+<main class="content" role="main">
+
+    <article class="post tag-raspberry-pi">
+
+
+            <h1 class="post-title">打造Raspberry Pi萬能家用遊戲機(RetroPie)</h1>
+
+            <span class="post-meta label"><time datetime="2015-06-04">04 Jun 2015</time></span>
+
+            <section class="post-content">
+                <p>安迪兒之前一直想拿pi來當遊戲機玩 <br>
+但pi的用途太多了，一直移去別的用途 <br>
+這次忍痛拿了一塊Raspberry Pi 2來用 <br>
+因為他有1G的RAM和4核心 <br>
+效能超好，玩game不用擔心lag~XD</p>
+
+<p>所以，安迪兒立馬去裝了有名的 
+<a href="http://blog.petrockblock.com/retropie/retropie-downloads/">RetroPie</a>  </p>
+
+<p>它是個open source的萬用模擬器 <br>
+支援了數不清的各種模擬器</p>
+
+<p>可以來這邊看看，保證大家滿意~XD
+<a href="https://github.com/petrockblog/RetroPie-Setup/wiki">https://github.com/petrockblog/RetroPie-Setup/wiki</a>  </p>
+
+<p>而且mame竟然不只mame4all耶 <br>
+因為安迪兒之前捉的是pc上mame的ROM <br>
+mame4all上大多不能玩 <br>
+而RetroPie有支援AdvanceMAME <br>
+真是太開心了~XD</p>
+
+<p>另外RetroPie對把手或是搖桿的支援度也蠻高的 <br>
+以上總結，不快裝一台來當家用遊樂器怎行呢~XD</p>
+
+<p>以下安迪兒記錄一下安裝的過程</p>
+
+<p>整個過程其實還好，大約和XBMC一樣
+直接捉下它的img下來，燒進sd卡
+然後再做一些設定</p>
+
+<p>可以參考這份，git clone下來安裝 <br>
+<a href="https://github.com/petrockblog/RetroPie-Setup/wiki/First-Installation">First Installation</a>  </p>
+
+<p>也可以直接去他官方網站上，捉images下來 <br>
+<a href="http://blog.petrockblock.com/retropie/retropie-downloads/">retropie-downloads</a></p>
+
+<p>安迪兒是直接去捉images下來解開，燒至sd卡裡 <br>
+細節可以參考安迪兒之前記錄的文章 <br>
+<code>sudo dd bs=4m if=xxxxxxx.img of=/dev/disk2</code>  </p>
+
+<p><a href="http://www.dotblogs.com.tw/bowwowxx/archive/2014/04/15/144738.aspx">Raspberry pi 記錄1-安裝Raspberry pi</a>  </p>
+
+<p>再來接上鍵盤開機後，出現welcome的畫面 <br>
+有接搖桿或按鈕的，這時按一下第一顆鈕，看畫面有沒反應 <br>
+ok的話，按下鍵盤的F4離開  </p>
+
+<p><img src="https://lh6.googleusercontent.com/-SkcUndVVi7E/VW8bRBnLGlI/AAAAAAAAH3g/kXWn53DCz08/w615-h820-no/retropio1_07.JPG" alt=""></p>
+
+<p>再來會要你設定其它界面選單上用到的鈕 <br>
+(這邊和遊戲用到的鈕不太同喔)  </p>
+
+<p><img src="https://lh6.googleusercontent.com/-MFdQvS-M8H0/VW8bRDmX4hI/AAAAAAAAH3Y/eMJYwmUibSU/w615-h820-no/retropio1_08.JPG" alt=""></p>
+
+<p>設定完後，各種模擬器的選項就出來了  </p>
+
+<p>再來我們先來調整一下raspberry pi上的一些基本設定 <br>
+按下鍵盤的F4鍵，再按一下別的按鍵就會跳出RetroPie到指令列 <br>
+首先我們看一下ip多少 <br>
+<code>ifconfig</code>  </p>
+
+<p><img src="https://lh6.googleusercontent.com/-eh-R0RmgPx8/VW8bTzjnOBI/AAAAAAAAH30/M6GA_hD1Dz0/w615-h820-no/retropio1_11.JPG" alt=""></p>
+
+<p>然後對raspberry pi做一些設定 <br>
+<code>sudo raspi-config</code>  </p>
+
+<p>照慣例，先擴展一下sd磁區 <br>
+<strong>選1.Expand Filesystem</strong>  </p>
+
+<p><img src="https://lh6.googleusercontent.com/-96j--lzOGkg/VW8bZmkTodI/AAAAAAAAH4U/1qL_rpyn7mk/w615-h820-no/retropio1_15.JPG" alt=""></p>
+
+<p><strong>看一下ssh有沒有打開(應該是有啦)</strong>  </p>
+
+<p><img src="https://lh6.googleusercontent.com/-H9ajK1R_FCU/VW8bWg4WtGI/AAAAAAAAH4A/tq-DOCsGzQg/w615-h820-no/retropio1_12.JPG" alt="" title="">  </p>
+
+<p><strong>超一點點頻(看個人~XD)</strong>  </p>
+
+<p><img src="https://lh6.googleusercontent.com/-amUTbllr828/VW8bXaDnHLI/AAAAAAAAH4I/ryGdPFWDDuA/w615-h820-no/retropio1_13.JPG" alt="" title="">  </p>
+
+<p><strong>設定完成，重開機</strong> <br>
+畫面出現了  </p>
+
+<p><img src="https://lh6.googleusercontent.com/-tLpvD1CuNIs/VW8bRwB8e2I/AAAAAAAAH3k/Ot4YvE5W-hk/w615-h820-no/retropio1_09.JPG" alt=""></p>
+
+<p>此時把ROM COPY進去 <br>
+剛確定ip和ssh的設定就是要連線用的 <br>
+打開filezilla，輸入ip <br>
+帳號:pi <br>
+密碼:raspberry <br>
+就可以連線進去看嘍 <br>
+可以看到很多不同模擬器的資料匣 <br>
+把ROM拉到相關的模擬器資料匣吧^^</p>
+
+<p><img src="https://lh6.googleusercontent.com/-OQwYI92HSVc/VW8bNUOTboI/AAAAAAAAH24/zq04hhcr0QU/w802-h541-no/retropio1_01.jpg" alt=""></p>
+
+<p>再來我們更新一下RetroPie內，各模擬器的版本 <br>
+在電腦上打開終端機連線到pi裡面 <br>
+輸入:<code>ssh pi@raspberry pi的ip位址</code> <br>
+密碼:<code>raspberry</code>   </p>
+
+<p>進RetroPie的設定資料匣 <br>
+<code>cd RetroPie-Setup</code> <br>
+<code>chmod +x retropie_setup.sh</code> <br>
+<code>sudo ./retropie_setup.sh</code>  </p>
+
+<p>就會進入設定畫面嘍</p>
+
+<p><img src="https://lh4.googleusercontent.com/-j9V-wr41D1c/VW8bOJ718vI/AAAAAAAAH28/xk_8QjS2jGM/w686-h457-no/retropio1_04.jpg" alt=""></p>
+
+<p><strong>選1 Binary-baseinstallation(recommended)</strong> <br>
+給它跑一下，全部裝完會到主畫面 <br>
+跑完後，安迪兒有碰到要裝什麼Atari 800的BIOS檔 <br>
+但因為沒用到，所以安迪兒直接按ok <br>
+(這不知是啥的模擬器沒玩過~XD) <br>
+最後在主畫面那<strong>選R Perform reboot</strong>，它會重開機
+(先接一下鍵盤)  </p>
+
+<p><img src="https://lh3.googleusercontent.com/-A-re0dw3fUE/VW8bOdjYbkI/AAAAAAAAH3A/bN6oXdhImQY/w498-h367-no/retropio1_05.jpg" alt=""></p>
+
+<p>重開機後，一樣出現剛才各種模擬器的選項 <br>
+但這時可以選mame了，裡面應該就有遊戲可以玩了 <br>
+安迪兒一開始搖桿都不能投幣 <br>
+百思不得其解，後來試了一下，原來它和pc上的mame plus模擬器一樣 <br>
+初始設定的按鈕 鍵盤的5是投幣 1是開始 p是暫停 <br>
+其它要更改按鍵的話，按一下tab，把要的key全換成按鈕或搖桿上的按鍵 <br>
+以上到這邊就完成了 <br>
+來張當年的<strong>絕響</strong>紀念一下~~XD  </p>
+
+<p><img src="https://lh6.googleusercontent.com/-Y19gSaOdPuI/VW8bap-BmII/AAAAAAAAH4k/QtYBxACx91I/w615-h820-no/retropio1_16.JPG" alt="" title="">  </p>
+
+<p>最後，怕<strong>Raspberry Pi 2</strong>長時間玩溫度過高 <br>
+幫他裝了靜音風扇和打上LED燈(XD)  </p>
+
+<p><img src="https://lh6.googleusercontent.com/-rWVOJVUF66E/VW8bajV0QHI/AAAAAAAAH4o/wc2WrVOoSqQ/w615-h820-no/retropio1_17.JPG" alt="" title="">  </p>
+
+<p>收工嘍~收工嘍</p>
+
+<p>喔~對!，你問我<a href="http://blog.xuite.net/conanluo/twblog1?st=c&amp;p=1&amp;w=4372320">ROM</a>去那申請試用? <br>
+嗯....應該就樣吧.. <br>
+好孩子試用幾分鐘後要刪除喔~XD  </p>
+
+<p><mark><a href="https://bowwowxx.github.io/ghblog/">以上文章同步發表至安迪兒另一個github備份站</a></mark>  </p>
+                        <aside class="tags fi-pricetag-multiple">Posted on <a href="../tag/raspberry-pi/">Raspberry Pi</a></aside>
+            </section>
+            <hr>
+            <footer class="post-footer">
+
+                <section class="share">
+                    <h4>Liked this post ? Share it.</h4>
+                    <a class="fi-social-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://127.0.0.1:2368/da-zao-raspberry-piwan-neng-jia-yong-you-xi-ji-retropie/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    </a>
+                    <a class="fi-social-twitter" href="https://twitter.com/share?text=%E6%89%93%E9%80%A0Raspberry%20Pi%E8%90%AC%E8%83%BD%E5%AE%B6%E7%94%A8%E9%81%8A%E6%88%B2%E6%A9%9F(RetroPie)&amp;url=http://127.0.0.1:2368/da-zao-raspberry-piwan-neng-jia-yong-you-xi-ji-retropie/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    </a>
+                    <a class="fi-social-google-plus" href="https://plus.google.com/share?url=http://127.0.0.1:2368/da-zao-raspberry-piwan-neng-jia-yong-you-xi-ji-retropie/" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    </a>
+                </section>
+
+                <section class="author">
+                    <header>
+                        <span>About the author</span>
+                    </header>
+                    <section>
+                        <h4>bowwow</h4>
+                        <img src="../content/images/2015/05/bow02-2.jpg">
+                        <span>TW</span>
+                        
+                    </section>
+                    <footer>
+                         <p></p>
+                    </footer>
+                </section>
+
+        <div class="clearfix"></div>
+                    <hr>
+
+            </footer>
+
+        <h3 class="title-disqus"><span class="fi-comments"></span>Discussions</h3>
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'bowwow'; // required: replace example with your forum shortname
+    var disqus_identifier = '9'; // make sure to use the post.id as an identifier, otherwise disqus will use the pages url per default, which might be problematic...
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </article>
+
+</main>
+
+</div>
+
+</div>
+
+    <!--[if lte IE 8]>
+        <script type="text/javascript" src="/assets/js/outdatedBrowser.min.js?v=b4c1f10b06"></script>
+    <![endif]-->
+    <script type="text/javascript" src="../assets/js/dest/built.min.js?v=b4c1f10b06"></script>
+
+    <script>
+      $(document).foundation();
+    </script>
+</body>
