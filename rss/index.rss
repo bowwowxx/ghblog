@@ -1,4 +1,4 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>bowwow</title><description>Thoughts, stories and ideas.</description><link>http://127.0.0.1:2368/</link><generator>Ghost 0.6</generator><lastBuildDate>Wed, 03 Jun 2015 06:16:06 GMT</lastBuildDate><atom:link href="http://127.0.0.1:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>幫Ghost Blog備份/升級/新增標籤雲功能</title><description>&lt;p&gt;替Ghost Blog升級&amp;amp;備份&amp;amp;加上標籤雲功能  &lt;/p&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>bowwow</title><description>Thoughts, stories and ideas.</description><link>http://127.0.0.1:2368/</link><generator>Ghost 0.6</generator><lastBuildDate>Wed, 03 Jun 2015 07:52:21 GMT</lastBuildDate><atom:link href="http://127.0.0.1:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>幫Ghost Blog備份/升級/新增標籤雲功能</title><description>&lt;p&gt;替Ghost Blog升級&amp;amp;備份&amp;amp;加上標籤雲功能  &lt;/p&gt;
 
 &lt;p&gt;安迪兒之前想要cloud tag，有小改了一下ghost &lt;br&gt;
 碰上這次有新版就做了一次Ghost blog備份、升級、移植 &lt;br&gt;
@@ -124,23 +124,23 @@ helper: &lt;br&gt;
 &lt;pre&gt;&lt;code&gt;coreHelpers.tag_cloud = require('./tags_cloudtag');
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img src="https://lh6.googleusercontent.com/-2xETiUrnGC4/VW3zWw2EOxI/AAAAAAAAH08/b5pNDHz0wiQ/w637-h266-no/ghosbackup04.jpg" alt="幫Ghost Blog備份/升級/新增標籤雲功能"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://lh5.googleusercontent.com/-zziMZwUNHtI/VW6wtnj6iMI/AAAAAAAAH2E/SJzbIU_eYlk/w628-h511-no/ghostbackup08.jpg" alt="幫Ghost Blog備份/升級/新增標籤雲功能"&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;async&lt;/strong&gt;那加上&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;registerAsyncThemeHelper('tags_cloudtag',coreHelpers.tags_cloudtag);
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img src="https://lh5.googleusercontent.com/-umKmYea-ztY/VW3zXJyYWoI/AAAAAAAAH1M/-gVhVqTgA8I/w794-h511-no/ghosbackup05.jpg" alt="幫Ghost Blog備份/升級/新增標籤雲功能" title=""&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://lh4.googleusercontent.com/-NOwR3gt83bk/VW6wtmcfYdI/AAAAAAAAH2A/uol2NLVd3RY/w689-h511-no/ghostbackup09.jpg" alt="幫Ghost Blog備份/升級/新增標籤雲功能" title=""&gt;&lt;/p&gt;
 
 &lt;p&gt;再來看看要把這個tag加到那邊  &lt;/p&gt;
 
 &lt;p&gt;像安迪兒是改使用的themes裡面 &lt;br&gt;
 某一包theme的default.hbs檔 &lt;br&gt;
-再想要的地方加上{{tags_cloudtag limit="all"}} &lt;br&gt;
-limit指的是限定的標籤數量&lt;/p&gt;
+再想要的地方加上&lt;strong&gt;{{tags_cloudtag limit="all"}}&lt;/strong&gt; &lt;br&gt;
+(limit指的是限定的標籤數量)  &lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;&amp;lt;ul&amp;gt;{{tags_cloudtag limit="all"}}&amp;lt;/ul&amp;gt;&lt;/code&gt;    &lt;/p&gt;
+&lt;p&gt;&lt;img src="https://lh6.googleusercontent.com/-x0aaTDZaWAw/VW6wuCq5MmI/AAAAAAAAH2I/tGLhtTGnLPM/w595-h438-no/ghostbackup10.jpg" alt="幫Ghost Blog備份/升級/新增標籤雲功能" title=""&gt;    &lt;/p&gt;
 
 &lt;p&gt;改完嘍，重啟一下ghost &lt;br&gt;
  &lt;code&gt;npm start --production&lt;/code&gt;  &lt;/p&gt;
