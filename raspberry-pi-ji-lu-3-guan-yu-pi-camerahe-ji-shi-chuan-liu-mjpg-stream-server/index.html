@@ -1,0 +1,508 @@
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Raspberry pi 記錄3-關於Pi Camera和即時串流(MJPG Stream Server)</title>
+    <meta name="description" content="">
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="../favicon.ico">
+
+    <script type="text/javascript" src="../assets/js/vendor/fastclick.js?v=ec9a2e2cd2"></script>
+    <script type="text/javascript" src="../assets/js/vendor/modernizr.js?v=ec9a2e2cd2"></script>
+
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" type="text/css" href="/assets/css/outdatedBrowser/outdatedBrowser.min.css?v=ec9a2e2cd2">
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/ichi.css?v=ec9a2e2cd2">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:300,700,400%7CSource+Sans+Pro:300,400,600,700,900,300italic,400italic,600italic,700italic,900italic">
+
+    <link rel="canonical" href="index.html">
+    
+    <meta property="og:site_name" content="bowwow">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Raspberry pi 記錄3-關於Pi Camera和即時串流(MJPG Stream Server)">
+    <meta property="og:description" content="玩Raspberry pi  最常想到的就是能不能拿來當監視系統?   因為pi很迷你，又低耗電  1片約1千左右，加上webcam  大約2千元內就有不錯的影像監視系統  不論是觀察寵物、縮時設影、或是老人小孩居家保全  整體來說cp值還算高   這次安迪兒記錄一下  用raspberry pi官方出的Camera  來架設即時影像系統 其實之前安迪兒有裝上小機器人Rapiro  但那時大家都用motion  之後安迪兒有測過motion、ffmpeg、VLC等串流  這次安迪兒採用速度較快一些的MJPG-streamer 為啥要用官方的Camera呢?  官方出的camera很特別  他的連接埠是CSI（Camera Serial Interface)介面  直接接上pi版就可以使用  除了小巧省USB之外，CSI的連接埠傳輸速度很快  Raspberry Pi Camera其實也有500萬畫素  另外也有出紅外線夜視功能的版本     附上規格參考  Omnivision 5647 sensor...">
+    <meta property="og:url" content="http://127.0.0.1:2368/raspberry-pi-ji-lu-3-guan-yu-pi-camerahe-ji-shi-chuan-liu-mjpg-stream-server/">
+    <meta property="og:image" content="https://lh3.googleusercontent.com/-aQs-PLk3Gbg/VXTOqb620VI/AAAAAAAAH8I/3vbQZrtLlgo/w654-h554-no/raspberrypiStream04.jpg">
+    <meta property="article:published_time" content="2015-06-08T07:28:49.032Z">
+    <meta property="article:modified_time" content="2015-06-08T07:32:36.065Z">
+    <meta property="article:tag" content="Raspberry Pi">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Raspberry pi 記錄3-關於Pi Camera和即時串流(MJPG Stream Server)">
+    <meta name="twitter:description" content="玩Raspberry pi  最常想到的就是能不能拿來當監視系統?   因為pi很迷你，又低耗電  1片約1千左右，加上webcam  大約2千元內就有不錯的影像監視系統  不論是觀察寵物、縮時設影、或是老人小孩居家保全  整體來說cp值還算高   這次安迪兒記錄一下  用raspberry pi官方出的Camera  來架設即時影像系統 其實之前安迪兒有裝上小機器人Rapiro  但那時大家都用motion  之後安迪兒有測過motion、ffmpeg、VLC等串流  這次安迪兒採用速度較快一些的MJPG-streamer 為啥要用官方的Camera呢?  官方出的camera很特別  他的連接埠是CSI（Camera Serial Interface)介面  直接接上pi版就可以使用  除了小巧省USB之外，CSI的連接埠傳輸速度很快  Raspberry Pi Camera其實也有500萬畫素  另外也有出紅外線夜視功能的版本     附上規格參考  Omnivision 5647 sensor...">
+    <meta name="twitter:url" content="http://127.0.0.1:2368/raspberry-pi-ji-lu-3-guan-yu-pi-camerahe-ji-shi-chuan-liu-mjpg-stream-server/">
+    <meta name="twitter:image:src" content="https://lh3.googleusercontent.com/-aQs-PLk3Gbg/VXTOqb620VI/AAAAAAAAH8I/3vbQZrtLlgo/w654-h554-no/raspberrypiStream04.jpg">
+    
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "publisher": "bowwow",
+    "author": {
+        "@type": "Person",
+        "name": "bowwow",
+        "image": "http://127.0.0.1:2368/content/images/2015/05/bow02-2.jpg",
+        "url": "http://127.0.0.1:2368/author/bowwow",
+        "sameAs": null,
+        "description": null
+    },
+    "headline": "Raspberry pi 記錄3-關於Pi Camera和即時串流(MJPG Stream Server)",
+    "url": "http://127.0.0.1:2368/raspberry-pi-ji-lu-3-guan-yu-pi-camerahe-ji-shi-chuan-liu-mjpg-stream-server/",
+    "datePublished": "2015-06-08T07:28:49.032Z",
+    "dateModified": "2015-06-08T07:32:36.065Z",
+    "image": "https://lh3.googleusercontent.com/-aQs-PLk3Gbg/VXTOqb620VI/AAAAAAAAH8I/3vbQZrtLlgo/w654-h554-no/raspberrypiStream04.jpg",
+    "keywords": "Raspberry Pi",
+    "description": "玩Raspberry pi  最常想到的就是能不能拿來當監視系統?   因為pi很迷你，又低耗電  1片約1千左右，加上webcam  大約2千元內就有不錯的影像監視系統  不論是觀察寵物、縮時設影、或是老人小孩居家保全  整體來說cp值還算高   這次安迪兒記錄一下  用raspberry pi官方出的Camera  來架設即時影像系統 其實之前安迪兒有裝上小機器人Rapiro  但那時大家都用motion  之後安迪兒有測過motion、ffmpeg、VLC等串流  這次安迪兒採用速度較快一些的MJPG-streamer 為啥要用官方的Camera呢?  官方出的camera很特別  他的連接埠是CSI（Camera Serial Interface)介面  直接接上pi版就可以使用  除了小巧省USB之外，CSI的連接埠傳輸速度很快  Raspberry Pi Camera其實也有500萬畫素  另外也有出紅外線夜視功能的版本     附上規格參考  Omnivision 5647 sensor..."
+}
+    </script>
+
+    <meta name="generator" content="Ghost 0.6">
+    <link rel="alternate" type="application/rss+xml" title="bowwow" href="../rss/index.html">
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-63062501-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+<body class="post-template tag-raspberry-pi">
+
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdate" href="http://outdatedbrowser.com/">Update my browser now</a></p>
+</div>
+
+<nav class="top-bar hide-for-large-up" data-topbar style="background: none">
+  <ul class="title-area">
+    <li class="name">
+
+    </li>
+    <li class="home"><a class="fi-home" href="../"></a></li>
+    <li class="toggle-topbar"><a href="index.html#" id="trigger-overlay" class="fi-list"></a></li>
+  </ul>
+
+<div class="overlay overlay-scale">
+    <button type="button" class="overlay-close">Close</button>
+    <nav>
+        <ul>
+                <li><a href="https://bowwowxx.github.io/ghblog/">Home</a></li>
+
+        </ul>
+    </nav>
+</div>
+
+</nav>
+
+<div class="row">
+
+<div class="small-16 medium-16 large-4 columns head-area bgimage" style="background-image: url(../content/images/2015/05/do02.jpg)">
+
+<header class="site-head">
+    <div class="vertical">
+        <div class="site-head-content inner">
+            <ul class="side-nav blog-menu show-for-large-up">
+                    <li><a href="https://bowwowxx.github.io/ghblog/">Home</a></li>
+
+            </ul>
+            <a class="blog-logo" href="../"><img alt="bowwow" src="../content/images/2015/05/bow02-1.jpg"></a>
+            <h1 class="blog-title">bowwow</h1>
+            <hr>
+            <p class="blog-description">Thoughts, stories and ideas.</p>
+            <ul><ul class="side-nav blog-menu show-for-large-uplass">
+    <li>
+    <a href="../tag/ghost-blog/">ghost blog:4</a>
+    </li>
+    <li>
+    <a href="../tag/raspberry-pi/">Raspberry Pi:2</a>
+    </li>
+    <li>
+    <a href="../tag/tips/">tips:2</a>
+    </li>
+    <li>
+    <a href="../tag/github/">github:1</a>
+    </li>
+    <li>
+    <a href="../tag/getting-started/">Getting Started:0</a>
+    </li>
+</ul>
+</ul>
+
+            <div class="blog-network">
+<!--                 <a href="#" class="fi-social-pinterest"></a>
+                <a href="#" class="fi-social-linkedin"></a>
+                <a href="#" class="fi-social-behance"></a>
+                <a href="#" class="fi-social-deviant-art"></a>
+                <a href="#" class="fi-social-dribbble"></a>
+                <a href="#" class="fi-social-flickr"></a>
+                <a href="#" class="fi-social-github"></a>
+                <a href="#" class="fi-social-skype"></a>
+                <a href="#" class="fi-social-snapchat"></a>
+                <a href="#" class="fi-social-steam"></a>
+                <a href="#" class="fi-social-xbox"></a>
+                <a href="#" class="fi-social-reddit"></a> -->
+                <a href="index.html#" class="fi-rss"></a>
+                <a href="index.html#" class="fi-social-google-plus"></a>
+                <a href="index.html#" class="fi-social-youtube"></a>
+                <a href="index.html#" class="fi-social-twitter"></a>
+                <a href="index.html#" class="fi-social-facebook"></a>
+            </div>
+        </div>
+    </div>
+</header>
+
+</div>
+
+<div class="small-16 medium-16 large-12 columns main-column">
+    
+
+<main class="content" role="main">
+
+    <article class="post tag-raspberry-pi">
+
+
+            <h1 class="post-title">Raspberry pi 記錄3-關於Pi Camera和即時串流(MJPG Stream Server)</h1>
+
+            <span class="post-meta label"><time datetime="2015-06-08">08 Jun 2015</time></span>
+
+            <section class="post-content">
+                <p>玩Raspberry pi <br>
+最常想到的就是能不能拿來當監視系統?  </p>
+
+<p>因為pi很迷你，又低耗電 <br>
+1片約1千左右，加上webcam <br>
+大約2千元內就有不錯的影像監視系統 <br>
+不論是觀察寵物、縮時設影、或是老人小孩居家保全 <br>
+整體來說cp值還算高  </p>
+
+<p>這次安迪兒記錄一下 <br>
+用raspberry pi官方出的Camera 
+來架設即時影像系統</p>
+
+<p>其實之前安迪兒有裝上小機器人<a href="http://www.dotblogs.com.tw/bowwowxx/archive/2014/05/28/145279.aspx">Rapiro</a> <br>
+但那時大家都用<strong>motion</strong> <br>
+之後安迪兒有測過motion、ffmpeg、VLC等串流 <br>
+這次安迪兒採用速度較快一些的<strong>MJPG-streamer</strong></p>
+
+<p>為啥要用官方的Camera呢? <br>
+官方出的camera很特別 <br>
+他的連接埠是CSI（Camera Serial Interface)介面 <br>
+直接接上pi版就可以使用 <br>
+除了小巧省USB之外，CSI的連接埠傳輸速度很快 <br>
+Raspberry Pi Camera其實也有500萬畫素 <br>
+另外也有出紅外線夜視功能的版本    </p>
+
+<p><strong>附上規格參考</strong> <br>
+<strong>Omnivision 5647 sensor in a fixed-focus module（影像感測器） <br>
+5M Pixel sensor（500萬像素） <br>
+Still picture resolution: 2592 x 1944 <br>
+Max video resolution: 1080p（720p或1080p的H.264錄影格式） <br>
+Max frame rate: 30fps <br>
+尺寸：20 x 25 x 10mm</strong>   </p>
+
+<p>Raspberry Pi Camera雖然有種種優點 <br>
+但缺點是CSI這個介面比較特別 <br>
+很多視訊串流的軟體沒有很支援，免不了都要改東西 <br>
+這點和usb的webcam接上就可以使用，實在是不友好~XD  </p>
+
+<p>但為了Raspberry Pi Camera的優點 <br>
+我們還是一步一步的來修改 </p>
+
+<p>首先，先買好Raspberry Pi Camera <br>
+然後參考官方的影片說明，裝好它(排線別裝反了~XD) <br>
+<a href="https://www.raspberrypi.org/documentation/usage/camera/README.md">https://www.raspberrypi.org/documentation/usage/camera/README.md</a></p>
+
+<p>裝好之後，就整個開始raspberry pi的安裝流程  </p>
+
+<p><strong>參考一下舊文章</strong> <br>
+<a href="http://www.dotblogs.com.tw/bowwowxx/archive/2014/04/15/144738.aspx">Raspberry pi 記錄1-安裝Raspberry pi</a></p>
+
+<p>記得加選Enable Camera <br>
+<img src="https://lh4.googleusercontent.com/-pUNQgFGA9-4/VXTOq7LJZtI/AAAAAAAAH8A/EnXHgEBU2Yw/w886-h422-no/raspberrypiStream06.jpg" alt=""></p>
+
+<p><img src="https://lh4.googleusercontent.com/-xJhEEStVJFA/VXTOq5sfV0I/AAAAAAAAH8E/1ndAGhh1AS4/w901-h505-no/raspberrypiStream07.jpg" alt=""></p>
+
+<p>完成設定重開機 
+直接使用shell指令測試一下 <br>
+<code>raspistill -o cam.jpg</code> <br>
+<code>raspivid -o vid.h264</code></p>
+
+<p><img src="https://lh4.googleusercontent.com/-oNp_g4SiO6Y/VXTOrfFtt7I/AAAAAAAAH78/KmskaSTgXD8/w543-h497-no/raspberrypiStream08.jpg" alt=""></p>
+
+<h6 id="">再來就是進入正題了</h6>
+
+<p>先來安裝MJPEG Stream必要的套件  </p>
+
+<blockquote>
+  <p>sudo apt-get update <br>
+  sudo apt-get install subversion <br>
+  sudo apt-get install libjpeg8-dev <br>
+  sudo apt-get install imagemagick <br>
+  sudo apt-get install libv4l-dev</p>
+</blockquote>
+
+<p>用svn捉下
+<a href="https://svn.code.sf.net/p/mjpg-streamer/code/">https://svn.code.sf.net/p/mjpg-streamer/code/</a>  </p>
+
+<blockquote>
+  <p>svn co <a href="https://svn.code.sf.net/p/mjpg-streamer/code/">https://svn.code.sf.net/p/mjpg-streamer/code/</a> <br>
+  cd code/mjpg-streamer <br>
+  make <br>
+  sudo make install  </p>
+</blockquote>
+
+<p><img src="https://lh4.googleusercontent.com/-WNdY6C_mZCU/VXTOrkgcPyI/AAAAAAAAH70/Ez3jdzeNd3c/w785-h497-no/raspberrypiStream09.jpg" alt="" title=""> <br>
+<img src="https://lh3.googleusercontent.com/-roaULRPvCrY/VXTOsE073nI/AAAAAAAAH7w/LX0Ox2dpwuw/w747-h502-no/raspberrypiStream11.jpg" alt="" title="">  </p>
+
+<p>裝完後啟動mjpg_streamer <br>
+(一般usb webcam的應該到這邊就ok了)  </p>
+
+<p>切換目錄 <br>
+<code>cd code/mjpg-streamer</code>  </p>
+
+<p>啟動server <br>
+<code>./mjpg_streamer -i "./input_uvc.so" -o "./output_http.so -w ./www"</code>  </p>
+
+<p>嗯..發生錯誤了 <br>
+原因是V4L driver 不支援raspberry pi的camera <br>
+所以沒有 /dev/video0 <br>
+<img src="https://lh6.googleusercontent.com/-iZqLuM06sHM/VXTOsfBJXxI/AAAAAAAAH7k/fK11T3MPEhw/w531-h500-no/raspberrypiStream12.jpg" alt=""></p>
+
+<p>因為raspberry pi的camera比較特別V4L driver不支援 </p>
+
+<p><strong>所以我們要換成非官方的V4L deiver</strong> <br>
+參考下列的文件 <br>
+<a href="http://www.linux-projects.org/modules/sections/index.php?op=viewarticle&amp;artid=14">How to install or upgrade UV4L on Raspbian (for the Raspberry Pi)</a></p>
+
+<p>內容大約是先捉下key <br>
+再到sources.list裡加上套件的連結  </p>
+
+<p><img src="https://lh5.googleusercontent.com/--jE6C_1q7q0/VXTOslPKTyI/AAAAAAAAH7o/U_joZVuIJNg/w828-h500-no/raspberrypiStream13.jpg" alt="" title=""> <br>
+<img src="https://lh4.googleusercontent.com/uI0RUtgYTC6i3z4PHCMukJkQswxQTqVpVLnirsQLBNg=w801-h259-no" alt="" title="">  </p>
+
+<p>安裝必要的程式庫 <br>
+<code>wget http://www.linux-projects.org/listing/uv4l_repo/lrkey.asc &amp;&amp; sudo apt-key add ./lrkey.asc</code>  </p>
+
+<p>修改sources list <br>
+<code>sudo nano /etc/apt/sources.list</code>  </p>
+
+<p>加上這行，存檔離開 <br>
+<code>deb http://www.linux-projects.org/listing/uv4l_repo/raspbian/ wheezy main</code>  </p>
+
+<p>執行以下安裝  </p>
+
+<blockquote>
+  <p>sudo apt-get update <br>
+  sudo apt-get install uv4l uv4l-raspicam   </p>
+  
+  <p>以下可不裝(啟動時自動執行的外掛) <br>
+  sudo apt-get install uv4l-raspicam-extras  </p>
+</blockquote>
+
+<p>測試一下uv4l <br>
+<code>uv4l --help --driver raspicam --driver-help</code> 
+<img src="https://lh3.googleusercontent.com/-RfYfrbu9jvo/VXTOtKmlyQI/AAAAAAAAH74/Pu2X4AkJ_iI/w738-h504-no/raspberrypiStream15.jpg" alt="" title="">  </p>
+
+<p>重開機 <br>
+<code>sudo reboot</code>  </p>
+
+<p>再來補上其它的外掛 <br>
+先kill掉uv4l <br>
+<code>sudo pkill uv4l</code>  </p>
+
+<p>執行以下指令  </p>
+
+<blockquote>
+  <p>sudo apt-get update <br>
+  sudo apt-get install uv4l-uvc <br>
+  sudo apt-get install uv4l-xscreen <br>
+  sudo apt-get install uv4l-mjpegstream  </p>
+  
+  <p>以下可以不裝(直接用MJPG Stream Server代替) <br>
+  sudo apt-get install uv4l-server  </p>
+</blockquote>
+
+<p>裝完後執行 <br>
+<code>sudo reboot</code>    </p>
+
+<p>另外如果要用webRTC，文件裡面有提到  </p>
+
+<h6 id="fortheraspberrypi2onlythewebrtcextensionforthestreamingserverisalsoavailable">For the Raspberry Pi 2 only, the WebRTC extension for the   Streaming Server is also available:</h6>
+
+<h6 id="dsudoaptgetinstalluv4lwebrtc">$ sudo apt-get install uv4l-webrtc</h6>
+
+<p>安迪兒這邊沒安裝  </p>
+
+<p>重啟完，如果有裝uv4l-server的，可以試試能不能起動  </p>
+
+<p><code>uv4l --auto-video_nr --driver raspicam --encoding mjpeg --server-option '--port=9000'</code>  </p>
+
+<p><strong>or</strong>  </p>
+
+<p><code>uv4l --auto-video_nr --driver raspicam --encoding mjpeg --server-option '--port=9000' --driver raspicam --rotation 180 --width 352 --height 288</code>  </p>
+
+<p><img src="https://lh4.googleusercontent.com/-IH6JixQrzRU/VXTOpgu_4aI/AAAAAAAAH8M/vnat7VJsovQ/w620-h510-no/raspberrypiStream01.jpg" alt=""></p>
+
+<p><strong>安迪兒第一次是uv4l-raspicam-extras、uv4l-server全裝</strong> <br>
+<strong>但後來沒需要啟動時就執行、也不想再多裝個server</strong> <br>
+<strong>所以就沒裝了</strong>  </p>
+
+<p>再來我們來測試一下mjpg_streamer可不可以執行了  </p>
+
+<blockquote>
+  <p>sudo modprobe bcm2835-v4l2 <br>
+  cd code/mjpg-streamer  </p>
+  
+  <p>./mjpg<em>streamer -i "./input</em>uvc.so -d /dev/video0 -n -y f 15 -r 640x480" -o "./output_http.so -n -w /usr/local/www"    </p>
+</blockquote>
+
+<p>打開browser <br>
+輸入<a href="http://192.168.0.12:8080/">http://192.168.0.12:8080/</a>  </p>
+
+<p><img src="https://lh3.googleusercontent.com/-aQs-PLk3Gbg/VXTOqb620VI/AAAAAAAAH8I/3vbQZrtLlgo/w654-h554-no/raspberrypiStream04.jpg" alt=""></p>
+
+<p>看來是正常了 <br>
+設定一下alias方便使用 <br>
+<code>sudo nano ~/.bashrc</code>  </p>
+
+<p>拉到最下面加上2行指令，存檔後關掉</p>
+
+<blockquote>
+  <p>export MJPG<em>STREAMER</em>PATH=/home/pi/code/mjpg-streamer  </p>
+  
+  <p>alias mjpggo='sudo modprobe bcm2835-v4l2 &amp;&amp; LD<em>PRELOAD=/usr/lib/uv4l/uv4lext/armv6l/libuv4lext.so sudo ${MJPG</em>STREAMER<em>PATH}/mjpg</em>streamer -i "${MJPG<em>STREAMER</em>PATH}/input<em>uvc.so -n -y f 15 -r 320x240" -o "${MJPG</em>STREAMER<em>PATH}/output</em>http.so -n -w /usr/local/www"'  </p>
+</blockquote>
+
+<p>重新讀取.bashrc <br>
+<code>source .bashrc</code> <br>
+<code>alias</code> <br>
+<code>mjpggo</code>  </p>
+
+<p>如果要客制化頁面的，可以再在自己的頁面上加上tag <br>
+&lt; img src="<a href="http://192.168.0.12:8080/?action=stream">http://192.168.0.12:8080/?action=stream</a>" / &gt; <br>
+就能捉的到串流影像嘍  </p>
+
+<p>當然MJPG-Streamer也提供了不少的使用方式 <br>
+java、javascript...等等 <br>
+看要自行使用那一種 <br>
+以上到這邊就都完成嘍~XD</p>
+
+<p>另外，如果有裝 <br>
+<strong>uv4l-raspicam-extras</strong> <br>
+<strong>uv4l-server</strong>  </p>
+
+<p><strong>uv4l-raspicam-extras:</strong> <br>
+開機會自動執行，登入後可以使用以下指令 <br>
+sudo service uv4l_raspicam start/stop/restart  </p>
+
+<p><strong>uv4l-server:</strong> <br>
+會起一個server
+預設定8080 port <br>
+可以做一些設定  </p>
+
+<p><img src="https://lh6.googleusercontent.com/-IH6JixQrzRU/VXTOpgu_4aI/AAAAAAAAH8M/vnat7VJsovQ/w673-h554-no/raspberrypiStream01.jpg" alt=""></p>
+
+<p>可以修改uv4l-server設定檔 <br>
+/etc/uv4l/uv4l-raspicam.conf</p>
+
+<p>以下是安迪兒修改的內容  </p>
+
+<blockquote>
+  <p>driver = raspicam
+  # video<em>nr = 0 <br>
+  auto-video</em>nr = yes <br>
+  syslog-host = localhost <br>
+  <strong>server-option = --port=9000</strong> <br>
+  #raspicam options <br>
+  encoding = mjpeg <br>
+  <strong>width = 320</strong> <br>
+  <strong>height = 240</strong> </p>
+</blockquote>
+
+<p>如果想停掉服務，可以執行下面的指令 <br>
+<code>sudo service uv4l_raspicam stop</code> <br>
+或 <br>
+<code>pkill uv4l</code>  </p>
+
+<p>安迪兒測試了一下 <br>
+MJPG Stream Server還真的蠻快的 <br>
+正常畫面的傳輸，大約0.2秒內的延遲 <br>
+還真不賴呀，收工嘍~~收工嘍</p>
+
+<p><mark><a href="https://bowwowxx.github.io/ghblog/">以上文章同步發表至安迪兒另一個github備份站</a></mark> </p>
+                        <aside class="tags fi-pricetag-multiple">Posted on <a href="../tag/raspberry-pi/">Raspberry Pi</a></aside>
+            </section>
+            <hr>
+            <footer class="post-footer">
+
+                <section class="share">
+                    <h4>Liked this post ? Share it.</h4>
+                    <a class="fi-social-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://127.0.0.1:2368/raspberry-pi-ji-lu-3-guan-yu-pi-camerahe-ji-shi-chuan-liu-mjpg-stream-server/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    </a>
+                    <a class="fi-social-twitter" href="https://twitter.com/share?text=Raspberry%20pi%20%E8%A8%98%E9%8C%843-%E9%97%9C%E6%96%BCPi%20Camera%E5%92%8C%E5%8D%B3%E6%99%82%E4%B8%B2%E6%B5%81(MJPG%20Stream%20Server)&amp;url=http://127.0.0.1:2368/raspberry-pi-ji-lu-3-guan-yu-pi-camerahe-ji-shi-chuan-liu-mjpg-stream-server/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    </a>
+                    <a class="fi-social-google-plus" href="https://plus.google.com/share?url=http://127.0.0.1:2368/raspberry-pi-ji-lu-3-guan-yu-pi-camerahe-ji-shi-chuan-liu-mjpg-stream-server/" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    </a>
+                </section>
+
+                <section class="author">
+                    <header>
+                        <span>About the author</span>
+                    </header>
+                    <section>
+                        <h4>bowwow</h4>
+                        <img src="../content/images/2015/05/bow02-2.jpg">
+                        <span>TW</span>
+                        
+                    </section>
+                    <footer>
+                         <p></p>
+                    </footer>
+                </section>
+
+        <div class="clearfix"></div>
+                    <hr>
+
+            </footer>
+
+        <h3 class="title-disqus"><span class="fi-comments"></span>Discussions</h3>
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'bowwow'; // required: replace example with your forum shortname
+    var disqus_identifier = '10'; // make sure to use the post.id as an identifier, otherwise disqus will use the pages url per default, which might be problematic...
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </article>
+
+</main>
+
+</div>
+
+</div>
+
+    <!--[if lte IE 8]>
+        <script type="text/javascript" src="/assets/js/outdatedBrowser.min.js?v=ec9a2e2cd2"></script>
+    <![endif]-->
+    <script type="text/javascript" src="../assets/js/dest/built.min.js?v=ec9a2e2cd2"></script>
+
+    <script>
+      $(document).foundation();
+    </script>
+</body>

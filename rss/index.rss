@@ -1,4 +1,295 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>bowwow</title><description>Thoughts, stories and ideas.</description><link>http://127.0.0.1:2368/</link><generator>Ghost 0.6</generator><lastBuildDate>Wed, 03 Jun 2015 17:13:08 GMT</lastBuildDate><atom:link href="http://127.0.0.1:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>打造Raspberry Pi萬能家用遊戲機(RetroPie)</title><description>&lt;p&gt;安迪兒之前一直想拿pi來當遊戲機玩 &lt;br&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>bowwow</title><description>Thoughts, stories and ideas.</description><link>http://127.0.0.1:2368/</link><generator>Ghost 0.6</generator><lastBuildDate>Mon, 08 Jun 2015 07:34:07 GMT</lastBuildDate><atom:link href="http://127.0.0.1:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Raspberry pi 記錄3-關於Pi Camera和即時串流(MJPG Stream Server)</title><description>&lt;p&gt;玩Raspberry pi &lt;br&gt;
+最常想到的就是能不能拿來當監視系統?  &lt;/p&gt;
+
+&lt;p&gt;因為pi很迷你，又低耗電 &lt;br&gt;
+1片約1千左右，加上webcam &lt;br&gt;
+大約2千元內就有不錯的影像監視系統 &lt;br&gt;
+不論是觀察寵物、縮時設影、或是老人小孩居家保全 &lt;br&gt;
+整體來說cp值還算高  &lt;/p&gt;
+
+&lt;p&gt;這次安迪兒記錄一下 &lt;br&gt;
+用raspberry pi官方出的Camera 
+來架設即時影像系統&lt;/p&gt;
+
+&lt;p&gt;其實之前安迪兒有裝上小機器人&lt;a href="http://www.dotblogs.com.tw/bowwowxx/archive/2014/05/28/145279.aspx"&gt;Rapiro&lt;/a&gt; &lt;br&gt;
+但那時大家都用&lt;strong&gt;motion&lt;/strong&gt; &lt;br&gt;
+之後安迪兒有測過motion、ffmpeg、VLC等串流 &lt;br&gt;
+這次安迪兒採用速度較快一些的&lt;strong&gt;MJPG-streamer&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;為啥要用官方的Camera呢? &lt;br&gt;
+官方出的camera很特別 &lt;br&gt;
+他的連接埠是CSI（Camera Serial Interface)介面 &lt;br&gt;
+直接接上pi版就可以使用 &lt;br&gt;
+除了小巧省USB之外，CSI的連接埠傳輸速度很快 &lt;br&gt;
+Raspberry Pi Camera其實也有500萬畫素 &lt;br&gt;
+另外也有出紅外線夜視功能的版本    &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;附上規格參考&lt;/strong&gt; &lt;br&gt;
+&lt;strong&gt;Omnivision 5647 sensor in a fixed-focus module（影像感測器） &lt;br&gt;
+5M Pixel&lt;/strong&gt;&lt;/p&gt;</description><link>http://127.0.0.1:2368/raspberry-pi-ji-lu-3-guan-yu-pi-camerahe-ji-shi-chuan-liu-mjpg-stream-server/</link><guid isPermaLink="false">a4b80a3a-ff7e-42d2-bfee-d0a5faa39cbe</guid><category>Raspberry Pi</category><dc:creator>bowwow</dc:creator><pubDate>Mon, 08 Jun 2015 07:28:49 GMT</pubDate><media:content url="https://lh3.googleusercontent.com/-aQs-PLk3Gbg/VXTOqb620VI/AAAAAAAAH8I/3vbQZrtLlgo/w654-h554-no/raspberrypiStream04.jpg" medium="image"/><content:encoded>&lt;img src="https://lh3.googleusercontent.com/-aQs-PLk3Gbg/VXTOqb620VI/AAAAAAAAH8I/3vbQZrtLlgo/w654-h554-no/raspberrypiStream04.jpg" alt="Raspberry pi 記錄3-關於Pi Camera和即時串流(MJPG Stream Server)"&gt;&lt;p&gt;玩Raspberry pi &lt;br&gt;
+最常想到的就是能不能拿來當監視系統?  &lt;/p&gt;
+
+&lt;p&gt;因為pi很迷你，又低耗電 &lt;br&gt;
+1片約1千左右，加上webcam &lt;br&gt;
+大約2千元內就有不錯的影像監視系統 &lt;br&gt;
+不論是觀察寵物、縮時設影、或是老人小孩居家保全 &lt;br&gt;
+整體來說cp值還算高  &lt;/p&gt;
+
+&lt;p&gt;這次安迪兒記錄一下 &lt;br&gt;
+用raspberry pi官方出的Camera 
+來架設即時影像系統&lt;/p&gt;
+
+&lt;p&gt;其實之前安迪兒有裝上小機器人&lt;a href="http://www.dotblogs.com.tw/bowwowxx/archive/2014/05/28/145279.aspx"&gt;Rapiro&lt;/a&gt; &lt;br&gt;
+但那時大家都用&lt;strong&gt;motion&lt;/strong&gt; &lt;br&gt;
+之後安迪兒有測過motion、ffmpeg、VLC等串流 &lt;br&gt;
+這次安迪兒採用速度較快一些的&lt;strong&gt;MJPG-streamer&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;為啥要用官方的Camera呢? &lt;br&gt;
+官方出的camera很特別 &lt;br&gt;
+他的連接埠是CSI（Camera Serial Interface)介面 &lt;br&gt;
+直接接上pi版就可以使用 &lt;br&gt;
+除了小巧省USB之外，CSI的連接埠傳輸速度很快 &lt;br&gt;
+Raspberry Pi Camera其實也有500萬畫素 &lt;br&gt;
+另外也有出紅外線夜視功能的版本    &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;附上規格參考&lt;/strong&gt; &lt;br&gt;
+&lt;strong&gt;Omnivision 5647 sensor in a fixed-focus module（影像感測器） &lt;br&gt;
+5M Pixel sensor（500萬像素） &lt;br&gt;
+Still picture resolution: 2592 x 1944 &lt;br&gt;
+Max video resolution: 1080p（720p或1080p的H.264錄影格式） &lt;br&gt;
+Max frame rate: 30fps &lt;br&gt;
+尺寸：20 x 25 x 10mm&lt;/strong&gt;   &lt;/p&gt;
+
+&lt;p&gt;Raspberry Pi Camera雖然有種種優點 &lt;br&gt;
+但缺點是CSI這個介面比較特別 &lt;br&gt;
+很多視訊串流的軟體沒有很支援，免不了都要改東西 &lt;br&gt;
+這點和usb的webcam接上就可以使用，實在是不友好~XD  &lt;/p&gt;
+
+&lt;p&gt;但為了Raspberry Pi Camera的優點 &lt;br&gt;
+我們還是一步一步的來修改 &lt;/p&gt;
+
+&lt;p&gt;首先，先買好Raspberry Pi Camera &lt;br&gt;
+然後參考官方的影片說明，裝好它(排線別裝反了~XD) &lt;br&gt;
+&lt;a href="https://www.raspberrypi.org/documentation/usage/camera/README.md"&gt;https://www.raspberrypi.org/documentation/usage/camera/README.md&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;裝好之後，就整個開始raspberry pi的安裝流程  &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;參考一下舊文章&lt;/strong&gt; &lt;br&gt;
+&lt;a href="http://www.dotblogs.com.tw/bowwowxx/archive/2014/04/15/144738.aspx"&gt;Raspberry pi 記錄1-安裝Raspberry pi&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;記得加選Enable Camera &lt;br&gt;
+&lt;img src="https://lh4.googleusercontent.com/-pUNQgFGA9-4/VXTOq7LJZtI/AAAAAAAAH8A/EnXHgEBU2Yw/w886-h422-no/raspberrypiStream06.jpg" alt="Raspberry pi 記錄3-關於Pi Camera和即時串流(MJPG Stream Server)"&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://lh4.googleusercontent.com/-xJhEEStVJFA/VXTOq5sfV0I/AAAAAAAAH8E/1ndAGhh1AS4/w901-h505-no/raspberrypiStream07.jpg" alt="Raspberry pi 記錄3-關於Pi Camera和即時串流(MJPG Stream Server)"&gt;&lt;/p&gt;
+
+&lt;p&gt;完成設定重開機 
+直接使用shell指令測試一下 &lt;br&gt;
+&lt;code&gt;raspistill -o cam.jpg&lt;/code&gt; &lt;br&gt;
+&lt;code&gt;raspivid -o vid.h264&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://lh4.googleusercontent.com/-oNp_g4SiO6Y/VXTOrfFtt7I/AAAAAAAAH78/KmskaSTgXD8/w543-h497-no/raspberrypiStream08.jpg" alt="Raspberry pi 記錄3-關於Pi Camera和即時串流(MJPG Stream Server)"&gt;&lt;/p&gt;
+
+&lt;h6 id=""&gt;再來就是進入正題了&lt;/h6&gt;
+
+&lt;p&gt;先來安裝MJPEG Stream必要的套件  &lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;sudo apt-get update &lt;br&gt;
+  sudo apt-get install subversion &lt;br&gt;
+  sudo apt-get install libjpeg8-dev &lt;br&gt;
+  sudo apt-get install imagemagick &lt;br&gt;
+  sudo apt-get install libv4l-dev&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;用svn捉下
+&lt;a href="https://svn.code.sf.net/p/mjpg-streamer/code/"&gt;https://svn.code.sf.net/p/mjpg-streamer/code/&lt;/a&gt;  &lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;svn co &lt;a href="https://svn.code.sf.net/p/mjpg-streamer/code/"&gt;https://svn.code.sf.net/p/mjpg-streamer/code/&lt;/a&gt; &lt;br&gt;
+  cd code/mjpg-streamer &lt;br&gt;
+  make &lt;br&gt;
+  sudo make install  &lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src="https://lh4.googleusercontent.com/-WNdY6C_mZCU/VXTOrkgcPyI/AAAAAAAAH70/Ez3jdzeNd3c/w785-h497-no/raspberrypiStream09.jpg" alt="Raspberry pi 記錄3-關於Pi Camera和即時串流(MJPG Stream Server)" title=""&gt; &lt;br&gt;
+&lt;img src="https://lh3.googleusercontent.com/-roaULRPvCrY/VXTOsE073nI/AAAAAAAAH7w/LX0Ox2dpwuw/w747-h502-no/raspberrypiStream11.jpg" alt="Raspberry pi 記錄3-關於Pi Camera和即時串流(MJPG Stream Server)" title=""&gt;  &lt;/p&gt;
+
+&lt;p&gt;裝完後啟動mjpg_streamer &lt;br&gt;
+(一般usb webcam的應該到這邊就ok了)  &lt;/p&gt;
+
+&lt;p&gt;切換目錄 &lt;br&gt;
+&lt;code&gt;cd code/mjpg-streamer&lt;/code&gt;  &lt;/p&gt;
+
+&lt;p&gt;啟動server &lt;br&gt;
+&lt;code&gt;./mjpg_streamer -i "./input_uvc.so" -o "./output_http.so -w ./www"&lt;/code&gt;  &lt;/p&gt;
+
+&lt;p&gt;嗯..發生錯誤了 &lt;br&gt;
+原因是V4L driver 不支援raspberry pi的camera &lt;br&gt;
+所以沒有 /dev/video0 &lt;br&gt;
+&lt;img src="https://lh6.googleusercontent.com/-iZqLuM06sHM/VXTOsfBJXxI/AAAAAAAAH7k/fK11T3MPEhw/w531-h500-no/raspberrypiStream12.jpg" alt="Raspberry pi 記錄3-關於Pi Camera和即時串流(MJPG Stream Server)"&gt;&lt;/p&gt;
+
+&lt;p&gt;因為raspberry pi的camera比較特別V4L driver不支援 &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;所以我們要換成非官方的V4L deiver&lt;/strong&gt; &lt;br&gt;
+參考下列的文件 &lt;br&gt;
+&lt;a href="http://www.linux-projects.org/modules/sections/index.php?op=viewarticle&amp;amp;artid=14"&gt;How to install or upgrade UV4L on Raspbian (for the Raspberry Pi)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;內容大約是先捉下key &lt;br&gt;
+再到sources.list裡加上套件的連結  &lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://lh5.googleusercontent.com/--jE6C_1q7q0/VXTOslPKTyI/AAAAAAAAH7o/U_joZVuIJNg/w828-h500-no/raspberrypiStream13.jpg" alt="Raspberry pi 記錄3-關於Pi Camera和即時串流(MJPG Stream Server)" title=""&gt; &lt;br&gt;
+&lt;img src="https://lh4.googleusercontent.com/uI0RUtgYTC6i3z4PHCMukJkQswxQTqVpVLnirsQLBNg=w801-h259-no" alt="Raspberry pi 記錄3-關於Pi Camera和即時串流(MJPG Stream Server)" title=""&gt;  &lt;/p&gt;
+
+&lt;p&gt;安裝必要的程式庫 &lt;br&gt;
+&lt;code&gt;wget http://www.linux-projects.org/listing/uv4l_repo/lrkey.asc &amp;amp;&amp;amp; sudo apt-key add ./lrkey.asc&lt;/code&gt;  &lt;/p&gt;
+
+&lt;p&gt;修改sources list &lt;br&gt;
+&lt;code&gt;sudo nano /etc/apt/sources.list&lt;/code&gt;  &lt;/p&gt;
+
+&lt;p&gt;加上這行，存檔離開 &lt;br&gt;
+&lt;code&gt;deb http://www.linux-projects.org/listing/uv4l_repo/raspbian/ wheezy main&lt;/code&gt;  &lt;/p&gt;
+
+&lt;p&gt;執行以下安裝  &lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;sudo apt-get update &lt;br&gt;
+  sudo apt-get install uv4l uv4l-raspicam   &lt;/p&gt;
+  
+  &lt;p&gt;以下可不裝(啟動時自動執行的外掛) &lt;br&gt;
+  sudo apt-get install uv4l-raspicam-extras  &lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;測試一下uv4l &lt;br&gt;
+&lt;code&gt;uv4l --help --driver raspicam --driver-help&lt;/code&gt; 
+&lt;img src="https://lh3.googleusercontent.com/-RfYfrbu9jvo/VXTOtKmlyQI/AAAAAAAAH74/Pu2X4AkJ_iI/w738-h504-no/raspberrypiStream15.jpg" alt="Raspberry pi 記錄3-關於Pi Camera和即時串流(MJPG Stream Server)" title=""&gt;  &lt;/p&gt;
+
+&lt;p&gt;重開機 &lt;br&gt;
+&lt;code&gt;sudo reboot&lt;/code&gt;  &lt;/p&gt;
+
+&lt;p&gt;再來補上其它的外掛 &lt;br&gt;
+先kill掉uv4l &lt;br&gt;
+&lt;code&gt;sudo pkill uv4l&lt;/code&gt;  &lt;/p&gt;
+
+&lt;p&gt;執行以下指令  &lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;sudo apt-get update &lt;br&gt;
+  sudo apt-get install uv4l-uvc &lt;br&gt;
+  sudo apt-get install uv4l-xscreen &lt;br&gt;
+  sudo apt-get install uv4l-mjpegstream  &lt;/p&gt;
+  
+  &lt;p&gt;以下可以不裝(直接用MJPG Stream Server代替) &lt;br&gt;
+  sudo apt-get install uv4l-server  &lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;裝完後執行 &lt;br&gt;
+&lt;code&gt;sudo reboot&lt;/code&gt;    &lt;/p&gt;
+
+&lt;p&gt;另外如果要用webRTC，文件裡面有提到  &lt;/p&gt;
+
+&lt;h6 id="fortheraspberrypi2onlythewebrtcextensionforthestreamingserverisalsoavailable"&gt;For the Raspberry Pi 2 only, the WebRTC extension for the   Streaming Server is also available:&lt;/h6&gt;
+
+&lt;h6 id="dsudoaptgetinstalluv4lwebrtc"&gt;$ sudo apt-get install uv4l-webrtc&lt;/h6&gt;
+
+&lt;p&gt;安迪兒這邊沒安裝  &lt;/p&gt;
+
+&lt;p&gt;重啟完，如果有裝uv4l-server的，可以試試能不能起動  &lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;uv4l --auto-video_nr --driver raspicam --encoding mjpeg --server-option '--port=9000'&lt;/code&gt;  &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;or&lt;/strong&gt;  &lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;uv4l --auto-video_nr --driver raspicam --encoding mjpeg --server-option '--port=9000' --driver raspicam --rotation 180 --width 352 --height 288&lt;/code&gt;  &lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://lh4.googleusercontent.com/-IH6JixQrzRU/VXTOpgu_4aI/AAAAAAAAH8M/vnat7VJsovQ/w620-h510-no/raspberrypiStream01.jpg" alt="Raspberry pi 記錄3-關於Pi Camera和即時串流(MJPG Stream Server)"&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;安迪兒第一次是uv4l-raspicam-extras、uv4l-server全裝&lt;/strong&gt; &lt;br&gt;
+&lt;strong&gt;但後來沒需要啟動時就執行、也不想再多裝個server&lt;/strong&gt; &lt;br&gt;
+&lt;strong&gt;所以就沒裝了&lt;/strong&gt;  &lt;/p&gt;
+
+&lt;p&gt;再來我們來測試一下mjpg_streamer可不可以執行了  &lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;sudo modprobe bcm2835-v4l2 &lt;br&gt;
+  cd code/mjpg-streamer  &lt;/p&gt;
+  
+  &lt;p&gt;./mjpg&lt;em&gt;streamer -i "./input&lt;/em&gt;uvc.so -d /dev/video0 -n -y f 15 -r 640x480" -o "./output_http.so -n -w /usr/local/www"    &lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;打開browser &lt;br&gt;
+輸入&lt;a href="http://192.168.0.12:8080/"&gt;http://192.168.0.12:8080/&lt;/a&gt;  &lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://lh3.googleusercontent.com/-aQs-PLk3Gbg/VXTOqb620VI/AAAAAAAAH8I/3vbQZrtLlgo/w654-h554-no/raspberrypiStream04.jpg" alt="Raspberry pi 記錄3-關於Pi Camera和即時串流(MJPG Stream Server)"&gt;&lt;/p&gt;
+
+&lt;p&gt;看來是正常了 &lt;br&gt;
+設定一下alias方便使用 &lt;br&gt;
+&lt;code&gt;sudo nano ~/.bashrc&lt;/code&gt;  &lt;/p&gt;
+
+&lt;p&gt;拉到最下面加上2行指令，存檔後關掉&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;export MJPG&lt;em&gt;STREAMER&lt;/em&gt;PATH=/home/pi/code/mjpg-streamer  &lt;/p&gt;
+  
+  &lt;p&gt;alias mjpggo='sudo modprobe bcm2835-v4l2 &amp;amp;&amp;amp; LD&lt;em&gt;PRELOAD=/usr/lib/uv4l/uv4lext/armv6l/libuv4lext.so sudo ${MJPG&lt;/em&gt;STREAMER&lt;em&gt;PATH}/mjpg&lt;/em&gt;streamer -i "${MJPG&lt;em&gt;STREAMER&lt;/em&gt;PATH}/input&lt;em&gt;uvc.so -n -y f 15 -r 320x240" -o "${MJPG&lt;/em&gt;STREAMER&lt;em&gt;PATH}/output&lt;/em&gt;http.so -n -w /usr/local/www"'  &lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;重新讀取.bashrc &lt;br&gt;
+&lt;code&gt;source .bashrc&lt;/code&gt; &lt;br&gt;
+&lt;code&gt;alias&lt;/code&gt; &lt;br&gt;
+&lt;code&gt;mjpggo&lt;/code&gt;  &lt;/p&gt;
+
+&lt;p&gt;如果要客制化頁面的，可以再在自己的頁面上加上tag &lt;br&gt;
+&amp;lt; img src="&lt;a href="http://192.168.0.12:8080/?action=stream"&gt;http://192.168.0.12:8080/?action=stream&lt;/a&gt;" / &gt; &lt;br&gt;
+就能捉的到串流影像嘍  &lt;/p&gt;
+
+&lt;p&gt;當然MJPG-Streamer也提供了不少的使用方式 &lt;br&gt;
+java、javascript...等等 &lt;br&gt;
+看要自行使用那一種 &lt;br&gt;
+以上到這邊就都完成嘍~XD&lt;/p&gt;
+
+&lt;p&gt;另外，如果有裝 &lt;br&gt;
+&lt;strong&gt;uv4l-raspicam-extras&lt;/strong&gt; &lt;br&gt;
+&lt;strong&gt;uv4l-server&lt;/strong&gt;  &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;uv4l-raspicam-extras:&lt;/strong&gt; &lt;br&gt;
+開機會自動執行，登入後可以使用以下指令 &lt;br&gt;
+sudo service uv4l_raspicam start/stop/restart  &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;uv4l-server:&lt;/strong&gt; &lt;br&gt;
+會起一個server
+預設定8080 port &lt;br&gt;
+可以做一些設定  &lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://lh6.googleusercontent.com/-IH6JixQrzRU/VXTOpgu_4aI/AAAAAAAAH8M/vnat7VJsovQ/w673-h554-no/raspberrypiStream01.jpg" alt="Raspberry pi 記錄3-關於Pi Camera和即時串流(MJPG Stream Server)"&gt;&lt;/p&gt;
+
+&lt;p&gt;可以修改uv4l-server設定檔 &lt;br&gt;
+/etc/uv4l/uv4l-raspicam.conf&lt;/p&gt;
+
+&lt;p&gt;以下是安迪兒修改的內容  &lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;driver = raspicam
+  # video&lt;em&gt;nr = 0 &lt;br&gt;
+  auto-video&lt;/em&gt;nr = yes &lt;br&gt;
+  syslog-host = localhost &lt;br&gt;
+  &lt;strong&gt;server-option = --port=9000&lt;/strong&gt; &lt;br&gt;
+  #raspicam options &lt;br&gt;
+  encoding = mjpeg &lt;br&gt;
+  &lt;strong&gt;width = 320&lt;/strong&gt; &lt;br&gt;
+  &lt;strong&gt;height = 240&lt;/strong&gt; &lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;如果想停掉服務，可以執行下面的指令 &lt;br&gt;
+&lt;code&gt;sudo service uv4l_raspicam stop&lt;/code&gt; &lt;br&gt;
+或 &lt;br&gt;
+&lt;code&gt;pkill uv4l&lt;/code&gt;  &lt;/p&gt;
+
+&lt;p&gt;安迪兒測試了一下 &lt;br&gt;
+MJPG Stream Server還真的蠻快的 &lt;br&gt;
+正常畫面的傳輸，大約0.2秒內的延遲 &lt;br&gt;
+還真不賴呀，收工嘍~~收工嘍&lt;/p&gt;
+
+&lt;p&gt;&lt;mark&gt;&lt;a href="https://bowwowxx.github.io/ghblog/"&gt;以上文章同步發表至安迪兒另一個github備份站&lt;/a&gt;&lt;/mark&gt; &lt;/p&gt;</content:encoded></item><item><title>打造Raspberry Pi萬能家用遊戲機(RetroPie)</title><description>&lt;p&gt;安迪兒之前一直想拿pi來當遊戲機玩 &lt;br&gt;
 但pi的用途太多了，一直移去別的用途 &lt;br&gt;
 這次忍痛拿了一塊Raspberry Pi 2來用 &lt;br&gt;
 因為他有1G的RAM和4核心 &lt;br&gt;
