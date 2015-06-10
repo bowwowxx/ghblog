@@ -1,0 +1,444 @@
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>打造Raspberry Pi 無線坦克車(PiTank)</title>
+    <meta name="description" content="">
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="../favicon.ico">
+
+    <script type="text/javascript" src="../assets/js/vendor/fastclick.js?v=5f02a2b2fc"></script>
+    <script type="text/javascript" src="../assets/js/vendor/modernizr.js?v=5f02a2b2fc"></script>
+
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" type="text/css" href="/assets/css/outdatedBrowser/outdatedBrowser.min.css?v=5f02a2b2fc">
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/ichi.css?v=5f02a2b2fc">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:300,700,400%7CSource+Sans+Pro:300,400,600,700,900,300italic,400italic,600italic,700italic,900italic">
+
+    <link rel="canonical" href="index.html">
+    
+    <meta property="og:site_name" content="bowwow">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="打造Raspberry Pi 無線坦克車(PiTank)">
+    <meta property="og:description" content="去年安迪兒試做了raspberry pi小車後  一直想要試試更威的坦克車  可是去年碰上專案趕年底上線  安迪兒又有考試要唸書  坦克車就一直在todo list上放了好久  今年清todo list時  終於狠下心來實現它  (怠惰啊...)   剛好的安迪兒同事 Terry大  知道安迪兒想要弄坦克車  就送了安迪兒tamiya的坦克車底座  並告訴安迪兒可以用齒輪變速箱去加大扭力   他還怕我沒其它的配件  又多給了一包零星的材料包  超有用的  (真是太感謝了T.T)   所以安迪兒這次完全拿這些東西和手上現成的東西來打造   首先是程式部份 先寫一個坦克的控制中心，web介面的  這樣手機、平板、PC都可以使用 安迪兒這次是拿node.js + express來開發  因為node.js很輕巧，資源也吃不多  很適合拿來在raspberry pi上執行服務  express讓前端有個簡易的介面，給使用者看影像和操控的地方   前後端溝通方式有2種  一種是websocket...">
+    <meta property="og:url" content="http://127.0.0.1:2368/da-zao-raspberry-pi-wu-xian-tan-ke-che-pitank/">
+    <meta property="og:image" content="https://lh6.googleusercontent.com/--WBTkekVk7Y/VXgGSigiwaI/AAAAAAAAH_0/RHoaxebv3Qo/w416-h555-no/PiTank28.jpg">
+    <meta property="article:published_time" content="2015-06-10T14:06:03.108Z">
+    <meta property="article:modified_time" content="2015-06-10T14:14:15.316Z">
+    <meta property="article:tag" content="Raspberry Pi">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="打造Raspberry Pi 無線坦克車(PiTank)">
+    <meta name="twitter:description" content="去年安迪兒試做了raspberry pi小車後  一直想要試試更威的坦克車  可是去年碰上專案趕年底上線  安迪兒又有考試要唸書  坦克車就一直在todo list上放了好久  今年清todo list時  終於狠下心來實現它  (怠惰啊...)   剛好的安迪兒同事 Terry大  知道安迪兒想要弄坦克車  就送了安迪兒tamiya的坦克車底座  並告訴安迪兒可以用齒輪變速箱去加大扭力   他還怕我沒其它的配件  又多給了一包零星的材料包  超有用的  (真是太感謝了T.T)   所以安迪兒這次完全拿這些東西和手上現成的東西來打造   首先是程式部份 先寫一個坦克的控制中心，web介面的  這樣手機、平板、PC都可以使用 安迪兒這次是拿node.js + express來開發  因為node.js很輕巧，資源也吃不多  很適合拿來在raspberry pi上執行服務  express讓前端有個簡易的介面，給使用者看影像和操控的地方   前後端溝通方式有2種  一種是websocket...">
+    <meta name="twitter:url" content="http://127.0.0.1:2368/da-zao-raspberry-pi-wu-xian-tan-ke-che-pitank/">
+    <meta name="twitter:image:src" content="https://lh6.googleusercontent.com/--WBTkekVk7Y/VXgGSigiwaI/AAAAAAAAH_0/RHoaxebv3Qo/w416-h555-no/PiTank28.jpg">
+    
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "publisher": "bowwow",
+    "author": {
+        "@type": "Person",
+        "name": "bowwow",
+        "image": "http://127.0.0.1:2368/content/images/2015/05/bow02-2.jpg",
+        "url": "http://127.0.0.1:2368/author/bowwow",
+        "sameAs": null,
+        "description": null
+    },
+    "headline": "打造Raspberry Pi 無線坦克車(PiTank)",
+    "url": "http://127.0.0.1:2368/da-zao-raspberry-pi-wu-xian-tan-ke-che-pitank/",
+    "datePublished": "2015-06-10T14:06:03.108Z",
+    "dateModified": "2015-06-10T14:14:15.316Z",
+    "image": "https://lh6.googleusercontent.com/--WBTkekVk7Y/VXgGSigiwaI/AAAAAAAAH_0/RHoaxebv3Qo/w416-h555-no/PiTank28.jpg",
+    "keywords": "Raspberry Pi",
+    "description": "去年安迪兒試做了raspberry pi小車後  一直想要試試更威的坦克車  可是去年碰上專案趕年底上線  安迪兒又有考試要唸書  坦克車就一直在todo list上放了好久  今年清todo list時  終於狠下心來實現它  (怠惰啊...)   剛好的安迪兒同事 Terry大  知道安迪兒想要弄坦克車  就送了安迪兒tamiya的坦克車底座  並告訴安迪兒可以用齒輪變速箱去加大扭力   他還怕我沒其它的配件  又多給了一包零星的材料包  超有用的  (真是太感謝了T.T)   所以安迪兒這次完全拿這些東西和手上現成的東西來打造   首先是程式部份 先寫一個坦克的控制中心，web介面的  這樣手機、平板、PC都可以使用 安迪兒這次是拿node.js + express來開發  因為node.js很輕巧，資源也吃不多  很適合拿來在raspberry pi上執行服務  express讓前端有個簡易的介面，給使用者看影像和操控的地方   前後端溝通方式有2種  一種是websocket..."
+}
+    </script>
+
+    <meta name="generator" content="Ghost 0.6">
+    <link rel="alternate" type="application/rss+xml" title="bowwow" href="../rss/index.html">
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-63062501-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+<body class="post-template tag-raspberry-pi">
+
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdate" href="http://outdatedbrowser.com/">Update my browser now</a></p>
+</div>
+
+<nav class="top-bar hide-for-large-up" data-topbar style="background: none">
+  <ul class="title-area">
+    <li class="name">
+
+    </li>
+    <li class="home"><a class="fi-home" href="../"></a></li>
+    <li class="toggle-topbar"><a href="index.html#" id="trigger-overlay" class="fi-list"></a></li>
+  </ul>
+
+<div class="overlay overlay-scale">
+    <button type="button" class="overlay-close">Close</button>
+    <nav>
+        <ul>
+                <li><a href="https://bowwowxx.github.io/ghblog/">Home</a></li>
+
+        </ul>
+    </nav>
+</div>
+
+</nav>
+
+<div class="row">
+
+<div class="small-16 medium-16 large-4 columns head-area bgimage" style="background-image: url(../content/images/2015/05/do02.jpg)">
+
+<header class="site-head">
+    <div class="vertical">
+        <div class="site-head-content inner">
+            <ul class="side-nav blog-menu show-for-large-up">
+                    <li><a href="https://bowwowxx.github.io/ghblog/">Home</a></li>
+
+            </ul>
+            <a class="blog-logo" href="../"><img alt="bowwow" src="../content/images/2015/05/bow02-1.jpg"></a>
+            <h1 class="blog-title">bowwow</h1>
+            <hr>
+            <p class="blog-description">Thoughts, stories and ideas.</p>
+            <ul><ul class="side-nav blog-menu show-for-large-uplass">
+    <li>
+    <a href="../tag/ghost-blog/">ghost blog:4</a>
+    </li>
+    <li>
+    <a href="../tag/raspberry-pi/">Raspberry Pi:3</a>
+    </li>
+    <li>
+    <a href="../tag/tips/">tips:2</a>
+    </li>
+    <li>
+    <a href="../tag/github/">github:1</a>
+    </li>
+    <li>
+    <a href="../tag/getting-started/">Getting Started:0</a>
+    </li>
+</ul>
+</ul>
+
+            <div class="blog-network">
+<!--                 <a href="#" class="fi-social-pinterest"></a>
+                <a href="#" class="fi-social-linkedin"></a>
+                <a href="#" class="fi-social-behance"></a>
+                <a href="#" class="fi-social-deviant-art"></a>
+                <a href="#" class="fi-social-dribbble"></a>
+                <a href="#" class="fi-social-flickr"></a>
+                <a href="#" class="fi-social-github"></a>
+                <a href="#" class="fi-social-skype"></a>
+                <a href="#" class="fi-social-snapchat"></a>
+                <a href="#" class="fi-social-steam"></a>
+                <a href="#" class="fi-social-xbox"></a>
+                <a href="#" class="fi-social-reddit"></a> -->
+                <a href="index.html#" class="fi-rss"></a>
+                <a href="index.html#" class="fi-social-google-plus"></a>
+                <a href="index.html#" class="fi-social-youtube"></a>
+                <a href="index.html#" class="fi-social-twitter"></a>
+                <a href="index.html#" class="fi-social-facebook"></a>
+            </div>
+        </div>
+    </div>
+</header>
+
+</div>
+
+<div class="small-16 medium-16 large-12 columns main-column">
+    
+
+<main class="content" role="main">
+
+    <article class="post tag-raspberry-pi">
+
+
+            <h1 class="post-title">打造Raspberry Pi 無線坦克車(PiTank)</h1>
+
+            <span class="post-meta label"><time datetime="2015-06-10">10 Jun 2015</time></span>
+
+            <section class="post-content">
+                <p>去年安迪兒試做了raspberry pi小車後 <br>
+一直想要試試更威的坦克車 <br>
+可是去年碰上專案趕年底上線 <br>
+安迪兒又有考試要唸書 <br>
+坦克車就一直在todo list上放了好久 <br>
+今年清todo list時 <br>
+終於狠下心來實現它 <br>
+(怠惰啊...)  </p>
+
+<p>剛好的安迪兒同事
+<a href="http://blog.lifetaiwan.net/2015/03/part-1.html">Terry大</a> <br>
+知道安迪兒想要弄坦克車 <br>
+就送了安迪兒tamiya的坦克車底座 <br>
+並告訴安迪兒可以用齒輪變速箱去加大扭力  </p>
+
+<p>他還怕我沒其它的配件 <br>
+又多給了一包零星的材料包 <br>
+超有用的 <br>
+(真是太感謝了T.T)  </p>
+
+<p>所以安迪兒這次完全拿這些東西和手上現成的東西來打造  </p>
+
+<h3 id=""><strong>首先是程式部份</strong></h3>
+
+<p>先寫一個坦克的控制中心，web介面的 <br>
+這樣手機、平板、PC都可以使用</p>
+
+<p>安迪兒這次是拿node.js + express來開發 <br>
+因為node.js很輕巧，資源也吃不多 <br>
+很適合拿來在raspberry pi上執行服務 <br>
+express讓前端有個簡易的介面，給使用者看影像和操控的地方  </p>
+
+<p>前後端溝通方式有2種 <br>
+一種是websocket <br>
+* 傳送手機x、y軸的感測，控制鏡頭即時變換視野  </p>
+
+<p>一種是api <br>
+* 負責畫面上四個方式的按鈕控制 </p>
+
+<p>以下是安迪兒完成的樣子 <br>
+<img src="https://lh6.googleusercontent.com/--eigFMRiYwk/VXfvVf6dJOI/AAAAAAAAH9A/FlHQaXegvUY/w416-h555-no/PiTank01.jpg" alt=""></p>
+
+<p>因為網路上大多是python的模組 <br>
+node.js很少提到怎麼直接控制gpio  </p>
+
+<p>安迪兒這邊提一下 <br>
+關於node.js控制pi gpio的方式 <br>
+安迪兒是用這2隻去控制 <br>
+<a href="https://www.npmjs.com/package/pi-gpio">https://www.npmjs.com/package/pi-gpio</a> <br>
+<a href="https://www.npmjs.com/package/pi-blaster.js">https://www.npmjs.com/package/pi-blaster.js</a>  </p>
+
+<p>pi-gpio是送GPIO訊號 <br>
+pi-blaster是送伺服馬達PWM訊號  </p>
+
+<p>要使用這2個套件，raspberry pi上都還要另外安裝相對的東西 <br>
+(2份npm的文件裡有提到，原理可以看一下套件裡的程式碼)  </p>
+
+<p><a href="https://github.com/quick2wire/quick2wire-gpio-admin">https://github.com/quick2wire/quick2wire-gpio-admin</a> <br>
+<a href="https://github.com/sarfata/pi-blaster">https://github.com/sarfata/pi-blaster</a>  </p>
+
+<p>因為年代久遠了，雖然大家都說用quick2wire-gpio-admin <br>
+但其實有錯誤(2012年的)  </p>
+
+<p><img src="https://lh4.googleusercontent.com/-7wD1qCLhqh0/VXfveYow8OI/AAAAAAAAH94/D2ieOZbZyIw/w958-h424-no/PiTank13.jpg" alt="" title="">  </p>
+
+<p>查了一下原因是因為raspberry pi B版後燒的image有改過 <br>
+(雖然是這樣說，但B版這也很久了耶，安迪兒第一塊pi版就是B版的)</p>
+
+<p>安迪兒只好去看quick2wire-gpio-admin的原始碼 <br>
+並修改了一些相關的部份，再重新make過安裝就可以順利使用了  </p>
+
+<p>相同的情形也發生在node.js的套件 <br>
+<a href="https://www.npmjs.com/package/pi-gpio">https://www.npmjs.com/package/pi-gpio</a></p>
+
+<p>也是因為老舊判斷版子cpu等資料和gpio的部份有更動 <br>
+所以安迪兒又再一次流眼淚的去修改套件 <br>
+這部份的修改，安迪兒直接放上github的node_module裡 <br>
+沒重新安裝的話，可以直接用安迪兒整包改好的node module  </p>
+
+<p>全部的程式 <br>
+安迪兒己經放上github <br>
+<a href="https://github.com/bowwowxx/PiTank.git">Bow-wow Pi Tank</a></p>
+
+<p>可以自行捉下來玩玩 </p>
+
+<p>安迪兒說一下 <br>
+使用github上整包bowwow PiTank的步驟 <br>
+首先git clone <a href="https://github.com/bowwowxx/PiTank.git">https://github.com/bowwowxx/PiTank.git</a> xxx資料匣 <br>
+然後裡面有個PiTank_module.zip 
+解開它，裡邊是安迪兒改好的模組 <br>
+可以直接拿這個進quick2wire-gpio-admin    </p>
+
+<blockquote>
+  <p>cd quick2wire-gpio-admin <br>
+  make <br>
+  sudo make install <br>
+  sudo adduser $USER gpio   </p>
+</blockquote>
+
+<p><img src="https://lh6.googleusercontent.com/-cR4HO1UBIu8/VXfvglZ4mMI/AAAAAAAAH-U/1ilH1et1Y-k/w790-h288-no/PiTank18.jpg" alt="" title="">  </p>
+
+<p><img src="https://lh3.googleusercontent.com/-L7TmtQvXH44/VXfvg0y6nYI/AAAAAAAAH-s/lRYgYwFxYw4/w762-h437-no/PiTank19.jpg" alt=""></p>
+
+<p>再來是pi-blaster  </p>
+
+<blockquote>
+  <p>cd pi-blaster  </p>
+</blockquote>
+
+<p>install autoconf  </p>
+
+<blockquote>
+  <p>sudo apt-get install autoconf  </p>
+</blockquote>
+
+<p>building  </p>
+
+<blockquote>
+  <p>./autogen.sh <br>
+  ./configure <br>
+  make  </p>
+</blockquote>
+
+<p>install  </p>
+
+<blockquote>
+  <p>sudo make install  </p>
+</blockquote>
+
+<p><img src="https://lh5.googleusercontent.com/-Ah-weolVuK4/VXfvhTS55QI/AAAAAAAAH_A/54KHWKjep4U/w957-h486-no/PiTank20.jpg" alt="">
+<img src="https://lh3.googleusercontent.com/-dS1iUWF-m9I/VXfvh0HiG4I/AAAAAAAAH-4/X7oF8I6XXJI/w730-h555-no/PiTank21.jpg" alt="" title="">  </p>
+
+<p>正常的話，這部份重開機後也會執行 <br>
+PWM相關訊息 <br>
+<img src="https://lh4.googleusercontent.com/-QRKJGc3OXTk/VXfvinqlFrI/AAAAAAAAH_I/cUuriH1GzFc/w791-h555-no/PiTank23.jpg" alt="" title="">  </p>
+
+<p>再來裝一下raspberry pi的node.js  </p>
+
+<blockquote>
+  <p>wget <a href="http://node-arm.herokuapp.com/node">http://node-arm.herokuapp.com/node</a><em>latest</em>armhf.deb <br>
+  sudo dpkg -i node<em>latest</em>armhf.deb </p>
+</blockquote>
+
+<p>看一下裝完後有沒訊息了   </p>
+
+<blockquote>
+  <p>pi@raspberrypi ~ $ node -v <br>
+  v0.12.1 <br>
+  pi@raspberrypi ~ $ npm -v <br>
+  2.5.1 <br>
+  <img src="https://lh3.googleusercontent.com/-tla6JfPzTYA/VXfvjEqLq3I/AAAAAAAAH_Q/P5CrqEq696k/w958-h526-no/PiTank24.jpg" alt=""></p>
+</blockquote>
+
+<p>最後進到PiTank的資料匣下 <br>
+有必要的話，修改一下gpio的腳位後 <br>
+起動PiTank     </p>
+
+<blockquote>
+  <p>sudo npm start  </p>
+</blockquote>
+
+<p><img src="https://lh5.googleusercontent.com/-8v9U0ou7Joc/VXfvjmEWD_I/AAAAAAAAH_U/Iq-7gdLOfxA/w769-h555-no/PiTank25.jpg" alt=""></p>
+
+<h3 id=""><strong>再來是影像的部份</strong></h3>
+
+<p>參考 <br>
+<a href="http://www.dotblogs.com.tw/bowwowxx/archive/2015/06/08/151511.aspx">Raspberry pi 記錄3-關於Pi Camera和即時串流(MJPG Stream Server)</a>  </p>
+
+<p>起動即時串流服務後，修改一下PiTank裡面index.jade的ip <br>
+再重啟PiTank</p>
+
+<blockquote>
+  <p>sudo npm start</p>
+</blockquote>
+
+<p>打開瀏覽器，EX:192.168.0.10:3000 <br>
+看一下影像和控制按鈕有沒反應了</p>
+
+<h3 id=""><strong>再來是車體的部份</strong></h3>
+
+<p>大約是規劃位子裝上零件 <br>
+貼上照片看一下 <br>
+<img src="https://lh6.googleusercontent.com/-6hhZwd6JZmE/VXfvbPqZGAI/AAAAAAAAH9M/oOcBLxMJCVs/w416-h555-no/PiTank06.jpg" alt="">
+<img src="https://lh6.googleusercontent.com/-Vdd4fHiYzPs/VXfvczJN8LI/AAAAAAAAH9Y/7XDJqeMZhM0/w416-h555-no/PiTank09.jpg" alt="">
+<img src="https://lh4.googleusercontent.com/-ZgCopox-tZc/VXfvdZhc7XI/AAAAAAAAH9c/gM8cu8TAViI/w740-h555-no/PiTank10.jpg" alt="">
+<img src="https://lh6.googleusercontent.com/-GKinaVQAhN8/VXfvej6_FfI/AAAAAAAAH-A/zJ16VlU_-6w/w416-h555-no/PiTank11.jpg" alt="" title="">  </p>
+
+<p><strong>完成圖:</strong> <br>
+<img src="https://lh6.googleusercontent.com/-r4REoeR_GKE/VXgGSof-SkI/AAAAAAAAH_w/vKG477e60HA/w416-h555-no/PiTank27.jpg" alt="">
+<img src="https://lh6.googleusercontent.com/--WBTkekVk7Y/VXgGSigiwaI/AAAAAAAAH_0/RHoaxebv3Qo/w416-h555-no/PiTank28.jpg" alt=""></p>
+
+<p><strong>附上去年完工的小車影片:</strong> <br>
+<a href="http://www.youtube.com/watch?v=V8sGuDmZq3w"><img src="http://img.youtube.com/vi/V8sGuDmZq3w/0.jpg" alt="bowwow小車" title=""></a>   </p>
+
+<p><strong>附上完工的bowwow坦克車影片:</strong> <br>
+ <a href="http://www.youtube.com/watch?v=pDa3TXEhJ4Y"><img src="http://img.youtube.com/vi/pDa3TXEhJ4Y/0.jpg" alt="bowwow坦克車" title=""></a>  </p>
+
+<p>收工嘍~收工嘍~^^ </p>
+
+<p><mark><a href="https://bowwowxx.github.io/ghblog/">以上文章同步發表至安迪兒另一個github備份站</a></mark> </p>
+                        <aside class="tags fi-pricetag-multiple">Posted on <a href="../tag/raspberry-pi/">Raspberry Pi</a></aside>
+            </section>
+            <hr>
+            <footer class="post-footer">
+
+                <section class="share">
+                    <h4>Liked this post ? Share it.</h4>
+                    <a class="fi-social-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://127.0.0.1:2368/da-zao-raspberry-pi-wu-xian-tan-ke-che-pitank/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    </a>
+                    <a class="fi-social-twitter" href="https://twitter.com/share?text=%E6%89%93%E9%80%A0Raspberry%20Pi%20%E7%84%A1%E7%B7%9A%E5%9D%A6%E5%85%8B%E8%BB%8A(PiTank)&amp;url=http://127.0.0.1:2368/da-zao-raspberry-pi-wu-xian-tan-ke-che-pitank/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    </a>
+                    <a class="fi-social-google-plus" href="https://plus.google.com/share?url=http://127.0.0.1:2368/da-zao-raspberry-pi-wu-xian-tan-ke-che-pitank/" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    </a>
+                </section>
+
+                <section class="author">
+                    <header>
+                        <span>About the author</span>
+                    </header>
+                    <section>
+                        <h4>bowwow</h4>
+                        <img src="../content/images/2015/05/bow02-2.jpg">
+                        <span>TW</span>
+                        
+                    </section>
+                    <footer>
+                         <p></p>
+                    </footer>
+                </section>
+
+        <div class="clearfix"></div>
+                    <hr>
+
+            </footer>
+
+        <h3 class="title-disqus"><span class="fi-comments"></span>Discussions</h3>
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'bowwow'; // required: replace example with your forum shortname
+    var disqus_identifier = '11'; // make sure to use the post.id as an identifier, otherwise disqus will use the pages url per default, which might be problematic...
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </article>
+
+</main>
+
+</div>
+
+</div>
+
+    <!--[if lte IE 8]>
+        <script type="text/javascript" src="/assets/js/outdatedBrowser.min.js?v=5f02a2b2fc"></script>
+    <![endif]-->
+    <script type="text/javascript" src="../assets/js/dest/built.min.js?v=5f02a2b2fc"></script>
+
+    <script>
+      $(document).foundation();
+    </script>
+</body>

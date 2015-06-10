@@ -1,4 +1,248 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>bowwow</title><description>Thoughts, stories and ideas.</description><link>http://127.0.0.1:2368/</link><generator>Ghost 0.6</generator><lastBuildDate>Mon, 08 Jun 2015 07:34:07 GMT</lastBuildDate><atom:link href="http://127.0.0.1:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Raspberry pi 記錄3-關於Pi Camera和即時串流(MJPG Stream Server)</title><description>&lt;p&gt;玩Raspberry pi &lt;br&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>bowwow</title><description>Thoughts, stories and ideas.</description><link>http://127.0.0.1:2368/</link><generator>Ghost 0.6</generator><lastBuildDate>Wed, 10 Jun 2015 14:15:25 GMT</lastBuildDate><atom:link href="http://127.0.0.1:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>打造Raspberry Pi 無線坦克車(PiTank)</title><description>&lt;p&gt;去年安迪兒試做了raspberry pi小車後 &lt;br&gt;
+一直想要試試更威的坦克車 &lt;br&gt;
+可是去年碰上專案趕年底上線 &lt;br&gt;
+安迪兒又有考試要唸書 &lt;br&gt;
+坦克車就一直在todo list上放了好久 &lt;br&gt;
+今年清todo list時 &lt;br&gt;
+終於狠下心來實現它 &lt;br&gt;
+(怠惰啊...)  &lt;/p&gt;
+
+&lt;p&gt;剛好的安迪兒同事
+&lt;a href="http://blog.lifetaiwan.net/2015/03/part-1.html"&gt;Terry大&lt;/a&gt; &lt;br&gt;
+知道安迪兒想要弄坦克車 &lt;br&gt;
+就送了安迪兒tamiya的坦克車底座 &lt;br&gt;
+並告訴安迪兒可以用齒輪變速箱去加大扭力  &lt;/p&gt;
+
+&lt;p&gt;他還怕我沒其它的配件 &lt;br&gt;
+又多給了一包零星的材料包 &lt;br&gt;
+超有用的 &lt;br&gt;
+(真是太感謝了T.T)  &lt;/p&gt;
+
+&lt;p&gt;所以安迪兒這次完全拿這些東西和手上現成的東西來打造  &lt;/p&gt;
+
+&lt;h3 id=""&gt;&lt;strong&gt;首先是程式部份&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;先寫一個坦克的控制中心，web介面的 &lt;br&gt;
+這樣手機、平板、PC都可以使用&lt;/p&gt;
+
+&lt;p&gt;安迪兒這次是拿node.js + express來開發 &lt;br&gt;
+因為node.js很輕巧，資源也吃不多 &lt;br&gt;
+很適合拿來在raspberry pi上執行服務 &lt;br&gt;
+express讓前端有個簡易的介面，給使用者看影像和操控的地方  &lt;/p&gt;
+
+&lt;p&gt;前後端溝通方式有2種 &lt;br&gt;
+一種是websocket &lt;br&gt;
+* 傳送手機x、y軸的感測，控制鏡頭即時變換視野  &lt;/p&gt;
+
+&lt;p&gt;一種是api &lt;br&gt;
+* 負責畫面上四個方式的按鈕控制 &lt;/p&gt;
+
+&lt;p&gt;以下是安迪兒完成的樣子 &lt;br&gt;
+&lt;img src="https://lh6.googleusercontent.com/--eigFMRiYwk/VXfvVf6dJOI/AAAAAAAAH9A/FlHQaXegvUY/w416-h555-no/PiTank01.jpg" alt=""&gt;&lt;/p&gt;
+
+&lt;p&gt;因為網路上大多是python的模組 &lt;br&gt;
+node.js很少提到怎麼直接控制gpio  &lt;/p&gt;
+
+&lt;p&gt;安迪兒這邊提一下&lt;/p&gt;</description><link>http://127.0.0.1:2368/da-zao-raspberry-pi-wu-xian-tan-ke-che-pitank/</link><guid isPermaLink="false">6320791b-7630-4c3e-ab52-d57a79332eaf</guid><category>Raspberry Pi</category><dc:creator>bowwow</dc:creator><pubDate>Wed, 10 Jun 2015 14:06:03 GMT</pubDate><media:content url="https://lh6.googleusercontent.com/--WBTkekVk7Y/VXgGSigiwaI/AAAAAAAAH_0/RHoaxebv3Qo/w416-h555-no/PiTank28.jpg" medium="image"/><content:encoded>&lt;img src="https://lh6.googleusercontent.com/--WBTkekVk7Y/VXgGSigiwaI/AAAAAAAAH_0/RHoaxebv3Qo/w416-h555-no/PiTank28.jpg" alt="打造Raspberry Pi 無線坦克車(PiTank)"&gt;&lt;p&gt;去年安迪兒試做了raspberry pi小車後 &lt;br&gt;
+一直想要試試更威的坦克車 &lt;br&gt;
+可是去年碰上專案趕年底上線 &lt;br&gt;
+安迪兒又有考試要唸書 &lt;br&gt;
+坦克車就一直在todo list上放了好久 &lt;br&gt;
+今年清todo list時 &lt;br&gt;
+終於狠下心來實現它 &lt;br&gt;
+(怠惰啊...)  &lt;/p&gt;
+
+&lt;p&gt;剛好的安迪兒同事
+&lt;a href="http://blog.lifetaiwan.net/2015/03/part-1.html"&gt;Terry大&lt;/a&gt; &lt;br&gt;
+知道安迪兒想要弄坦克車 &lt;br&gt;
+就送了安迪兒tamiya的坦克車底座 &lt;br&gt;
+並告訴安迪兒可以用齒輪變速箱去加大扭力  &lt;/p&gt;
+
+&lt;p&gt;他還怕我沒其它的配件 &lt;br&gt;
+又多給了一包零星的材料包 &lt;br&gt;
+超有用的 &lt;br&gt;
+(真是太感謝了T.T)  &lt;/p&gt;
+
+&lt;p&gt;所以安迪兒這次完全拿這些東西和手上現成的東西來打造  &lt;/p&gt;
+
+&lt;h3 id=""&gt;&lt;strong&gt;首先是程式部份&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;先寫一個坦克的控制中心，web介面的 &lt;br&gt;
+這樣手機、平板、PC都可以使用&lt;/p&gt;
+
+&lt;p&gt;安迪兒這次是拿node.js + express來開發 &lt;br&gt;
+因為node.js很輕巧，資源也吃不多 &lt;br&gt;
+很適合拿來在raspberry pi上執行服務 &lt;br&gt;
+express讓前端有個簡易的介面，給使用者看影像和操控的地方  &lt;/p&gt;
+
+&lt;p&gt;前後端溝通方式有2種 &lt;br&gt;
+一種是websocket &lt;br&gt;
+* 傳送手機x、y軸的感測，控制鏡頭即時變換視野  &lt;/p&gt;
+
+&lt;p&gt;一種是api &lt;br&gt;
+* 負責畫面上四個方式的按鈕控制 &lt;/p&gt;
+
+&lt;p&gt;以下是安迪兒完成的樣子 &lt;br&gt;
+&lt;img src="https://lh6.googleusercontent.com/--eigFMRiYwk/VXfvVf6dJOI/AAAAAAAAH9A/FlHQaXegvUY/w416-h555-no/PiTank01.jpg" alt="打造Raspberry Pi 無線坦克車(PiTank)"&gt;&lt;/p&gt;
+
+&lt;p&gt;因為網路上大多是python的模組 &lt;br&gt;
+node.js很少提到怎麼直接控制gpio  &lt;/p&gt;
+
+&lt;p&gt;安迪兒這邊提一下 &lt;br&gt;
+關於node.js控制pi gpio的方式 &lt;br&gt;
+安迪兒是用這2隻去控制 &lt;br&gt;
+&lt;a href="https://www.npmjs.com/package/pi-gpio"&gt;https://www.npmjs.com/package/pi-gpio&lt;/a&gt; &lt;br&gt;
+&lt;a href="https://www.npmjs.com/package/pi-blaster.js"&gt;https://www.npmjs.com/package/pi-blaster.js&lt;/a&gt;  &lt;/p&gt;
+
+&lt;p&gt;pi-gpio是送GPIO訊號 &lt;br&gt;
+pi-blaster是送伺服馬達PWM訊號  &lt;/p&gt;
+
+&lt;p&gt;要使用這2個套件，raspberry pi上都還要另外安裝相對的東西 &lt;br&gt;
+(2份npm的文件裡有提到，原理可以看一下套件裡的程式碼)  &lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://github.com/quick2wire/quick2wire-gpio-admin"&gt;https://github.com/quick2wire/quick2wire-gpio-admin&lt;/a&gt; &lt;br&gt;
+&lt;a href="https://github.com/sarfata/pi-blaster"&gt;https://github.com/sarfata/pi-blaster&lt;/a&gt;  &lt;/p&gt;
+
+&lt;p&gt;因為年代久遠了，雖然大家都說用quick2wire-gpio-admin &lt;br&gt;
+但其實有錯誤(2012年的)  &lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://lh4.googleusercontent.com/-7wD1qCLhqh0/VXfveYow8OI/AAAAAAAAH94/D2ieOZbZyIw/w958-h424-no/PiTank13.jpg" alt="打造Raspberry Pi 無線坦克車(PiTank)" title=""&gt;  &lt;/p&gt;
+
+&lt;p&gt;查了一下原因是因為raspberry pi B版後燒的image有改過 &lt;br&gt;
+(雖然是這樣說，但B版這也很久了耶，安迪兒第一塊pi版就是B版的)&lt;/p&gt;
+
+&lt;p&gt;安迪兒只好去看quick2wire-gpio-admin的原始碼 &lt;br&gt;
+並修改了一些相關的部份，再重新make過安裝就可以順利使用了  &lt;/p&gt;
+
+&lt;p&gt;相同的情形也發生在node.js的套件 &lt;br&gt;
+&lt;a href="https://www.npmjs.com/package/pi-gpio"&gt;https://www.npmjs.com/package/pi-gpio&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;也是因為老舊判斷版子cpu等資料和gpio的部份有更動 &lt;br&gt;
+所以安迪兒又再一次流眼淚的去修改套件 &lt;br&gt;
+這部份的修改，安迪兒直接放上github的node_module裡 &lt;br&gt;
+沒重新安裝的話，可以直接用安迪兒整包改好的node module  &lt;/p&gt;
+
+&lt;p&gt;全部的程式 &lt;br&gt;
+安迪兒己經放上github &lt;br&gt;
+&lt;a href="https://github.com/bowwowxx/PiTank.git"&gt;Bow-wow Pi Tank&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;可以自行捉下來玩玩 &lt;/p&gt;
+
+&lt;p&gt;安迪兒說一下 &lt;br&gt;
+使用github上整包bowwow PiTank的步驟 &lt;br&gt;
+首先git clone &lt;a href="https://github.com/bowwowxx/PiTank.git"&gt;https://github.com/bowwowxx/PiTank.git&lt;/a&gt; xxx資料匣 &lt;br&gt;
+然後裡面有個PiTank_module.zip 
+解開它，裡邊是安迪兒改好的模組 &lt;br&gt;
+可以直接拿這個進quick2wire-gpio-admin    &lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;cd quick2wire-gpio-admin &lt;br&gt;
+  make &lt;br&gt;
+  sudo make install &lt;br&gt;
+  sudo adduser $USER gpio   &lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src="https://lh6.googleusercontent.com/-cR4HO1UBIu8/VXfvglZ4mMI/AAAAAAAAH-U/1ilH1et1Y-k/w790-h288-no/PiTank18.jpg" alt="打造Raspberry Pi 無線坦克車(PiTank)" title=""&gt;  &lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://lh3.googleusercontent.com/-L7TmtQvXH44/VXfvg0y6nYI/AAAAAAAAH-s/lRYgYwFxYw4/w762-h437-no/PiTank19.jpg" alt="打造Raspberry Pi 無線坦克車(PiTank)"&gt;&lt;/p&gt;
+
+&lt;p&gt;再來是pi-blaster  &lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;cd pi-blaster  &lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;install autoconf  &lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;sudo apt-get install autoconf  &lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;building  &lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;./autogen.sh &lt;br&gt;
+  ./configure &lt;br&gt;
+  make  &lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;install  &lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;sudo make install  &lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src="https://lh5.googleusercontent.com/-Ah-weolVuK4/VXfvhTS55QI/AAAAAAAAH_A/54KHWKjep4U/w957-h486-no/PiTank20.jpg" alt="打造Raspberry Pi 無線坦克車(PiTank)"&gt;
+&lt;img src="https://lh3.googleusercontent.com/-dS1iUWF-m9I/VXfvh0HiG4I/AAAAAAAAH-4/X7oF8I6XXJI/w730-h555-no/PiTank21.jpg" alt="打造Raspberry Pi 無線坦克車(PiTank)" title=""&gt;  &lt;/p&gt;
+
+&lt;p&gt;正常的話，這部份重開機後也會執行 &lt;br&gt;
+PWM相關訊息 &lt;br&gt;
+&lt;img src="https://lh4.googleusercontent.com/-QRKJGc3OXTk/VXfvinqlFrI/AAAAAAAAH_I/cUuriH1GzFc/w791-h555-no/PiTank23.jpg" alt="打造Raspberry Pi 無線坦克車(PiTank)" title=""&gt;  &lt;/p&gt;
+
+&lt;p&gt;再來裝一下raspberry pi的node.js  &lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;wget &lt;a href="http://node-arm.herokuapp.com/node"&gt;http://node-arm.herokuapp.com/node&lt;/a&gt;&lt;em&gt;latest&lt;/em&gt;armhf.deb &lt;br&gt;
+  sudo dpkg -i node&lt;em&gt;latest&lt;/em&gt;armhf.deb &lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;看一下裝完後有沒訊息了   &lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;pi@raspberrypi ~ $ node -v &lt;br&gt;
+  v0.12.1 &lt;br&gt;
+  pi@raspberrypi ~ $ npm -v &lt;br&gt;
+  2.5.1 &lt;br&gt;
+  &lt;img src="https://lh3.googleusercontent.com/-tla6JfPzTYA/VXfvjEqLq3I/AAAAAAAAH_Q/P5CrqEq696k/w958-h526-no/PiTank24.jpg" alt="打造Raspberry Pi 無線坦克車(PiTank)"&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;最後進到PiTank的資料匣下 &lt;br&gt;
+有必要的話，修改一下gpio的腳位後 &lt;br&gt;
+起動PiTank     &lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;sudo npm start  &lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src="https://lh5.googleusercontent.com/-8v9U0ou7Joc/VXfvjmEWD_I/AAAAAAAAH_U/Iq-7gdLOfxA/w769-h555-no/PiTank25.jpg" alt="打造Raspberry Pi 無線坦克車(PiTank)"&gt;&lt;/p&gt;
+
+&lt;h3 id=""&gt;&lt;strong&gt;再來是影像的部份&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;參考 &lt;br&gt;
+&lt;a href="http://www.dotblogs.com.tw/bowwowxx/archive/2015/06/08/151511.aspx"&gt;Raspberry pi 記錄3-關於Pi Camera和即時串流(MJPG Stream Server)&lt;/a&gt;  &lt;/p&gt;
+
+&lt;p&gt;起動即時串流服務後，修改一下PiTank裡面index.jade的ip &lt;br&gt;
+再重啟PiTank&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;sudo npm start&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;打開瀏覽器，EX:192.168.0.10:3000 &lt;br&gt;
+看一下影像和控制按鈕有沒反應了&lt;/p&gt;
+
+&lt;h3 id=""&gt;&lt;strong&gt;再來是車體的部份&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;大約是規劃位子裝上零件 &lt;br&gt;
+貼上照片看一下 &lt;br&gt;
+&lt;img src="https://lh6.googleusercontent.com/-6hhZwd6JZmE/VXfvbPqZGAI/AAAAAAAAH9M/oOcBLxMJCVs/w416-h555-no/PiTank06.jpg" alt="打造Raspberry Pi 無線坦克車(PiTank)"&gt;
+&lt;img src="https://lh6.googleusercontent.com/-Vdd4fHiYzPs/VXfvczJN8LI/AAAAAAAAH9Y/7XDJqeMZhM0/w416-h555-no/PiTank09.jpg" alt="打造Raspberry Pi 無線坦克車(PiTank)"&gt;
+&lt;img src="https://lh4.googleusercontent.com/-ZgCopox-tZc/VXfvdZhc7XI/AAAAAAAAH9c/gM8cu8TAViI/w740-h555-no/PiTank10.jpg" alt="打造Raspberry Pi 無線坦克車(PiTank)"&gt;
+&lt;img src="https://lh6.googleusercontent.com/-GKinaVQAhN8/VXfvej6_FfI/AAAAAAAAH-A/zJ16VlU_-6w/w416-h555-no/PiTank11.jpg" alt="打造Raspberry Pi 無線坦克車(PiTank)" title=""&gt;  &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;完成圖:&lt;/strong&gt; &lt;br&gt;
+&lt;img src="https://lh6.googleusercontent.com/-r4REoeR_GKE/VXgGSof-SkI/AAAAAAAAH_w/vKG477e60HA/w416-h555-no/PiTank27.jpg" alt="打造Raspberry Pi 無線坦克車(PiTank)"&gt;
+&lt;img src="https://lh6.googleusercontent.com/--WBTkekVk7Y/VXgGSigiwaI/AAAAAAAAH_0/RHoaxebv3Qo/w416-h555-no/PiTank28.jpg" alt="打造Raspberry Pi 無線坦克車(PiTank)"&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;附上去年完工的小車影片:&lt;/strong&gt; &lt;br&gt;
+&lt;a href="http://www.youtube.com/watch?v=V8sGuDmZq3w"&gt;&lt;img src="http://img.youtube.com/vi/V8sGuDmZq3w/0.jpg" alt="打造Raspberry Pi 無線坦克車(PiTank)" title=""&gt;&lt;/a&gt;   &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;附上完工的bowwow坦克車影片:&lt;/strong&gt; &lt;br&gt;
+ &lt;a href="http://www.youtube.com/watch?v=pDa3TXEhJ4Y"&gt;&lt;img src="http://img.youtube.com/vi/pDa3TXEhJ4Y/0.jpg" alt="打造Raspberry Pi 無線坦克車(PiTank)" title=""&gt;&lt;/a&gt;  &lt;/p&gt;
+
+&lt;p&gt;收工嘍~收工嘍~^^ &lt;/p&gt;
+
+&lt;p&gt;&lt;mark&gt;&lt;a href="https://bowwowxx.github.io/ghblog/"&gt;以上文章同步發表至安迪兒另一個github備份站&lt;/a&gt;&lt;/mark&gt; &lt;/p&gt;</content:encoded></item><item><title>Raspberry pi 記錄3-關於Pi Camera和即時串流(MJPG Stream Server)</title><description>&lt;p&gt;玩Raspberry pi &lt;br&gt;
 最常想到的就是能不能拿來當監視系統?  &lt;/p&gt;
 
 &lt;p&gt;因為pi很迷你，又低耗電 &lt;br&gt;
